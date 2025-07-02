@@ -237,6 +237,7 @@ span.typed-text {
 }
 .service-item p{
     color: white;
+    font_weight: 300;
 }
 
 .service-item:first-child {
