@@ -830,7 +830,7 @@ span.typed-text {
 }
 .donias-impact {
     padding: 80px 10%;
-    background-color: #fcf6f5;
+
     color: #222;
     text-align: left;
 }
@@ -874,3 +874,95 @@ span.typed-text {
     color: #555;
     margin-top: 8px;
 }
+/* @media screen and (min-width: 1200px) {
+    body {
+        font-size: 17px;
+    }
+
+    header {
+        padding: 25px 80px;
+    }
+
+    .logo h2 {
+        font-size: 26px;
+    }
+
+    .nav_btn {
+        padding: 12px 28px;
+        font-size: 16px;
+    }
+
+    .one {
+        padding: 80px 12%;
+        height: 950px;
+    }
+
+    .left_side_one {
+        max-width: 60%;
+        padding: 40px;
+    }
+
+    .header {
+        font-size: 60px;
+    }
+
+    .sub_header_one {
+        font-size: 22px;
+    }
+
+    .talk {
+        font-size: 16px;
+        padding: 14px 100px;
+    }
+
+    .service-item {
+        width: 180px;
+        height: 180px;
+    }
+
+    .three {
+        padding: 80px 12%;
+    }
+
+    .about_img {
+        max-width: 550px;
+    }
+
+    .donias-impact {
+        padding: 100px 12%;
+    }
+
+    .impact-text h2 {
+        font-size: 40px;
+    }
+
+    .impact-text p {
+        font-size: 18px;
+    }
+
+    .four {
+        padding: 100px 12%;
+    }
+
+    .section_title {
+        font-size: 36px;
+    }
+
+    .why-choose-us {
+        padding: 100px 12%;
+    }
+
+    .testimonials {
+        padding: 100px 12%;
+    }
+
+    .cta {
+        padding: 100px 60px;
+        max-width: 1200px;
+    }
+
+    .footer {
+        padding: 80px 12%;
+        gap: 80px;
+    }
+} */
