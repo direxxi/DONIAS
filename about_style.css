@@ -363,10 +363,7 @@ a.header_achor:focus {
     width: 500px;
     margin: 0 auto;
 }
-.founder1{
 
-    
-}
 .founder_img{
     width: 350px;
     height: 350px;
@@ -619,5 +616,8 @@ a.header_achor:focus {
 
 .footer-col ul li a:hover {
     color: #000;
+}
+.vision{
+    font-size: 25px;
 }
 
