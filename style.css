@@ -237,7 +237,7 @@ span.typed-text {
 }
 .service-item p{
     color: white;
-    font_weight: 300;
+    font-weight: 300;
 }
 
 .service-item:first-child {
@@ -734,7 +734,7 @@ span.typed-text {
 }
 
 .cta {
-    background: linear-gradient(135deg, #990011, #bb361e, #990011);
+    background: #000000;
     background-size: 300% 300%;
     background-repeat: no-repeat;
     animation: gradientFlow 12s ease infinite;

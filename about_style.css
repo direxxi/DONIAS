@@ -222,7 +222,7 @@ a.header_achor:focus {
     position: relative;
     overflow: hidden;
     transition: flex 0.5s ease;
-    background-image: url(images/iPhone\ Wallpaper.jpeg);
+    background-image: url(images/0NNFLOLO.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,7 +300,7 @@ a.header_achor:focus {
 
 .choice.active::before {
     opacity: 1;
-    background-image: url('images/iPhone\ Wallpaper.jpeg');
+    background-image: url('images/0NNFLOLO.jpg');
     object-fit: contain;
     /* fallback only */
 }
@@ -534,7 +534,7 @@ a.header_achor:focus {
     }
 }
 .cta {
-    background: linear-gradient(135deg, #990011, #bb361e, #990011);
+    background: #000000;
     background-size: 300% 300%;
     background-repeat: no-repeat;
     animation: gradientFlow 12s ease infinite;
