@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tourism-section {
+    position: relative;
+    height: 100vh;
+    background: url('Country_img/rish-agarwal-f8tGje5BkpQ-unsplash.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
+.back{
+    position: absolute;
+    left: 10px;
+}
+
+.title {
+    font-size: 120px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+.info-box {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background: rgba(255, 255, 255, 0.7);
+    color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.info-box h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.info-box p {
+    margin: 5px 0;
+}
+
+.thumbs {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.thumbs img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}

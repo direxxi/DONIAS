@@ -349,7 +349,7 @@ a.header_achor:focus {
 }
 .four{
     width: 100%;
-    height: 600px;
+    height: 1900px;
 }
 .meet{
     font-size: 80px;
@@ -363,14 +363,6 @@ a.header_achor:focus {
     width: 500px;
     margin: 0 auto;
 }
-
-.founder_img{
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    position: relative;
-    bottom: 50px;
-}
 .first{
     width: 1200px;
     display: flex;
@@ -380,15 +372,35 @@ a.header_achor:focus {
     position: relative;
     top: 100px;
 }
+.third{
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        position: relative;
+        top: 280px;
+}
+.fifth{
+    width: 1200px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        position: relative;
+        top: 460px;
+}
 .number{
     font-size: 70px;
         font-family: "DM Serif Display", serif;
         margin-left: 14px;
         text-align: center;
+        margin-top: 100px;
 }
 .firstt{
     width: 800px;
     margin-left: 50px;
+    margin-top: 100px;
 }
 .name{
     font-size: 'Roboto';
@@ -397,6 +409,7 @@ a.header_achor:focus {
 .subheader_first{
     width: 500px;
     margin-top: 15px;
+    line-height: 20px;
 }
 .second {
     width: 1200px;
@@ -407,11 +420,21 @@ a.header_achor:focus {
     position: relative;
     top: 150px;
 }
+.fourth{
+        width: 1200px;
+        display: flex;
+        justify-content: center;
+        justify-content: space-around;
+        margin: 0 auto;
+        position: relative;
+        top: 400px;
+}
 .numbers {
     font-size: 70px;
     font-family: "DM Serif Display", serif;
     text-align: center;
     margin-left: 200px;
+    margin-top: 100px;
 }
 .names{
     font-size: 'Roboto';
@@ -420,10 +443,12 @@ a.header_achor:focus {
 .secondd{
     width: 400px;
     margin-right: 50px;
+    margin-top: 100px;
 }
 .subheader_second{
     width: 500px;
-        margin-top: 15px;
+    margin-top: 15px;
+    line-height: 20px;
 }
 .five{
     height: 1500px;
@@ -620,4 +645,80 @@ a.header_achor:focus {
 .vision{
     font-size: 25px;
 }
+.flip-card {
+    width: 350px;
+    height: 350px;
+    perspective: 1000px;
+    cursor: pointer;
+}
 
+.flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.flip-front {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 👈 ensures image fills card while preserving aspect ratio */
+    border-radius: 10px;
+}
+
+.flip-back {
+    background: #555;
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-back .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.flip-back .socials a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}
+
+.flip-back .socials img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.flip-back .socials img:hover {
+    transform: scale(1.2);
+}

@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.tourism-section {
+    position: relative;
+    height: 100vh;
+    background: url('service_images/flight.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
+.back{
+    position: absolute;
+        left: 10px;
+}
+
+.title {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.info-box {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.thumbs {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.thumb {
+    cursor: pointer;
+    text-align: center;
+}
+
+.thumb img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.thumb p {
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.book-btn {
+    margin-top: 10px;
+    background-color: #fff;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+     display: inline-block;
+    text-align: center;
+        
+}
+
+.book-btn:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
