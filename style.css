@@ -938,7 +938,7 @@ span.typed-text {
             display: block;
         }
                 .ul {
-                    max-height: auto;
+                    max-height: 0;
                     overflow: hidden;
                     flex-direction: column;
                     gap: 10px;
@@ -954,7 +954,7 @@ span.typed-text {
                 }
         
                 .ul.show {
-                    max-height: 500px;
+                    max-height: 900px;
                     padding: 20px;
                 }
     .one {
