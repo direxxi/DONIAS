@@ -1,121 +1,94 @@
-const choices = document.querySelectorAll('.choice');
+document.addEventListener("DOMContentLoaded", () => {
+  // WHY CHOOSE US
+  const choices = document.querySelectorAll(".choice");
 
-choices.forEach(choice => {
-  choice.addEventListener('click', () => {
+  const setActiveChoice = (activeChoice) => {
     choices.forEach(c => {
-      c.classList.remove('active');
-      c.style.removeProperty('background-image');
+      c.classList.remove("active");
+      const label = c.querySelector(".basic-label");
+      if (label) label.style.display = "block";
     });
 
-    choice.classList.add('active');
+    activeChoice.classList.add("active");
+    const activeLabel = activeChoice.querySelector(".basic-label");
+    if (activeLabel) activeLabel.style.display = "none";
+  };
 
-    const img = choice.getAttribute('data-img');
-    if (img) {
-      choice.style.setProperty('background-image', `url(${img})`);
-    }
+  choices.forEach(choice => {
+    choice.addEventListener("click", () => {
+      setActiveChoice(choice);
+    });
+  });
+
+  if (!document.querySelector(".choice.active") && choices.length) {
+    setActiveChoice(choices[0]);
+  }
+
+  window.addEventListener("resize", () => {
+    const active = document.querySelector(".choice.active");
+    if (active) setActiveChoice(active);
+  });
+
+  // COUNTERS
+  const counters = document.querySelectorAll(".counter");
+  let countersTriggered = false;
+
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const target = +counter.dataset.target;
+      let current = 0;
+      const increment = target / 100;
+
+      const updateCount = () => {
+        current += increment;
+        if (current < target) {
+          counter.innerText = Math.ceil(current);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  const statSection = document.querySelector(".three");
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !countersTriggered) {
+        animateCounters();
+        countersTriggered = true;
+      }
+    });
+  });
+  if (statSection) counterObserver.observe(statSection);
+
+  // FLIP CARDS
+  const flipCards = document.querySelectorAll(".flip-card");
+  flipCards.forEach(card => {
+    card.addEventListener("click", () => {
+      flipCards.forEach(c => {
+        if (c !== card) c.classList.remove("flipped");
+      });
+      card.classList.toggle("flipped");
+    });
+  });
+
+  // HAMBURGER
+  const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".ul");
+  const navLinks = document.querySelectorAll(".ul li a");
+
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+    hamburger.classList.toggle("open");
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+      hamburger.classList.remove("open");
+    });
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
-    let triggered = false;
-  
-    const animateCounters = () => {
-      counters.forEach(counter => {
-        const target = +counter.dataset.target;
-        let current = 0;
-        const increment = target / 100;
-  
-        const updateCount = () => {
-          current += increment;
-          if (current < target) {
-            counter.innerText = Math.ceil(current);
-            setTimeout(updateCount, 20);
-          } else {
-            counter.innerText = target;
-          }
-        };
-  
-        updateCount();
-      });
-    };
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !triggered) {
-          animateCounters();
-          triggered = true;
-        }
-      });
-    });
-  
-    const statSection = document.querySelector(".three");
-    if (statSection) observer.observe(statSection);
-  });
-  document.addEventListener("DOMContentLoaded", () => {
-    // Activate Why Choose Us boxes
-    const choices = document.querySelectorAll(".choice");
-    choices.forEach(choice => {
-      choice.addEventListener("click", () => {
-        choices.forEach(c => {
-          c.classList.remove("active");
-          c.style.removeProperty("background-image");
-        });
-  
-        choice.classList.add("active");
-        const img = choice.getAttribute("data-img");
-        if (img) {
-          choice.style.setProperty("background-image", `url(${img})`);
-        }
-      });
-    });
-  
-    // Animate stats counters when visible
-    const counters = document.querySelectorAll(".counter");
-    let triggered = false;
-  
-    const animateCounters = () => {
-      counters.forEach(counter => {
-        const target = +counter.dataset.target;
-        let current = 0;
-        const increment = target / 100;
-  
-        const updateCount = () => {
-          current += increment;
-          if (current < target) {
-            counter.innerText = Math.ceil(current);
-            setTimeout(updateCount, 20);
-          } else {
-            counter.innerText = target;
-          }
-        };
-  
-        updateCount();
-      });
-    };
-  
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !triggered) {
-          animateCounters();
-          triggered = true;
-        }
-      });
-    });
-  
-    const statSection = document.querySelector(".three");
-    if (statSection) observer.observe(statSection);
-  
-    // Flip cards (and close others)
-    const flipCards = document.querySelectorAll(".flip-card");
-    flipCards.forEach(card => {
-      card.addEventListener("click", () => {
-        flipCards.forEach(c => {
-          if (c !== card) c.classList.remove("flipped");
-        });
-        card.classList.toggle("flipped");
-      });
-    });
-  });
-  
-  

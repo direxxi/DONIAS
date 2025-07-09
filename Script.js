@@ -287,6 +287,24 @@ const animateCounters = () => {
     updateCount();
   });
 };
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".ul");
+const navLinks = document.querySelectorAll(".ul li a");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  hamburger.classList.toggle("open");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("show");
+    hamburger.classList.remove("open");
+  });
+});
 
 // Trigger when in view (optional optimization)
 window.addEventListener("load", animateCounters);
+
+
+
