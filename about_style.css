@@ -800,6 +800,10 @@ a.header_achor:focus {
     position: relative;
     right: 200px;
 }
+#flipped{
+    position: relative;
+        right: 200px;
+}
 .secondd{
     position: relative;
     right: 110px;
@@ -830,7 +834,7 @@ a.header_achor:focus {
 }
 }
 
-@media(max-width: 812px){
+@media(max-width: 834px){
     .hamburger {
             display: block;
             font-size: 24px;
@@ -897,6 +901,14 @@ a.header_achor:focus {
         .two{
             width: 100%;
         }
+      .two{
+        position: relative;
+        top: 200px;
+      }
+      .three{
+        position: relative;
+            top: 200px;
+      }
         .why{
             font-size: 40px;
         }
@@ -911,6 +923,10 @@ a.header_achor:focus {
         }
         .four{
             width: 100%;
+            height: auto;
+            margin-top: 200px;
+            position: relative;
+            top: 200px;
         }
         .meet{
             font-size: 40px;
@@ -921,10 +937,464 @@ a.header_achor:focus {
             position: relative;
             top: 20px;
         }
-        .founder1{
+        #foundz{
+            position: relative;
+            bottom: 100px;
+        }
+        .first{
+            width: 100%;
+            height: auto;
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .firstt{
+            position: relative;
+            bottom: 50px;
+            text-align: center;
+        }
+        .subheader_first{
+            margin: 0 auto;
+        }
+        #flipper{
+            position: relative;
+            left: 4px;
+        }
+        .linez{
+            margin-top: 20px;
+            width: 100%;
+            height: 1px;
+            background-color: #333;
+        }
+        #f2{
+            position: relative;
+            bottom:120px;
+        }
+        .second{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .numbers{
+            position: relative;
+            bottom: 40px;
+        }
+        .secondd{
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            left: 10px;
+            bottom: 40px;
+        }
+        .third{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;   
+        }
+        #nomba{
+            position: relative;
+            bottom: 360px;
+        }
+        #njoku{
+            position: relative;
+                bottom: 390px;
+        }
+        #flipped{
+            position: relative;
+                left: 4px;
+                bottom: 340px;
+        }
+        #liner{
+            position: relative;
+            bottom: 860px;
+        }
+        .fourth{
+            width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+        }
+        #flopper{
+            position: relative;
+            bottom: 350px;
+        }
+        #num04{
+            position: relative;
+                bottom: 400px;
+        }
+        #secondd04{
+            position: relative;
+            bottom: 400px;
+        }
+        .fifth{
+            width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+        }
+        #num05{
+            position: relative;
+            bottom: 500px;
+        }
+        #first55{
+            text-align: center;
+            position: relative;
+                bottom: 600px;
+        }
+        #flippez{
+            position: relative;
+                bottom: 500px;
+        }
+     
+        .team-grid{
+            gap: 20px;
+            
+        }
+    .team-card{
+        width: 220px;
+    }
+    .footer{
+        background-color: #c5c5c5;
+    } 
+    @media(max-width:440px){
+        .logo_img{
+            width: 30px;
+            height: 30px;
+            position: relative;
+            right:  20px ;
+        }
+        .logo h2{
+            font-size: 13px;
+        }
+        .hamburger{
+            position: relative;
+            left: 40px;
+        }
+        .nav_btn{
+            padding: 4px 40px;
+        }.one{
+            width: 100%;
+            height: 1400px;
+        }
+        .header{
+            margin-top: 10px;
+        }
+        .subheader{
+            margin-top: 20px;
+            height: 4px;
+        }
+        .talk{
+            text-align: center;
+            background-color: #AE3A43;
+          
+        }
+        .div_imgs{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* position: relative;
+            bottom: 300px; */
+            height: 1200px;
+        }
+        .img1{
+            width: 300px;
+            margin: 0 auto;
+            margin-bottom: 200px;
+        }
+        .img2{
+            width: 400px;
+            margin: 0 auto;
+        }
+        .about_us{
+            position: relative;
+            bottom: 200px;
+            font-size: 18px;
+            
+        }
+        .why{
+            position: relative;
+            bottom: 150px;
+        }
+        .lines{
+            position: relative;
+                bottom: 150px;
+        }
+        .why-choose-us {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            bottom: 100px;
+        }
+        .choice {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.5s ease;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+        .choice .basic-label {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: rotate(-1deg) translateX(-50%);
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            z-index: 3;
+            max-width: 90%;
+            line-height: 1.3;
+            white-space: normal;
+            text-wrap: balance;
+            pointer-events: none;
         }
 
+    }
+    .impact-stats{
+        position: relative;
+        top: 150px;
+    }
+.four{
+    position: relative;
+    top: 400px;
+}
+    .liness{
+        width: 50%;
+    }
+    .number{
+        font-size: 40px;
+    }
+    .name{
+        font-size: 30px;
+    }
+    .subheader_first{
+        text-align: center;
+        font-size: 14px;
+        width: 400px;
+    }
+    .five{
+        width: 100%;
+        height: 2200px;
+    }
+    .team{
+        font-size: 40px;
+    }
+    .team-card{
+        width: 180px;
+        height: 250px;
+    }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin: 0 auto;
+        }
+}
+
+@media(max-width:395px){
+    .logo_img {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            right: 20px;
+        }
+    
+        .logo h2 {
+            font-size: 13px;
+        }
+    
+        .hamburger {
+            position: relative;
+            left: 40px;
+        }
+    
+        .nav_btn {
+            padding: 4px 40px;
+        }
+    
+        .one {
+            width: 100%;
+            height: 1400px;
+        }
+    
+        .header {
+            margin-top: 10px;
+        }
+    
+        .subheader {
+            margin-top: 20px;
+            height: 4px;
+        }
+    
+        .talk {
+            text-align: center;
+            background-color: #AE3A43;
+    
+        }
+    
+        .div_imgs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* position: relative;
+            bottom: 300px; */
+            height: 1200px;
+        }
+    
+        .img1 {
+            width: 300px;
+            margin: 0 auto;
+            margin-bottom: 200px;
+        }
+    
+        .img2 {
+            width: 400px;
+            margin: 0 auto;
+        }
+    
+        .about_us {
+            position: relative;
+            bottom: 200px;
+            font-size: 18px;
+    
+        }
+    
+        .why {
+            position: relative;
+            bottom: 150px;
+        }
+    
+        .lines {
+            position: relative;
+            bottom: 150px;
+        }
+    
+        .why-choose-us {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 1000px;
+            overflow: hidden;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            bottom: 100px;
+        }
+    
+        .choice {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            transition: flex 0.5s ease;
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid #eee;
+        }
+    
+        .choice .basic-label {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: rotate(-1deg) translateX(-50%);
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            z-index: 3;
+            max-width: 90%;
+            line-height: 1.3;
+            white-space: normal;
+            text-wrap: balance;
+            pointer-events: none;
+        }
+    
+    .impact-stats {
+        position: relative;
+        top: 400px;
+    }
+    
+    .four {
+        position: relative;
+        top: 550px;
+    }
+    
+    .liness {
+        width: 50%;
+    }
+    
+    .number {
+        font-size: 40px;
+    }
+    
+    .name {
+        font-size: 30px;
+    }
+    
+    .subheader_first {
+        text-align: center;
+        font-size: 14px;
+        width: 350px;
+    }
+    #flipper{
+        margin-right: 5px;
+    }
+    #flipped{
+        margin-right: 5px;
+    }
+    .secondd{
+        margin-right: 10px;
+    }
+    .names{
+        position: relative;
+        right: 25px;
+        font-size: 30px;
+    }
+    .subheader_second{
+        width: 320px;
+        margin-left: 6px;
+    }
+    
+    .five {
+        width: 100%;
+        height: 2200px;
+        margin-top: 60px;
+    }
+    
+    .team {
+        font-size: 40px;
+    }
+    .team-card{
+        position: relative;
+        right: 13px;
+        width: 160px;
+    }
+    .team-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        margin-top: 20px;
+        
+    }
 }
