@@ -42,7 +42,36 @@ nav {
     align-items: center;
     gap: 40px;
 }
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+}
+.hamburger.open {
+    transform: rotate(90deg);
+}
 
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #000;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
 ul.ul {
     display: flex;
     align-items: center;
@@ -721,4 +750,181 @@ a.header_achor:focus {
 
 .flip-back .socials img:hover {
     transform: scale(1.2);
+}
+@media (max-width: 1200px){
+    html{
+        overflow-x: hidden;
+    }
+ .hamburger{
+    display: none;
+ }
+ ul.ul{
+    font-size: 15px;
+    width: 100%;
+ }
+ .nav_btn{
+    position: relative;
+    left: 10px;
+    font-size: 10px;
+ }
+ .one{
+   width: 100%;
+   height: 1200px;
+ }
+ .img1{
+    width: 400px;
+ }
+ .img2{
+    width: 600px;
+ }
+ .p_about{
+    width: 100%;
+ }
+ .basic-label h2{
+    font-size: 14px;
+ }
+.three{
+    width: 100%;
+}
+.impact-stats{
+    width: 100%;
+}
+.four{
+    width: 100%;
+}
+.firstt{
+    position: relative;
+    right: 30px;
+}
+#flipper{
+    position: relative;
+    right: 200px;
+}
+.secondd{
+    position: relative;
+    right: 110px;
+}
+.numbers{
+    position: relative;
+    right: 100px;
+}
+.subheader_second{
+    width: 400px;
+}
+.five{
+    width: 100%;
+    height: 1800px;
+}
+.team-grid{
+   position: relative;
+   left: 20px;
+}
+
+.team-card{
+    width: 280px;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+@media(max-width: 812px){
+    .hamburger {
+            display: block;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+            position: relative;
+        }
+    
+        .ul {
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+            gap: 0;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            padding: 0;
+            z-index: 99;
+            transition: max-height 0.4s ease;
+        }
+    
+        .ul.show {
+            max-height: 700px;
+            padding: 60px 20px 20px;
+        }
+    
+        .ul li {
+            width: 100%;
+            text-align: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            background: #f9f9f9;
+            width: 100%;
+        }
+    
+        .dropdown-parent.open .dropdown-menu {
+            display: flex;
+        }
+    
+        .dropdown-menu li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .header{
+            font-size: 40px;
+        }
+        .img1{
+            width: 300px;
+        }
+        .img2{
+            width: 500px;
+        }
+        .two{
+            width: 100%;
+        }
+        .why{
+            font-size: 40px;
+        }
+        .lines{
+            width: 270px;
+        }
+        .impact-stats{
+            width: 100%;
+        }.stat-box{
+            width: 100%;
+            font-size: 10px;
+        }
+        .four{
+            width: 100%;
+        }
+        .meet{
+            font-size: 40px;
+            position: relative;
+            top: 20px;
+        }
+        .liness{
+            position: relative;
+            top: 20px;
+        }
+        .founder1{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
 }
