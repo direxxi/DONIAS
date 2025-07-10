@@ -1209,7 +1209,7 @@ a.header_achor:focus {
         }
 }
 
-@media(max-width:395px){
+@media(max-width:393px){
     .logo_img {
             width: 30px;
             height: 30px;
@@ -1346,7 +1346,9 @@ a.header_achor:focus {
     .number {
         font-size: 40px;
     }
-    
+    .numbers{
+        font-size: 40px;
+    }
     .name {
         font-size: 30px;
     }
@@ -1367,12 +1369,12 @@ a.header_achor:focus {
     }
     .names{
         position: relative;
-        right: 25px;
+        right: 20px;
         font-size: 30px;
     }
     .subheader_second{
         width: 320px;
-        margin-left: 6px;
+        margin-left: 19px;
     }
     
     .five {
@@ -1386,7 +1388,7 @@ a.header_achor:focus {
     }
     .team-card{
         position: relative;
-        right: 13px;
+        right: 4px;
         width: 160px;
     }
     .team-grid {
