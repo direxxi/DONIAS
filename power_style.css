@@ -806,7 +806,8 @@ footer {
        text-align: start;
     }
         .sub_service {
-            text-align: start;}
+            text-align: start;
+        }
 }
 
 @media (max-width: 440px) {
