@@ -905,21 +905,9 @@ span.typed-text {
     transform: rotate(-45deg) translate(7px, -6px);
 }
 @media (max-width: 1024px) {
-    header {
-        flex-wrap: wrap;
-        gap: 20px;
-        padding: 15px 20px;
-    }
-
-    .logo h2 {
-        font-size: 18px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
+    html {
+            overflow-x: hidden;
+        }
     .service_cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -931,9 +919,13 @@ span.typed-text {
     .why-layout {
         flex-direction: column;
     }
+    footer{
+        background-color: #c5c5c5;
+    }
 }
 
-@media (max-width: 768px) {
+
+@media (max-width: 834px) {
     .hamburger {
             display: block;
             font-size: 24px;
@@ -1045,11 +1037,30 @@ span.typed-text {
 
     .footer {
         flex-direction: column;
-        align-items: center;
+        align-items: start;
     }
 }
 
 @media (max-width: 480px) {
+    .logo_img {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            right: 20px;
+        }
+    
+        .logo h2 {
+            font-size: 13px;
+        }
+    
+        .hamburger {
+            position: relative;
+            left: 40px;
+        }
+    
+        .nav_btn {
+            padding: 4px 40px;
+        }
     .header {
         font-size: 28px;
     }
@@ -1093,5 +1104,44 @@ span.typed-text {
 
     .testimonial-text {
         font-size: 14px;
+    }
+}
+@media (max-width: 440px){
+    .logo_img {
+            width: 30px;
+            height: 30px;
+            position: relative;
+            right: 20px;
+        }
+    
+        .logo h2 {
+            font-size: 13px;
+        }
+    
+        .hamburger {
+            position: relative;
+            left: 40px;
+        }
+    
+        .nav_btn {
+            padding: 4px 20px;
+        }
+}
+@media(max-width: 320px){
+    header{
+        width: 100%;
+    }
+    .logo h2{
+        position: relative;
+        right: 20px;
+    }
+    .one{
+        height: 900px;
+    }
+    .nav_btn{
+       position: relative;
+       right: 20px;
+       padding: 2px 8px;
+       font-size: 12px;
     }
 }
