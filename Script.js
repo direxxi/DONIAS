@@ -311,13 +311,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Toggle dropdown menus
   dropdownParents.forEach(parent => {
+    const submenu = parent.querySelector(".dropdown-menu");
+    if (!submenu) return; // skip if no submenu
+  
     const trigger = parent.querySelector("a");
     trigger.addEventListener("click", (e) => {
-      e.preventDefault(); // prevent default navigation
+      e.preventDefault();
       parent.classList.toggle("open");
     });
   });
 });
+  
 
 
 // Trigger when in view (optional optimization)
