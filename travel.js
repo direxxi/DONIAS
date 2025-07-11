@@ -1,58 +1,93 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ Swiper init
-  if (document.querySelector(".five-swiper")) {
-    const swiper = new Swiper(".five-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        480: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
+  const hamburgerNav = document.querySelector(".hamburger");
+  const menuNav = document.getElementById("ulz");
+  const hamburgerServices = document.querySelector(".hamburger2");
+  const menuServices = document.querySelector(".ull .ul");
+
+  const navLinks = menuNav?.querySelectorAll("li a");
+  const serviceLinks = menuServices?.querySelectorAll("li a");
+
+  const closeNav = () => {
+    menuNav?.classList.remove("show");
+    hamburgerNav?.classList.remove("open");
+    hamburgerServices.style.display = ""; // show other hamburger back
+  };
+
+  const closeServices = () => {
+    menuServices?.classList.remove("show");
+    hamburgerServices?.classList.remove("open");
+    hamburgerNav.style.display = ""; // show other hamburger back
+  };
+
+  if (hamburgerNav && menuNav) {
+    hamburgerNav.addEventListener("click", () => {
+      const isOpen = menuNav.classList.toggle("show");
+      hamburgerNav.classList.toggle("open");
+
+      if (isOpen) {
+        hamburgerServices.style.display = "none"; // hide the other hamburger
+        closeServices(); // make sure its menu is closed
+      } else {
+        hamburgerServices.style.display = "";
+      }
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", closeNav);
     });
   }
 
-  // ✅ Modal functionality
-  const btn = document.getElementById("learnMoreBtn");
-  const modal = document.getElementById("modal");
-  const close = document.querySelector(".close");
+  if (hamburgerServices && menuServices) {
+    hamburgerServices.addEventListener("click", () => {
+      const isOpen = menuServices.classList.toggle("show");
+      hamburgerServices.classList.toggle("open");
 
-  if (btn && modal && close) {
-    btn.onclick = () => (modal.style.display = "flex");
-    close.onclick = () => (modal.style.display = "none");
-
-    window.onclick = (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    };
-  }
-
-  // ✅ Hamburger menu
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".ul");
-  const navLinks = document.querySelectorAll(".ul li a");
-
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("show");
-      hamburger.classList.toggle("open");
+      if (isOpen) {
+        hamburgerNav.style.display = "none"; // hide the other hamburger
+        closeNav(); // make sure its menu is closed
+      } else {
+        hamburgerNav.style.display = "";
+      }
     });
 
-    navLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("show");
-        hamburger.classList.remove("open");
+    serviceLinks.forEach(link => {
+      link.addEventListener("click", closeServices);
+    });
+  }
+
+  // dropdowns
+  const dropdownParents = document.querySelectorAll(".dropdown-parent");
+  dropdownParents.forEach(parent => {
+    const trigger = parent.querySelector("a");
+    const submenu = parent.querySelector(".dropdown-menu");
+
+    if (trigger && submenu) {
+      trigger.addEventListener("click", e => {
+        e.preventDefault();
+        parent.classList.toggle("open");
       });
+    }
+  });
+
+  // counters
+  const counters = document.querySelectorAll(".counter");
+  const animateCounters = () => {
+    counters.forEach(counter => {
+      const update = () => {
+        const target = +counter.dataset.target;
+        const current = +counter.innerText;
+        const increment = target / 100;
+
+        if (current < target) {
+          counter.innerText = Math.ceil(current + increment);
+          setTimeout(update, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      update();
     });
-  }
+  };
+
+  animateCounters();
 });
