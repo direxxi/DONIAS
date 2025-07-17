@@ -99,7 +99,7 @@ const sections = [
     {
       title: "Why trust us for Medical Tourism?",
       desc: "From health consultations to international care coordination — we simplify the journey to world-class treatment.",
-      image: "images/hush-naidoo-jade-photography-XwguHkKQqSA-unsplash.jpg",
+      image: "images/meddy.jpg",
       features: [
         {
           icon: "icons/doctor.png",
@@ -107,17 +107,17 @@ const sections = [
           desc: "We work with accredited hospitals across continents to ensure top-tier care.",
         },
         {
-          icon: "icons/support.png",
+          icon: "icons/customer.png",
           title: "Pre & Post Support",
           desc: "From consultation to recovery, we stand by your side with expert help.",
         },
         {
-          icon: "icons/translate.png",
+          icon: "icons/languages.png",
           title: "Multilingual Services",
           desc: "Our interpreters ensure seamless communication with your medical team.",
         },
         {
-          icon: "icons/flight.png",
+          icon: "icons/travelling.png",
           title: "Travel Coordination",
           desc: "We plan everything — flights, accommodation, care schedules — stress-free.",
         },
@@ -129,7 +129,7 @@ const sections = [
       image: "images/randy-fath-dDc0vuVH_LU-unsplash.jpg",
       features: [
         {
-          icon: "icons/network.png",
+          icon: "icons/global-connection.png",
           title: "Global Market Access",
           desc: "We link you with distributors, exporters, and agro hubs around the world.",
         },
@@ -139,12 +139,12 @@ const sections = [
           desc: "We offer agribusiness growth workshops and investor-readiness programs.",
         },
         {
-          icon: "icons/monitor.png",
+          icon: "icons/monitoring.png",
           title: "Smart Farming Tools",
           desc: "Stay updated with tools that optimize yield and track performance.",
         },
         {
-          icon: "icons/support.png",
+          icon: "icons/customer.png",
           title: "Dedicated Support",
           desc: "Your agri-journey gets a dedicated consultant from start to finish.",
         },
@@ -161,7 +161,7 @@ const sections = [
             desc: "We build web and mobile applications that streamline your operations and boost efficiency.",
           },
           {
-            icon: "icons/cloud.png",
+            icon: "icons/cloud-platform.png",
             title: "Cloud & Infrastructure",
             desc: "Get scalable, secure cloud setups with expert support and data migration assistance.",
           },
@@ -171,7 +171,7 @@ const sections = [
             desc: "We secure your digital assets with robust audits, protection plans, and real-time monitoring.",
           },
           {
-            icon: "icons/tech-support.png",
+            icon: "icons/technical-support.png",
             title: "Ongoing Tech Support",
             desc: "From setup to maintenance, we provide continuous support and system upgrades.",
           },
@@ -183,12 +183,12 @@ const sections = [
         image: "images/adeolu-eletu-E7RLgUjjazc-unsplash.jpg",
         features: [
           {
-            icon: "icons/strategy.png",
+            icon: "icons/planning.png",
             title: "Strategic Planning",
             desc: "We help define clear goals, align your team, and plan for scalable growth.",
           },
           {
-            icon: "icons/legal.png",
+            icon: "icons/law-scale.png",
             title: "Regulatory Compliance",
             desc: "We guide you through licensing, company registration, and legal documentation.",
           },
@@ -198,7 +198,7 @@ const sections = [
             desc: "From budgeting to funding strategies, we optimize your financial performance.",
           },
           {
-            icon: "icons/market.png",
+            icon: "icons/customer.png",
             title: "Market Entry Support",
             desc: "Break into new markets with research-backed strategies and positioning.",
           },
@@ -321,9 +321,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-  
-
-
+const swiper = new Swiper('.testimonial-swiper', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  autoplay: {
+    delay: 4000,
+  },
+});
 // Trigger when in view (optional optimization)
 window.addEventListener("load", animateCounters);
 

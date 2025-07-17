@@ -140,7 +140,7 @@ a.header_achor:focus {
 }
 
 .nav_btn {
-    background-color: black;
+    background-color: #B13747;
     color: white;
     border: none;
     padding: 10px 22px;
@@ -149,13 +149,14 @@ a.header_achor:focus {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .nav_btn:hover {
     background-color: #222;
 }
 .one{
-    height: 1100px;
+    height: 1200px;
     width: 100%;
 }
 .header{
@@ -169,7 +170,7 @@ a.header_achor:focus {
     color: #AE3A43;
 }
 .talk{
-    background-color: black;
+    background-color: #B13747;
         color: white;
         padding: 12px 70px;
         border: none;
@@ -179,13 +180,13 @@ a.header_achor:focus {
         margin-left: 30px;
         position: relative;
         top: 190px;
+        text-decoration: none;
 }
+
 .div_imgs{
     display: flex;
     justify-content: center;
     justify-content: space-around;
-    position: relative;
-    bottom: 150px;
 }
 .img1{
     width: 500px;
@@ -203,6 +204,8 @@ a.header_achor:focus {
     width: 1500px;
     margin: 0 auto;
     text-align: center;
+    position: relative;
+    top: 90px;
 }
 .about_us{
     position: relative;
@@ -588,7 +591,7 @@ a.header_achor:focus {
     }
 }
 .cta {
-    background: #000000;
+    background: #B13747;
     background-size: 300% 300%;
     background-repeat: no-repeat;
     animation: gradientFlow 12s ease infinite;
@@ -624,6 +627,7 @@ a.header_achor:focus {
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
+    text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -834,7 +838,7 @@ a.header_achor:focus {
 }
 }
 
-@media(max-width: 834px){
+@media(max-width: 884px){
     .hamburger {
             display: block;
             font-size: 24px;

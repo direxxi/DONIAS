@@ -248,7 +248,7 @@ a.header_achor:focus {
 }
 
 .nav_btn {
-    background-color: black;
+    background-color: #b13747;
     color: white;
     border: none;
     padding: 10px 22px;
@@ -452,7 +452,7 @@ a.header_achor:focus {
     height: 500px;
     display: flex;
     justify-content: center;
-    background-color: #000000;
+    background-color: #b13747;
 }
 
 .words_2 {
@@ -678,7 +678,7 @@ footer {
     }
 }
 
-@media (max-width: 834px) {
+@media (max-width: 884px) {
 
     .hamburger,
     .hamburger2 {
