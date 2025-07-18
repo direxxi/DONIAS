@@ -509,24 +509,24 @@ footer {
 /* Mobile ≤440px */
 @media (max-width: 440px) {
     .logo_img {
-        width: 30px;
-        height: 30px;
-        position: relative;
-        right: 20px;
-    }
-
-    .logo h2 {
-        font-size: 13px;
-    }
-
-    .hamburger {
-        position: relative;
-        left: 40px;
-    }
-
-    .nav_btn {
-        padding: 4px 40px;
-    }
+            width: 30px;
+            height: 30px;
+            position: relative;
+            right: 20px;
+        }
+    
+        .logo h2 {
+            font-size: 13px;
+        }
+    
+        .hamburger {
+            position: relative;
+            left: 40px;
+        }
+    
+        .nav_btn {
+            padding: 4px 20px;
+        }
 
     .header,
     .header_one,
