@@ -7,7 +7,7 @@ body {
 }
 
 .tourism-section {
-    width: 100vh;
+    width: 100%;
     height: 100vh;
     background: url('Country_img/rish-agarwal-f8tGje5BkpQ-unsplash.jpg') center/cover no-repeat;
     color: white;
