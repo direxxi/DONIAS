@@ -104,28 +104,31 @@
           You can reach us anytime via
           <span class="highlight">info@donias.com.ng</span>
         </p>
-
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <input type="tel" placeholder="Phone Number" />
-          <textarea placeholder="How can we help?"></textarea>
-
-          <h4 class="serve">Services</h4>
-          <div class="services">
-            <label><input type="checkbox" /> Website design</label>
-            <label><input type="checkbox" /> UX design</label>
-            <label><input type="checkbox" /> User research</label>
-            <label><input type="checkbox" /> Content creation</label>
-            <label><input type="checkbox" /> Strategy & consulting</label>
-            <label><input type="checkbox" /> Other</label>
-          </div>
+        <form
+          id="contactForm"
+          action="https://donias-backend-production.up.railway.app/contact"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+          <textarea
+            name="message"
+            placeholder="How can we help?"
+            required
+          ></textarea>
 
           <button type="submit">Get Started</button>
         </form>
       </div>
     </div>
+    <div id="customModal" class="modal modal_hidden">
+      <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button id="modalClose">OK</button>
+      </div>
+    </div>
 
-    <script src="sii.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>

@@ -184,32 +184,32 @@
 
         <form
           id="studentApplicationForm"
-          action="http://127.0.0.1:8000/submit"
-          method="POST"
           enctype="multipart/form-data"
+          method="post"
+          action="https://donias-backend-production.up.railway.app/submit"
         >
           <section>
             <h2>1. Personal Information</h2>
             <div class="grid">
               <div>
                 <label>First Name *</label>
-                <input type="text" required />
+                <input type="text" name="first_name" required />
               </div>
               <div>
                 <label>Middle Name</label>
-                <input type="text" />
+                <input type="text" name="middle_name" />
               </div>
               <div>
                 <label>Last Name *</label>
-                <input type="text" required />
+                <input type="text" name="last_name" required />
               </div>
               <div>
                 <label>Date of Birth *</label>
-                <input type="date" required />
+                <input type="date" name="date_of_birth" required />
               </div>
               <div>
                 <label>Gender *</label>
-                <select required>
+                <select name="gender" required>
                   <option value="">Select Gender</option>
                   <option>Male</option>
                   <option>Female</option>
@@ -219,37 +219,47 @@
               </div>
               <div>
                 <label>Nationality *</label>
-                <input type="text" required placeholder="e.g., Nigeria" />
+                <input
+                  type="text"
+                  name="nationality"
+                  required
+                  placeholder="e.g., Nigeria"
+                />
               </div>
               <div>
                 <label>Passport Number *</label>
-                <input type="text" required />
+                <input type="text" name="passport_number" required />
               </div>
               <div>
                 <label>Email Address *</label>
-                <input type="email" required />
+                <input type="email" name="email" required />
               </div>
               <div>
                 <label>Phone Number *</label>
-                <input type="tel" required placeholder="+234 800 123 4567" />
+                <input
+                  type="tel"
+                  name="phone_number"
+                  required
+                  placeholder="+234 800 123 4567"
+                />
               </div>
             </div>
 
             <label>Residential Address *</label>
-            <textarea rows="3" required></textarea>
+            <textarea rows="3" name="residential_address" required></textarea>
 
             <div class="grid">
               <div>
                 <label>City *</label>
-                <input type="text" required />
+                <input type="text" name="city" required />
               </div>
               <div>
                 <label>State/Province *</label>
-                <input type="text" required />
+                <input type="text" name="state_province" required />
               </div>
               <div>
                 <label>Postal Code *</label>
-                <input type="text" required />
+                <input type="text" name="postal_code" required />
               </div>
             </div>
           </section>
@@ -259,7 +269,7 @@
             <div class="grid">
               <div>
                 <label>Highest Qualification *</label>
-                <select required>
+                <select name="highest_qualification" required>
                   <option value="">Select</option>
                   <option>High School</option>
                   <option>Bachelor's</option>
@@ -270,23 +280,30 @@
               </div>
               <div>
                 <label>Last School Attended *</label>
-                <input type="text" required />
+                <input type="text" name="last_school_attended" required />
               </div>
               <div>
                 <label>Year of Graduation *</label>
-                <input type="number" min="1900" max="2099" required />
+                <input
+                  type="number"
+                  name="year_of_graduation"
+                  min="1900"
+                  max="2099"
+                  required
+                />
               </div>
               <div>
                 <label>Preferred Program *</label>
                 <input
                   type="text"
+                  name="preferred_program"
                   required
                   placeholder="e.g., Computer Science"
                 />
               </div>
               <div>
                 <label>Study level</label>
-                <select required>
+                <select name="study_level" required>
                   <option value="">Select</option>
                   <option>Bachelor's</option>
                   <option>Master's</option>
@@ -296,7 +313,7 @@
               </div>
               <div>
                 <label>Preferred Intake *</label>
-                <select required>
+                <select name="preferred_intake" required>
                   <option value="">Select Intake</option>
                   <option>Fall 2025</option>
                   <option>Spring 2026</option>
@@ -311,19 +328,23 @@
             <div class="grid">
               <div>
                 <label>Full Name</label>
-                <input type="text" />
+                <input type="text" name="parent_full_name" />
               </div>
               <div>
                 <label>Relationship</label>
-                <input type="text" placeholder="e.g., Father, Mother" />
+                <input
+                  type="text"
+                  name="parent_relationship"
+                  placeholder="e.g., Father, Mother"
+                />
               </div>
               <div>
                 <label>Phone Number</label>
-                <input type="tel" />
+                <input type="tel" name="parent_phone_number" />
               </div>
               <div>
                 <label>Email Address</label>
-                <input type="email" />
+                <input type="email" name="parent_email" />
               </div>
             </div>
           </section>
@@ -335,27 +356,27 @@
             </p>
             <div>
               <label>Passport Bio-data Page *</label>
-              <input type="file" required />
+              <input type="file" name="passport_biodata_file" required />
             </div>
             <div>
               <label>Academic Transcripts *</label>
-              <input type="file" required />
+              <input type="file" name="academic_transcripts_file" required />
             </div>
             <div>
               <label>Statement of Purpose *</label>
-              <input type="file" required />
+              <input type="file" name="statement_of_purpose_file" required />
             </div>
           </section>
 
           <section>
             <h2>5. Declaration and Consent</h2>
             <label
-              ><input type="checkbox" required /> I declare all information is
-              accurate *</label
+              ><input type="checkbox" name="declaration" required /> I declare
+              all information is accurate *</label
             ><br />
             <label
-              ><input type="checkbox" required /> I consent to processing my
-              data *</label
+              ><input type="checkbox" name="consent" required /> I consent to
+              processing my data *</label
             >
           </section>
 
@@ -366,7 +387,14 @@
           <div id="messageBox" class="hidden"></div>
         </form>
       </div>
+      <div id="modal" class="modal hidden">
+        <div class="modal-content">
+          <p id="modalMessage"></p>
+          <button id="modalClose">Close</button>
+        </div>
+      </div>
     </section>
+
     <footer class="footer">
       <div class="footer-col brand">
         <h3>Donias .</h3>
