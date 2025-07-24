@@ -183,6 +183,7 @@ span{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: white;
 }
 .title_service{
     font-size: 40px;
