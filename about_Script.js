@@ -1,94 +1,66 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // WHY CHOOSE US
-  const choices = document.querySelectorAll(".choice");
+// Mobile Menu Toggle
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.getElementById("mobile-menu");
+const spans = hamburger.querySelectorAll("span");
 
-  const setActiveChoice = (activeChoice) => {
-    choices.forEach(c => {
-      c.classList.remove("active");
-      const label = c.querySelector(".basic-label");
-      if (label) label.style.display = "block";
-    });
+hamburger.addEventListener("click", function () {
+  const isHidden = mobileMenu.classList.contains("hidden");
+  mobileMenu.classList.toggle("hidden");
 
-    activeChoice.classList.add("active");
-    const activeLabel = activeChoice.querySelector(".basic-label");
-    if (activeLabel) activeLabel.style.display = "none";
-  };
-
-  choices.forEach(choice => {
-    choice.addEventListener("click", () => {
-      setActiveChoice(choice);
-    });
-  });
-
-  if (!document.querySelector(".choice.active") && choices.length) {
-    setActiveChoice(choices[0]);
+  if (isHidden) {
+    spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+    spans[1].style.opacity = "0";
+    spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+  } else {
+    spans[0].style.transform = "";
+    spans[1].style.opacity = "";
+    spans[2].style.transform = "";
   }
+});
 
-  window.addEventListener("resize", () => {
-    const active = document.querySelector(".choice.active");
-    if (active) setActiveChoice(active);
-  });
+// Counter Animation
+const counters = document.querySelectorAll(".counter");
+const speed = 200;
 
-  // COUNTERS
-  const counters = document.querySelectorAll(".counter");
-  let countersTriggered = false;
+const animateCounter = (counter) => {
+  const target = +counter.getAttribute("data-target");
+  const increment = target / speed;
 
-  const animateCounters = () => {
-    counters.forEach(counter => {
-      const target = +counter.dataset.target;
-      let current = 0;
-      const increment = target / 100;
-
-      const updateCount = () => {
-        current += increment;
-        if (current < target) {
-          counter.innerText = Math.ceil(current);
-          setTimeout(updateCount, 20);
-        } else {
-          counter.innerText = target;
-        }
-      };
-
-      updateCount();
-    });
+  const updateCount = () => {
+    const count = +counter.innerText;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, 1);
+    } else {
+      counter.innerText = target;
+    }
   };
 
-  const statSection = document.querySelector(".three");
-  const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !countersTriggered) {
-        animateCounters();
-        countersTriggered = true;
+  updateCount();
+};
+
+// Intersection Observer for counters
+const observerOptions = { threshold: 0.5 };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const counter = entry.target.querySelector(".counter");
+      if (counter && counter.innerText === "0") {
+        animateCounter(counter);
       }
-    });
+    }
   });
-  if (statSection) counterObserver.observe(statSection);
+}, observerOptions);
 
-  // FLIP CARDS
-  const flipCards = document.querySelectorAll(".flip-card");
-  flipCards.forEach(card => {
-    card.addEventListener("click", () => {
-      flipCards.forEach(c => {
-        if (c !== card) c.classList.remove("flipped");
-      });
-      card.classList.toggle("flipped");
-    });
-  });
+document.querySelectorAll(".stat-box").forEach((box) => {
+  observer.observe(box);
+});
 
-  // HAMBURGER
-  const hamburger = document.querySelector(".hamburger");
-  const navMenu = document.querySelector(".ul");
-  const navLinks = document.querySelectorAll(".ul li a");
-
-  hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-    hamburger.classList.toggle("open");
-  });
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      navMenu.classList.remove("show");
-      hamburger.classList.remove("open");
-    });
+// Why Choose Us Interactive
+const choices = document.querySelectorAll(".choice");
+choices.forEach((choice) => {
+  choice.addEventListener("click", () => {
+    choices.forEach((c) => c.classList.remove("active"));
+    choice.classList.add("active");
   });
 });

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Get A Quote - DONIAS GLOBAL CONSULTANTS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .logo_img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .header_achor {
+        text-decoration: none;
+        color: #374151;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .header_achor:hover,
+      .header_achor:focus {
+        color: #b13748;
+      }
+
+      .header_achor::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #b13748;
+        transition: width 0.3s ease;
+      }
+
+      .header_achor:hover::after {
+        width: 100%;
+      }
+
+      .nav_btn {
+        background: linear-gradient(135deg, #b13748, #8f2d3a);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(177, 55, 72, 0.3);
+      }
+
+      .nav_btn:hover {
+        background: linear-gradient(135deg, #8f2d3a, #722731);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(177, 55, 72, 0.4);
+      }
+
+      .quote-hero {
+        background: linear-gradient(135deg, #06213a 0%, #0f3460 100%);
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+        background: white;
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: #f91616;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+      }
+
+      .form-select {
+        width: 100%;
+        padding: 12px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 16px;
+        background: white;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-select:focus {
+        outline: none;
+        border-color: #f97316;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+      }
+
+      .file-upload-area {
+        border: 2px dashed #d1d5db;
+        border-radius: 8px;
+        padding: 24px;
+        text-align: center;
+        transition: border-color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .file-upload-area:hover {
+        border-color: #f97316;
+        background: #fef7ed;
+      }
+
+      .file-upload-btn {
+        background: #374151;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+
+      .file-upload-btn:hover {
+        background: #1f2937;
+      }
+
+      .submit-btn {
+        width: 100%;
+        background: #a91613;
+        color: white;
+        font-weight: bold;
+        padding: 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background: #a90f0f;
+      }
+
+      @media (max-width: 768px) {
+        .hero-text {
+          font-size: 2rem !important;
+          line-height: 1.3 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants Logo"
+          class="logo_img"
+        />
+        <h2 class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block">
+          Donias Global Consultants
+        </h2>
+      </div>
+
+      <nav class="w-full relative lg:w-auto">
+        <!-- Mobile menu button -->
+        <button
+          class="hamburger absolute right-0 bg-[#b13748] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b13748] focus:ring-opacity-50 transition-all"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul class="hidden lg:flex items-center space-x-8">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li><a class="header_achor" href="services.html">Services</a></li>
+          <li><a class="header_achor" href="sii.html">Study Abroad</a></li>
+          <li>
+            <a class="header_achor" href="Medical_tourism.html"
+              >Medical Tourism</a
+            >
+          </li>
+
+          <!-- Desktop CTA button -->
+          <div class="hidden lg:block ml-8">
+            <button class="nav_btn" onclick="location.href='contact_us.html'">
+              Get Free Consultation
+            </button>
+          </div>
+        </ul>
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
+        >
+          <ul class="flex flex-col p-6 space-y-4">
+            <li>
+              <a class="header_achor block py-2" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="sii.html"
+                >Study Abroad</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="Medical_tourism.html"
+                >Medical Tourism</a
+              >
+            </li>
+            <li class="pt-4">
+              <button
+                class="w-full nav_btn"
+                onclick="location.href='contact_us.html'"
+              >
+                Get Free Consultation
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Get A Quote Hero Section -->
+    <section class="quote-hero py-20 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-8">
+          Get A Quote
+        </h1>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div
+        class="absolute top-10 left-10 w-32 h-24 bg-red-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute top-20 right-20 w-40 h-32 bg-red-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute bottom-20 right-40 w-16 h-16 bg-gray-600 rounded-full opacity-60"
+      ></div>
+
+      <!-- Dotted Pattern -->
+      <div class="absolute top-5 left-5 opacity-30">
+        <svg class="w-32 h-32" viewBox="0 0 100 100">
+          <defs>
+            <pattern
+              id="quoteDots"
+              x="0"
+              y="0"
+              width="8"
+              height="8"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="2" cy="2" r="1" fill="white" opacity="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#quoteDots)" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12 border border-gray-100"
+        >
+          <h2
+            class="text-2xl md:text-3xl font-bold text-[#06213a] text-center mb-8"
+          >
+            Fill The Form Below
+          </h2>
+
+          <form class="space-y-6" id="quoteForm">
+            <!-- Name Field -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-3 text-sm"
+                >Enter your name ?</label
+              >
+              <input
+                type="text"
+                name="fullName"
+                placeholder="Enter full name"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-3 text-sm"
+                >What is your email address ?</label
+              >
+              <input
+                type="email"
+                name="email"
+                placeholder="name@email.com"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <!-- Phone Field -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-3 text-sm"
+                >What is your phone number ?</label
+              >
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter mobile number"
+                class="form-input"
+                required
+              />
+            </div>
+
+            <!-- Specialities Dropdown -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-3 text-sm"
+                >Specialities</label
+              >
+              <select name="speciality" class="form-select" required>
+                <option value="cancer" selected>Cancer</option>
+                <option value="heart">Heart</option>
+                <option value="bones-joints">Bones / Joints</option>
+                <option value="brain-spine">Brain & Spine</option>
+                <option value="orthopedic">Orthopedic</option>
+                <option value="cardiology">Cardiology</option>
+                <option value="neurology">Neurology</option>
+                <option value="oncology">Oncology</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- File Upload -->
+            <div>
+              <label class="block text-gray-700 font-medium mb-3 text-sm"
+                >Upload Medical Report</label
+              >
+              <div
+                class="file-upload-area"
+                onclick="document.getElementById('medical-report').click()"
+              >
+                <input
+                  type="file"
+                  id="medical-report"
+                  name="medicalReport"
+                  class="hidden"
+                  accept=".pdf,.doc,.docx,.jpg,.png,.jpeg"
+                />
+                <div class="file-upload-btn">Choose File</div>
+                <span id="file-name" class="text-gray-500">No file chosen</span>
+                <p class="text-sm text-gray-400 mt-2">Max. file size: 2 MB.</p>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="pt-6">
+              <button type="submit" class="submit-btn">Get Quote</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready for Medical Visit CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-[#06213a] to-[#0f3460] text-white relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
+          <div class="space-y-8">
+            <h2
+              class="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight"
+            >
+              Ready For A<br />Medical Visit?
+            </h2>
+
+            <button
+              class="bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
+              onclick="location.href='Quotes.html'"
+            >
+              Click Here To Get Started
+            </button>
+          </div>
+
+          <!-- Doctor Image -->
+          <div class="relative">
+            <div class="relative z-10">
+              <!-- Large orange circle background -->
+              <div
+                class="w-80 h-80 bg-orange-500 rounded-full mx-auto relative overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="images/preceptor.jpg"
+                  alt="Smiling female doctor with stethoscope"
+                />
+              </div>
+            </div>
+
+            <!-- Decorative dots -->
+            <div class="absolute top-10 right-10 w-24 h-24 opacity-30">
+              <svg viewBox="0 0 100 100" class="w-full h-full text-white">
+                <defs>
+                  <pattern
+                    id="ctaDots"
+                    x="0"
+                    y="0"
+                    width="8"
+                    height="8"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="2" cy="2" r="1" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#ctaDots)" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- About Us Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              About Us
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Through years of experience, we have evolved a system that
+              guarantees patients get the very best of treatment. From India to
+              UAE to Israel, every hospital in our network stands out as a
+              leader in its field.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="space-y-4">
+              <h4 class="font-semibold text-gray-800">Follow Us:</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.163-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latest Blog Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Latest Blog
+            </h3>
+            <div class="space-y-6">
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Orthopaedic Surgery In India For Nigerians
+                  (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Knee Replacement Surgery In India For
+                  Nigerians (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  Medical Visa From Nigeria To India | All You Need To Know
+                </h4>
+                <p class="text-sm text-gray-500">
+                  September 10, 2024 // No Comments
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Get In Touch Column -->
+          <div class="lg:col-span-2 space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Get In Touch
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">Tel:</h4>
+                  <p class="text-gray-600">+234 805 807 1257</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    Nigeria Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    India Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    S.P. Mukherjee Road, DumDum Cantonment Kolkata - 700028
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-200 mt-16 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <p class="text-gray-500 text-sm">
+              © 2025 Donias Global Consultants. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-6">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-500 text-sm transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-500 text-sm transition-colors"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile Menu Script
+      (function () {
+        const btn = document.querySelector("button.hamburger");
+        const menu = document.getElementById("mobile-menu");
+        const spans = btn.querySelectorAll("span");
+
+        if (!btn || !menu) return;
+
+        btn.addEventListener("click", function () {
+          const isHidden = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          btn.setAttribute("aria-expanded", String(isHidden));
+
+          // Animate hamburger icon
+          if (isHidden) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+          } else {
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+
+        // Close menu when clicking a link
+        menu.addEventListener("click", function (e) {
+          const link = e.target.closest("a");
+          if (link) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+      })();
+
+      // File upload handling
+      document
+        .getElementById("medical-report")
+        .addEventListener("change", function (e) {
+          const fileName = e.target.files[0]?.name || "No file chosen";
+          document.getElementById("file-name").textContent = fileName;
+
+          // Add visual feedback for successful file selection
+          if (e.target.files[0]) {
+            document.getElementById("file-name").style.color = "#059669";
+            document.getElementById("file-name").style.fontWeight = "500";
+          } else {
+            document.getElementById("file-name").style.color = "#6b7280";
+            document.getElementById("file-name").style.fontWeight = "normal";
+          }
+        });
+
+      // Form submission handling
+      document
+        .getElementById("quoteForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Basic form validation
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData.entries());
+
+          // Check if all required fields are filled
+          const requiredFields = ["fullName", "email", "phone", "speciality"];
+          const missingFields = requiredFields.filter((field) => !data[field]);
+
+          if (missingFields.length > 0) {
+            alert("Please fill in all required fields.");
+            return;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(data.email)) {
+            alert("Please enter a valid email address.");
+            return;
+          }
+
+          // File size validation (2MB = 2 * 1024 * 1024 bytes)
+          const fileInput = document.getElementById("medical-report");
+          if (fileInput.files[0] && fileInput.files[0].size > 2 * 1024 * 1024) {
+            alert("File size must be less than 2MB.");
+            return;
+          }
+
+          // Show success message (in a real application, you would send this data to a server)
+          alert(
+            "Thank you for your quote request! We will contact you within 24 hours."
+          );
+
+          // Reset form
+          this.reset();
+          document.getElementById("file-name").textContent = "No file chosen";
+          document.getElementById("file-name").style.color = "#6b7280";
+          document.getElementById("file-name").style.fontWeight = "normal";
+        });
+    </script>
+  </body>
+</html>

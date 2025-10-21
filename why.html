@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>About Us - DONIAS GLOBAL CONSULTANTS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .logo_img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .header_achor {
+        text-decoration: none;
+        color: #374151;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .header_achor:hover,
+      .header_achor:focus {
+        color: #b13748;
+      }
+
+      .header_achor::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #b13748;
+        transition: width 0.3s ease;
+      }
+
+      .header_achor:hover::after {
+        width: 100%;
+      }
+
+      .nav_btn {
+        background: linear-gradient(135deg, #b13748, #8f2d3a);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(177, 55, 72, 0.3);
+      }
+
+      .nav_btn:hover {
+        background: linear-gradient(135deg, #8f2d3a, #722731);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(177, 55, 72, 0.4);
+      }
+
+      .feature-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(177, 55, 72, 0.1);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(177, 55, 72, 0.15);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, #b13748, #8f2d3a);
+        color: white;
+        border: none;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(177, 55, 72, 0.3);
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #8f2d3a, #722731);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(177, 55, 72, 0.4);
+      }
+
+      .about-hero {
+        background: linear-gradient(135deg, #06213a 0%, #0f3460 100%);
+      }
+
+      .offering-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        border: 2px solid #f3f4f6;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .offering-card:hover {
+        border-color: #fb4311;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .offering-card.active {
+        border-color: #fb4311;
+        background: #ffeeed;
+      }
+
+      @media (max-width: 768px) {
+        .hero-text {
+          font-size: 2rem !important;
+          line-height: 1.3 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants Logo"
+          class="logo_img"
+        />
+        <h2 class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block">
+          Donias Global Consultants
+        </h2>
+      </div>
+
+      <nav class="w-full relative lg:w-auto">
+        <!-- Mobile menu button -->
+        <button
+          class="hamburger absolute right-0 bg-[#b13748] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b13748] focus:ring-opacity-50 transition-all"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul class="hidden lg:flex items-center space-x-8">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li><a class="header_achor" href="services.html">Services</a></li>
+          <li><a class="header_achor" href="sii.html">Study Abroad</a></li>
+          <li>
+            <a class="header_achor" href="Medical_tourism.html"
+              >Medical Tourism</a
+            >
+          </li>
+          <!-- Desktop CTA button -->
+          <div class="hidden lg:block ml-8">
+            <button class="nav_btn" onclick="location.href='contact_us.html'">
+              Get Free Consultation
+            </button>
+          </div>
+        </ul>
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
+        >
+          <ul class="flex flex-col p-6 space-y-4">
+            <li>
+              <a class="header_achor block py-2" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="sii.html"
+                >Study Abroad</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="Medical_tourism.html"
+                >Medical Tourism</a
+              >
+            </li>
+            <li class="pt-4">
+              <button
+                class="w-full nav_btn"
+                onclick="location.href='contact_us.html'"
+              >
+                Get Free Consultation
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- About Us Hero Section -->
+    <section class="about-hero py-20 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-8">About Us</h1>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div
+        class="absolute top-10 left-10 w-32 h-24 bg-red-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute top-20 right-20 w-40 h-32 bg-red-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute bottom-20 right-40 w-16 h-16 bg-gray-600 rounded-full opacity-60"
+      ></div>
+
+      <!-- Dotted Pattern -->
+      <div class="absolute top-5 left-5 opacity-30">
+        <svg class="w-32 h-32" viewBox="0 0 100 100">
+          <defs>
+            <pattern
+              id="aboutDots"
+              x="0"
+              y="0"
+              width="8"
+              height="8"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="2" cy="2" r="1" fill="white" opacity="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#aboutDots)" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Images Grid -->
+          <div class="relative">
+            <!-- Main large image -->
+            <div class="relative z-10">
+              <img
+                class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl"
+                src="images/preceptor.jpg"
+                alt="Medical professional with stethoscope"
+              />
+            </div>
+
+            <!-- Smaller overlapping image -->
+            <div
+              class="absolute top-8 right-8 lg:top-12 lg:right-12 z-20 bg-white p-3 rounded-xl shadow-xl"
+            >
+              <img
+                class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg"
+                src="images/preceptor.jpg"
+                alt="Healthcare consultation"
+              />
+            </div>
+
+            <!-- Decorative number -->
+            <div
+              class="absolute bottom-8 left-8 lg:bottom-12 lg:left-12 z-20 bg-[#06213a] text-white p-6 rounded-xl shadow-xl"
+            >
+              <span class="text-4xl md:text-5xl font-bold opacity-30">01</span>
+            </div>
+
+            <!-- Decorative elements -->
+            <div
+              class="absolute -top-6 -left-6 w-24 h-24 bg-orange-400 rounded-full opacity-20"
+            ></div>
+            <div
+              class="absolute -bottom-6 -right-6 w-20 h-20 bg-[#b13748] rounded-full opacity-20"
+            ></div>
+
+            <!-- Dotted pattern -->
+            <div class="absolute top-0 right-0 w-32 h-32 opacity-30">
+              <svg viewBox="0 0 100 100" class="w-full h-full text-gray-300">
+                <defs>
+                  <pattern
+                    id="dots"
+                    x="0"
+                    y="0"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="2" cy="2" r="1" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#dots)" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-8">
+            <!-- Badge -->
+            <div
+              class="inline-flex items-center px-4 py-2 bg-[#b13748] border border-orange-200 rounded-full"
+            >
+              <span
+                class="text-white font-semibold text-sm uppercase tracking-wide"
+                >About Us</span
+              >
+            </div>
+
+            <!-- Heading -->
+            <h2
+              class="text-3xl md:text-4xl xl:text-5xl font-bold text-[#06213a] leading-tight"
+            >
+              Nigeria's Top Medical Tourism Agency
+            </h2>
+
+            <!-- Description paragraphs -->
+            <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+              <p>
+                Donias Medical Tourism is a Nigeria based medical tourism agency
+                that connects Nigerian patients with quality and affordable
+                medical facilities abroad.
+              </p>
+              <p>
+                We ensure a rewarding and positive outcome to our clients
+                through our personalized service and partnership with some of
+                the world's leading medical facilities in India, UAE, Germany,
+                the United Kingdom and Israel.
+              </p>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="pt-4">
+              <button
+                class="bg-[#b13748] hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-1"
+              >
+                Speak With A Consultant
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Medvisit Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#06213a] mb-4">
+            Why Medvisit
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Partnership Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">Partnership</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              We partner with leading hospitals and expert doctors in three
+              continents to ensure you receive the best positive treatment.
+            </p>
+          </div>
+
+          <!-- Cooperation Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">Cooperation</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Seamless cooperation with local doctor in Nigeria to ensure
+              patients get good follow-up care
+            </p>
+          </div>
+
+          <!-- The Best Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">The Best</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              We only work with the best hospitals with international
+              accreditation and pedigree of excellence.
+            </p>
+          </div>
+
+          <!-- Seasoned Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">Seasoned</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              All our hospitals have dedicated international patients service
+              teams that help the patients as well as companions throughout
+              their stay.
+            </p>
+          </div>
+
+          <!-- Personalized Care Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">
+                Personalized Care
+              </h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Personalized care by one of the most reliable medical travel
+              company in Nigeria
+            </p>
+          </div>
+
+          <!-- Price Card -->
+          <div class="feature-card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-8 h-8 bg-[#b13748] rounded-full flex items-center justify-center mr-4"
+              >
+                <svg
+                  class="w-5 h-5 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-[#06213a]">Price</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              The lowest possible cost for medical care and treatment abroad.
+            </p>
+          </div>
+        </div>
+
+        <!-- Decorative dots -->
+        <div class="absolute bottom-10 left-10 w-24 h-24 opacity-20">
+          <svg viewBox="0 0 100 100" class="w-full h-full text-gray-400">
+            <defs>
+              <pattern
+                id="whyDots"
+                x="0"
+                y="0"
+                width="8"
+                height="8"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="2" cy="2" r="1" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#whyDots)" />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Unique Offerings Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Doctor Images -->
+          <div class="relative">
+            <img
+              class="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+              src="images/preceptor.jpg"
+              alt="Smiling medical professionals"
+            />
+
+            <!-- Decorative dots -->
+            <div class="absolute bottom-10 right-10 w-24 h-24 opacity-20">
+              <svg viewBox="0 0 100 100" class="w-full h-full text-gray-400">
+                <defs>
+                  <pattern
+                    id="offeringDots"
+                    x="0"
+                    y="0"
+                    width="8"
+                    height="8"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="2" cy="2" r="1" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#offeringDots)" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#06213a] mb-8">
+              Our Unique Offerings
+            </h2>
+
+            <!-- Accordion Items -->
+            <div class="space-y-4">
+              <!-- Free Second Opinion -->
+              <div class="offering-card active" onclick="toggleOffering(0)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Free Second Opinion
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-red-500 transform rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    When dealing with medical issues, consulting with another
+                    doctor can be an important step to finding best care. That
+                    is why we provide patients with free second opinion from our
+                    expert panel of doctors.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Talk To Our Experts -->
+              <div class="offering-card" onclick="toggleOffering(1)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Talk To Our Experts From Anywhere
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    We offer personalized video consultations with our expert
+                    consultants, giving you the chance to connect with your
+                    doctors, build trust, and get all your questions
+                    answered—well before you travel.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Visa Assistance -->
+              <div class="offering-card" onclick="toggleOffering(2)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Visa Assistance
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    Visa processing can be complicated, but our dedicated
+                    assistants handle everything—from documentation to
+                    approvals—so you can focus on preparing for your treatment
+                    with complete peace of mind.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Airport Shuttle -->
+              <div class="offering-card" onclick="toggleOffering(3)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Airport Shuttle / Conceirge Services
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    We go beyond airport shuttles to offer full concierge
+                    services, ensuring your comfort and catering to your every
+                    need throughout your stay.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Logistics -->
+              <div class="offering-card" onclick="toggleOffering(4)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Logistics Of Your Stay
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    We provide all-round logistics to give patients a memorable
+                    stay including assisting you to find affordable hotel or
+                    guest house tailored to your needs, foods, translator etc.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Hospital Arrangements -->
+              <div class="offering-card" onclick="toggleOffering(5)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Hospital Arrangements
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    To ensure your energy is focused entirely on getting better,
+                    we take care of all the formalities—check-ins, hospital
+                    admission, and even post-discharge follow-ups—so you can
+                    heal without worry.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Post Treatment Tours -->
+              <div class="offering-card" onclick="toggleOffering(6)">
+                <div class="flex items-center justify-between">
+                  <h3 class="text-lg font-semibold text-[#06213a]">
+                    Post Treatment Tours
+                  </h3>
+                  <svg
+                    class="w-5 h-5 text-gray-400"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="mt-4 text-gray-600">
+                  <p>
+                    If you wish, we can arrange personalized tours after your
+                    treatment—so once you’re feeling your best, you can relax
+                    and experience the sights and sounds of the region."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- About Us Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              About Us
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Through years of experience, we have evolved a system that
+              guarantees patients get the very best of treatment. From India to
+              UAE to Israel, every hospital in our network stands out as a
+              leader in its field.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="space-y-4">
+              <h4 class="font-semibold text-gray-800">Follow Us:</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.163-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latest Blog Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Latest Blog
+            </h3>
+            <div class="space-y-6">
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Orthopaedic Surgery In India For Nigerians
+                  (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Knee Replacement Surgery In India For
+                  Nigerians (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  Medical Visa From Nigeria To India | All You Need To Know
+                </h4>
+                <p class="text-sm text-gray-500">
+                  September 10, 2024 // No Comments
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Get In Touch Column -->
+          <div class="lg:col-span-2 space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Get In Touch
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">Tel:</h4>
+                  <p class="text-gray-600">+234 805 807 1257</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    Nigeria Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    India Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    S.P. Mukherjee Road, DumDum Cantonment Kolkata - 700028
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-200 mt-16 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <p class="text-gray-500 text-sm">
+              © 2025 Donias Global Consultants. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-6">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-500 text-sm transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-500 text-sm transition-colors"
+                >Terms of Service</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+      (function () {
+        const btn = document.querySelector("button.hamburger");
+        const menu = document.getElementById("mobile-menu");
+        const spans = btn.querySelectorAll("span");
+
+        if (!btn || !menu) return;
+
+        btn.addEventListener("click", function () {
+          const isHidden = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          btn.setAttribute("aria-expanded", String(isHidden));
+
+          // Animate hamburger icon
+          if (isHidden) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+          } else {
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+
+        // Close menu when clicking a link
+        menu.addEventListener("click", function (e) {
+          const link = e.target.closest("a");
+          if (link) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+      })();
+
+      // Accordion functionality for offerings section
+      function toggleOffering(index) {
+        const cards = document.querySelectorAll(".offering-card");
+        const targetCard = cards[index];
+
+        // Remove active class from all cards
+        cards.forEach((card) => {
+          card.classList.remove("active");
+          const arrow = card.querySelector("svg");
+          arrow.classList.remove("rotate-180", "text-red-500");
+          arrow.classList.add("text-gray-400");
+
+          // Hide content
+          const content = card.querySelector(".mt-4");
+          if (content) {
+            content.style.display = "none";
+          }
+        });
+
+        // Add active class to target card
+        targetCard.classList.add("active");
+        const arrow = targetCard.querySelector("svg");
+        arrow.classList.add("rotate-180", "text-red-500");
+        arrow.classList.remove("text-gray-400");
+
+        // Show content for active card
+        const content = targetCard.querySelector(".mt-4");
+        if (content) {
+          content.style.display = "block";
+        }
+      }
+
+      // Initialize first item as active
+      document.addEventListener("DOMContentLoaded", function () {
+        const firstCard = document.querySelector(".offering-card");
+        if (firstCard) {
+          firstCard.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

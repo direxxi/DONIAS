@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Treatments - DONIAS GLOBAL CONSULTANTS</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
+      }
+
+      .logo_img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .header_achor {
+        text-decoration: none;
+        color: #374151;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .header_achor:hover,
+      .header_achor:focus {
+        color: #b13748;
+      }
+
+      .header_achor::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #b13748;
+        transition: width 0.3s ease;
+      }
+
+      .header_achor:hover::after {
+        width: 100%;
+      }
+
+      .nav_btn {
+        background: linear-gradient(135deg, #b13748, #8f2d3a);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(177, 55, 72, 0.3);
+      }
+
+      .nav_btn:hover {
+        background: linear-gradient(135deg, #8f2d3a, #722731);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(177, 55, 72, 0.4);
+      }
+
+      .treatments-hero {
+        background: linear-gradient(135deg, #06213a 0%, #0f3460 100%);
+      }
+
+      .treatment-card {
+        background: white;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .treatment-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+        border-color: #f97316;
+      }
+
+      .icon-circle {
+        width: 80px;
+        height: 80px;
+        border: 2px solid #e5e7eb;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .treatment-card:hover .icon-circle {
+        border-color: #f97316;
+        background: #fff7ed;
+      }
+
+      .hospital-logos {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex-wrap: wrap;
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+      }
+
+      .hospital-logos:hover {
+        opacity: 1;
+      }
+
+      .hospital-logo {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      .hospital-logo:hover {
+        filter: grayscale(0%);
+      }
+
+      @media (max-width: 768px) {
+        .hero-text {
+          font-size: 2.5rem !important;
+          line-height: 1.2 !important;
+        }
+
+        .treatment-card {
+          padding: 1.5rem;
+        }
+
+        .icon-circle {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants Logo"
+          class="logo_img"
+        />
+        <h2 class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block">
+          Donias Global Consultants
+        </h2>
+      </div>
+
+      <nav class="w-full relative lg:w-auto">
+        <!-- Mobile menu button -->
+        <button
+          class="hamburger absolute right-0 bg-[#b13748] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#b13748] focus:ring-opacity-50 transition-all"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <!-- Desktop navigation -->
+        <ul class="hidden lg:flex items-center space-x-8">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li><a class="header_achor" href="services.html">Services</a></li>
+          <li><a class="header_achor" href="sii.html">Study Abroad</a></li>
+          <li>
+            <a class="header_achor" href="Medical_tourism.html"
+              >Medical Tourism</a
+            >
+          </li>
+        </ul>
+
+        <!-- Desktop CTA button -->
+        <div class="hidden lg:block ml-8">
+          <button class="nav_btn" onclick="location.href='contact_us.html'">
+            Get Free Consultation
+          </button>
+        </div>
+
+        <!-- Mobile menu -->
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
+        >
+          <ul class="flex flex-col p-6 space-y-4">
+            <li>
+              <a class="header_achor block py-2" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="sii.html"
+                >Study Abroad</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="Medical_tourism.html"
+                >Medical Tourism</a
+              >
+            </li>
+            <li class="pt-4">
+              <button
+                class="w-full nav_btn"
+                onclick="location.href='contact_us.html'"
+              >
+                Get Free Consultation
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Treatments Hero Section -->
+    <section class="treatments-hero py-20 relative overflow-hidden">
+      <div class="container mx-auto px-4 md:px-8 text-center relative z-10">
+        <h1 class="hero-text text-4xl md:text-6xl font-bold text-white mb-8">
+          Treatments
+        </h1>
+      </div>
+
+      <!-- Decorative Elements -->
+      <div
+        class="absolute top-10 left-10 w-32 h-24 bg-orange-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute top-20 right-20 w-40 h-32 bg-orange-500 rounded-lg opacity-80"
+      ></div>
+      <div
+        class="absolute bottom-20 right-40 w-16 h-16 bg-gray-600 rounded-full opacity-60"
+      ></div>
+
+      <!-- Dotted Pattern -->
+      <div class="absolute top-5 left-5 opacity-30">
+        <svg class="w-32 h-32" viewBox="0 0 100 100">
+          <defs>
+            <pattern
+              id="treatmentDots"
+              x="0"
+              y="0"
+              width="8"
+              height="8"
+              patternUnits="userSpaceOnUse"
+            >
+              <circle cx="2" cy="2" r="1" fill="white" opacity="0.5" />
+            </pattern>
+          </defs>
+          <rect width="100" height="100" fill="url(#treatmentDots)" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Treatments Overview Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-[#06213a] mb-6">
+            Our <span class="text-orange-500">World-Class</span> Procedures Cut
+            Across A Wide Range Of Conditions Including
+          </h2>
+        </div>
+
+        <!-- First Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Heart -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Heart</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Heart disease covers a range of conditions that affect the heart
+            </p>
+          </div>
+
+          <!-- Cancer -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Cancer</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Cancer is a disease in which cells anywhere in the body begin to
+              divide uncontrollably.
+            </p>
+          </div>
+
+          <!-- Bones/Joints -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Bones / Joints
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              The bone also protects and support our organs and make it possible
+              for us to move.
+            </p>
+          </div>
+
+          <!-- Brain & Spine -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Brain & Spine</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Disorders that affect the brain, spinal cord and nerves are called
+              neurological disorders.
+            </p>
+          </div>
+        </div>
+
+        <!-- Second Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Kidney -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Kidney</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Kidney Transplant is done when the patient is suffering from
+              End-Stage renal Disease (kidneys lose about 90% of their
+              functioning).
+            </p>
+          </div>
+
+          <!-- Eyes -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Eyes</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Eye surgery, also known as ocular surgery, is surgery performed on
+              the eye or its adnexa, typically by an ophthalmologist.
+            </p>
+          </div>
+
+          <!-- Urology -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Urology</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Urology is the medical and surgical specialty involving disorders
+              of the genitourinary tract and the adrenal glands.
+            </p>
+          </div>
+
+          <!-- Liver -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Liver</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Liver resection is surgery to remove a piece of the liver. Up to
+              one-half of your liver can be removed if the rest of it is
+              healthy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Third Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- ACL Injury -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">ACL Injury</h3>
+            <p class="text-gray-600 leading-relaxed">
+              ACL is also known as Anterior Cruciate Ligament, which refers to
+              an injury in this specific ligament that runs diagonally across
+              the middle of your knee.
+            </p>
+          </div>
+
+          <!-- Liposuction -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Liposuction</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Liposuction, often called Lipoplasty or Body Contouring, is a
+              surgical procedure that removes excess fat from particular body
+              regions.
+            </p>
+          </div>
+
+          <!-- LVAD Implantation -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              LVAD Implantation
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              It is used to sustain cardiac function in those with end-stage
+              heart failure or as a bridge to heart transplants.
+            </p>
+          </div>
+
+          <!-- Diabetes -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Diabetes</h3>
+            <p class="text-gray-600 leading-relaxed">
+              A group of diseases that result in too much sugar in the blood
+              (high blood glucose).
+            </p>
+          </div>
+        </div>
+
+        <!-- Fourth Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Breast Augmentation -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Breast Augmentation
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Breast augmentation also termed, augmentation mammoplasty, is a
+              surgery to increase breast size by placing breast implants under
+              the tissue or muscles of the chest.
+            </p>
+          </div>
+
+          <!-- Epilepsy -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Epilepsy</h3>
+            <p class="text-gray-600 leading-relaxed">
+              A disorder in which nerve cell activity in the brain is disturbed,
+              causing seizures.
+            </p>
+          </div>
+
+          <!-- Septoplasty -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Septoplasty</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Septoplasty is a surgical procedure that is meant to correct a
+              deviated septum. The septum is the wall of bone and cartilage that
+              divides the nose into two separate nostrils.
+            </p>
+          </div>
+
+          <!-- Tympanoplasty -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Tympanoplasty</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Tympanoplasty is a type of ear surgery done to patch up the hole
+              in the eardrum.
+            </p>
+          </div>
+        </div>
+
+        <!-- Fifth Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Hip Replacement Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Hip Replacement Surgery
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              A hip replacement is a surgical procedure that includes the
+              removal and replacement of portions of an injured hip joint either
+              with an artificial joint or implant.
+            </p>
+          </div>
+
+          <!-- Keyhole Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Keyhole Surgery
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Keyhole surgery - also known as laparoscopic surgery is a surgical
+              procedure that allows a surgeon to access the inside of the body
+              without making large incisions.
+            </p>
+          </div>
+
+          <!-- Interventional Cardiology -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Interventional Cardiology
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Interventional cardiology refers to the branch of cardiology that
+              includes a specific type of catheter-based treatment to deal with
+              heart diseases.
+            </p>
+          </div>
+
+          <!-- Colorectal Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Colorectal Surgery
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Colorectal surgery is a broad term used to describe different
+              surgical procedures to treat the problems of the lower gut.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sixth Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Abdominal Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Abdominal Surgery
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Abdominal surgery is a broad term used for various surgical
+              procedures around the abdominal region.
+            </p>
+          </div>
+
+          <!-- Spine Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Spine Surgery</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Spine surgery is a surgical procedure performed to treat serious
+              musculoskeletal injuries or nerve compression in the back.
+            </p>
+          </div>
+
+          <!-- Tonsillectomy -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Tonsillectomy</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Tonsillectomy is a surgical procedure performed to remove the
+              tonsils. Tonsils are the two small glands located around the back
+              of the mouth and nasal cavity.
+            </p>
+          </div>
+
+          <!-- Acne Treatment -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Acne Treatment
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Acne is a common condition that affects the population around the
+              world. It refers to an inflammatory skin condition that is chronic
+              in nature.
+            </p>
+          </div>
+        </div>
+
+        <!-- Final Row of Treatments -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <!-- Chemotherapy -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">Chemotherapy</h3>
+            <p class="text-gray-600 leading-relaxed">
+              Chemotherapy is a sort of therapy that is used to treat cancer; in
+              this process chemical drugs are used to kill the rapidly growing
+              cells in the body, which is the root cause of cancer.
+            </p>
+          </div>
+
+          <!-- Bariatric Surgery -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Bariatric Surgery
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Bariatric Obesity Weight loss surgery is an effective treatment
+              option for patients suffering with morbid obesity.
+            </p>
+          </div>
+
+          <!-- Coronary Angioplasty -->
+          <div class="treatment-card text-center">
+            <div class="icon-circle">
+              <svg
+                class="w-8 h-8 text-gray-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#06213a] mb-4">
+              Coronary Angioplasty
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              The coronary arteries play one of the significant roles in the
+              body. They are responsible for supplying blood to the heart.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hospital Partners Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-bold text-[#06213a] mb-4">
+            GET TREATMENT FROM WORLD-CLASS HOSPITALS
+          </h2>
+        </div>
+
+        <div class="hospital-logos">
+          <div class="text-gray-400 font-bold text-lg">parkside HOSPITAL</div>
+          <div class="text-gray-400 font-bold text-lg">Medeor</div>
+          <div class="text-gray-400 font-bold text-lg">WOCKHARDT HOSPITALS</div>
+          <div class="text-gray-400 font-bold text-lg">SCHÖN KLINIK</div>
+          <div class="text-gray-400 font-bold text-lg">MAX HEALTHCARE</div>
+          <div class="text-gray-400 font-bold text-lg">lakeshore</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ready for Medical Visit CTA Section -->
+    <section
+      class="py-20 bg-gradient-to-r from-[#06213a] to-[#0f3460] text-white relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <!-- Content -->
+          <div class="space-y-8">
+            <h2
+              class="text-3xl md:text-4xl xl:text-5xl font-bold leading-tight"
+            >
+              Ready For A<br />Medical Visit?
+            </h2>
+
+            <button
+              class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:transform hover:-translate-y-2"
+            >
+              Click Here To Get Started
+            </button>
+          </div>
+
+          <!-- Doctor Image -->
+          <div class="relative">
+            <div class="relative z-10">
+              <!-- Large orange circle background -->
+              <div
+                class="w-80 h-80 bg-orange-500 rounded-full mx-auto relative overflow-hidden"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="images/preceptor.jpg"
+                  alt="Smiling female doctor with stethoscope"
+                />
+              </div>
+            </div>
+
+            <!-- Decorative dots -->
+            <div class="absolute top-10 right-10 w-24 h-24 opacity-30">
+              <svg viewBox="0 0 100 100" class="w-full h-full text-white">
+                <defs>
+                  <pattern
+                    id="ctaDots"
+                    x="0"
+                    y="0"
+                    width="8"
+                    height="8"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="2" cy="2" r="1" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#ctaDots)" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-20 border-t border-gray-200">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- About Us Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              About Us
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Through years of experience, we have evolved a system that
+              guarantees patients get the very best of treatment. From India to
+              UAE to Israel, every hospital in our network stands out as a
+              leader in its field.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="space-y-4">
+              <h4 class="font-semibold text-gray-800">Follow Us:</h4>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 bg-gray-800 text-white rounded-full flex items-center justify-center hover:bg-orange-500 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.163-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Latest Blog Column -->
+          <div class="space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Latest Blog
+            </h3>
+            <div class="space-y-6">
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Orthopaedic Surgery In India For Nigerians
+                  (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  A Complete Guide To Knee Replacement Surgery In India For
+                  Nigerians (2025)
+                </h4>
+                <p class="text-sm text-gray-500">May 27, 2025 // No Comments</p>
+              </article>
+
+              <article class="space-y-2">
+                <h4
+                  class="font-semibold text-gray-800 hover:text-orange-500 transition-colors cursor-pointer"
+                >
+                  Medical Visa From Nigeria To India | All You Need To Know
+                </h4>
+                <p class="text-sm text-gray-500">
+                  September 10, 2024 // No Comments
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Get In Touch Column -->
+          <div class="lg:col-span-2 space-y-6">
+            <h3
+              class="text-xl font-bold text-[#06213a] uppercase tracking-wide"
+            >
+              Get In Touch
+            </h3>
+
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">Tel:</h4>
+                  <p class="text-gray-600">+234 805 807 1257</p>
+                </div>
+
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    Nigeria Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    1A, Johnson Oguntuyo street, Atunrase estate, Gbagada Lagos.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div>
+                  <h4 class="font-semibold text-gray-800 mb-2">
+                    India Address:
+                  </h4>
+                  <p class="text-gray-600">
+                    S.P. Mukherjee Road, DumDum Cantonment Kolkata - 700028
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-200 mt-16 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <p class="text-gray-500 text-sm">
+              Copyright © 2025
+              <span class="text-orange-500">Medvisit Nigeria</span>
+            </p>
+            <div class="flex items-center space-x-6">
+              <a
+                href="#"
+                class="text-gray-500 hover:text-orange-500 text-sm transition-colors"
+                >Terms & Conditions</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      (function () {
+        const btn = document.querySelector("button.hamburger");
+        const menu = document.getElementById("mobile-menu");
+        const spans = btn.querySelectorAll("span");
+
+        if (!btn || !menu) return;
+
+        btn.addEventListener("click", function () {
+          const isHidden = menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          btn.setAttribute("aria-expanded", String(isHidden));
+
+          // Animate hamburger
+          if (isHidden) {
+            spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+            spans[1].style.opacity = "0";
+            spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+          } else {
+            spans[0].style.transform = "";
+            spans[1].style.opacity = "";
+            spans[2].style.transform = "";
+          }
+        });
+
+        // Close menu when clicking a link
+        menu.addEventListener("click", function (e) {
+          if (e.target.closest("a")) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans.forEach(
+              (span) => (span.style.transform = span.style.opacity = "")
+            );
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", function (e) {
+          if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add("hidden");
+            btn.setAttribute("aria-expanded", "false");
+            spans.forEach(
+              (span) => (span.style.transform = span.style.opacity = "")
+            );
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
