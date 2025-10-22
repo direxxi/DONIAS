@@ -1,269 +1,848 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="shortcut icon" href="favicon/doniasLogo.png" type="image/x-icon">
-    <title>Services</title>
-  </head>
-  <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Grey+Qo&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,400;1,300;1,400&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="travel_style.css" />
-        <title>DONIAS GLOBAL CONSULTANTS</title>
-      </head>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-      <body>
-        <header>
-          <div class="logo">
-            <img src="icons/logo.png" alt="logo" class="logo_img" />
-            <h2>Donias Global Consultants</h2>
-          </div>
-          <nav>
-            <button class="hamburger" aria-label="Toggle menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>     
-            <ul class="ul" id="ulz">
-              <li><a class="header_achor" href="index.html">Home</a></li>
-              <li><a class="header_achor" href="about_us.html">About Us</a></li>
-              <li class="dropdown-parent">
-                <a class="header_achor" href="services.html">Services</a>
-              </li>
-              <li class="dropdown-parent">
-                <a class="header_achor" href="sii.html">Study Abroad</a>
-              </li>
-              <li>
-                <a
-                  class="header_achor"
-                  href="https://itechlink.zohobackstage.com/"
-                  >Events</a
-                >
-              </li>
-            </ul>
-            <div class="get_started">
-              <button class="nav_btn" onclick="location.href='contact_us.html'">
-                Get Free Consultation
-              </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donias Travel & Immigration - Your Journey Abroad Begins Here</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Rubik', sans-serif; }
+        
+        :root {
+            --burgundy: #a23342;
+            --navy: #06213a;
+            --gold: #fbbf24;
+        }
+        .bg-burgundy { background-color: var(--burgundy); }
+        .bg-navy { background-color: var(--navy); }
+        .text-burgundy { color: var(--burgundy); }
+        .text-navy { color: var(--navy); }
+        .text-gold { color: var(--gold); }
+        .border-burgundy { border-color: var(--burgundy); }
+        
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(6, 33, 58, 0.7), rgba(6, 33, 58, 0.3));
+        }
+        
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+        }
+        
+        .image-card-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+        
+        @media (max-width: 768px) {
+            .stat-number { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-navy">donias<span class="text-burgundy">travels</span></h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-burgundy transition-colors">Home</a>
+                    <a href="#services" class="text-gray-700 hover:text-burgundy transition-colors">Services</a>
+                    <a href="#destinations" class="text-gray-700 hover:text-burgundy transition-colors">Destinations</a>
+                    <a href="#packages" class="text-gray-700 hover:text-burgundy transition-colors">Packages</a>
+                    <a href="#contact" class="text-gray-700 hover:text-burgundy transition-colors">Contact</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <button class="bg-burgundy hover:bg-opacity-90 text-white px-6 py-2 rounded-full transition-all">
+                        Book Consultation
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
-          </nav>
-        </header>
-        <section class="one">
-          <div class="head">
-            <h2 class="header">Travel and Immigration</h2>
-          </div>
-          <button class="hamburger2" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>  
-        <div class="ull">
-            <ul class="ul" >
-              <li>
-                <a href="Business_Consultancy.html">Business Consultancy</a>
-              </li>
-              <li>
-                <a href="Agribusiness.html">Agribusiness</a>
-              </li>
-                  <a href="Information.html">Information and Technology Services</a>
-                </li>
-                </li>
-                <li><a href="power.html">Power and Infracstructure</a></li>
-                <li><a href="Event.html">Event Management</a></li>
-                <li><a href="Medical.html">Health and Medical Services</a></li>
-              </ul>
-             
         </div>
-        </section>
-        <section class="two">
-            <div class="lines"></div>
-            <div class="lines"></div>
-        </section>
-        <section class="three">
-            <div class="header_3">
-                <h2 class="title">
-                    Facilitating Seamless Journeys and Global Opportunities
-                </h2>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-4 space-y-3">
+                <a href="#home" class="block text-gray-700 hover:text-burgundy">Home</a>
+                <a href="#services" class="block text-gray-700 hover:text-burgundy">Services</a>
+                <a href="#destinations" class="block text-gray-700 hover:text-burgundy">Destinations</a>
+                <a href="#packages" class="block text-gray-700 hover:text-burgundy">Packages</a>
+                <a href="#contact" class="block text-gray-700 hover:text-burgundy">Contact</a>
+                <button class="w-full bg-burgundy text-white px-6 py-2 rounded-full">Book Consultation</button>
             </div>
-            <!-- <div class="sub_header3">
-               <p class="subtitle">
-                Our areas of expertise encompass a comprehensive range of travel and immigration services, designed to assist individuals, families, and organizations in navigating the complexities of international mobility. These include visa advisory and processing, study abroad placement and guidance, work and residency permit assistance, travel planning and itinerary management, flight and accommodation booking, pre-departure orientation and counseling, immigration compliance and documentation support, as well as relocation and settlement services tailored to your unique needs.
-               </p>
-            </div> -->
-        </section>
-        <section class="four">
-            <div class="side1">
-              <h2 class="header_one">
-                Visioning & Feasibility
-              </h2>
-              <p class="sub_one">
-                We begin by understanding your travel or immigration goals, aligning them with personal aspirations, destination requirements, and global opportunities. Through thorough consultations and feasibility assessments, we engage all stakeholders, evaluate eligibility and options whether for tours, Nigerian visas, international immigration, or corporate travel and chart a clear, achievable path to your journey’s success.
-              </p>
-              <div class="line"></div>
-              <h2 class="header_one_2">
-                Strategic Roadmap Development
-              </h2>
-              <p class="sub_one_2">
-                Our strategic roadmaps provide clarity, confidence, and actionable plans for your travel and immigration needs. Using realworld data, destination insights, and regulatory expertise, we design tailored itineraries, application timelines, and budget-friendly solutions combining proven processes with innovative tools to ensure efficiency, compliance, and peace of mind.
-              </p>
-            </div>
-            <div class="line" id="loin"></div>
-            <div class="side2">
-              <h2 class="header_two">
-                Operational Design & Optimization
-              </h2>
-              <p class="sub_two">
-                We dive into the details of your plans with precision and care, ensuring all aspects from tour packages to Nigerian visa applications, from immigration paperwork to flight and accommodation bookings are meticulously coordinated. By integrating advanced booking platforms, streamlined documentation processes, and destination-specific knowledge, we deliver smooth, optimized solutions for every client.
-              </p>
-              <div class="line"></div>
-              <h2 class="header_two_2">
-                On-Ground Execution & Support
-              </h2>
-              <p class="sub_two_2">
-                Our expertise extends to hands-on support, ensuring your plans materialize seamlessly and stress-free. We manage ticketing, tours, visa submissions, immigration follow-up, travel insurance, and pre-departure briefings embedding best practices and local know-how to guarantee a memorable, compliant, and impactful journey.
-              </p>
-            </div>
-        </section>
-        <section class="divider">
-          <div class="lines" id="linen"></div>
-        </section>
-        <section class="deep_dive" id="deep_dive">
-          <div class="deep_header">
-            Beyond Borders: Exploring Our Full Range of Travel & Immigration Services
-          </div>
-          <div class="deeper" id="deepers">
-            <div class="words_2">
-              <h2 class="title_service">Tourism</h2>
-              <p class="sub_services">
-                We provide services such as customized tour packages, local and international sightseeing arrangements, guided cultural and historical tours, hotel and resort bookings, eco-tourism and adventure experiences, group travel coordination, honeymoon and romantic getaway planning, travel insurance arrangements, airport transfers and private transportation, multilingual tour guides, curated culinary and shopping experiences, and so much more — all tailored to create unforgettable journeys and seamless travel memories.
-              </p>
-              <p class="learn_more"><a href="Tourism.html">OUR DESTINATIONS</a> -></p>
-            </div>
-            <div class="img_2">
-              <img
-                src="service_images/aditya-siva-6rDbvXzIVpQ-unsplash.jpg"
-                alt="travel"
-                class="title_img"
-              />
-            </div>
-          </div>
-          <div class="words_three">
-            <div class="img_3">
-              <img
-                src="service_images/jaimie-harmsen-8d9jdqyGaQA-unsplash.jpg"
-                alt="business"
-                class="title_imgs"
-              />
-            </div>
-            <div class="words_3">
-              <h2 class="title_services">Visa and Immigration</h2>
-              <p class="sub_service" id="subb">
-                We assist individuals and organizations in navigating the complexities of international travel and immigration. Our services include:
-                <ul class="uls">
-                  <li>Business Permit</li>
-                  <li>Expatriate Quota</li>
-                  <li>STR Visa (e.g., from India)</li>
-                  <li>Renewal and Regularization of CERPAC</li>
-                  <li>Temporary Work Permit (TWP)</li>
-                  <li>Visa on Arrival (VOA)</li>
-                  <li>Escort to and from Airport</li>
-                  <li>Airport Protocol Services</li>
-                  <li>Airport Lounges</li>
-                  <li>E-pass and more</li>
-                </ul>
-              </p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center mt-20">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&h=1080&fit=crop" alt="Airplane Wing Travel" class="absolute inset-0 w-full h-full object-cover"/>
+        <div class="hero-overlay absolute inset-0"></div>
+        
+        <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-light mb-6 leading-tight">
+                Begin your dream journey with our<br/>expert guidance and support
+            </h1>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <button class="bg-burgundy hover:bg-opacity-90 text-white px-8 py-3 rounded-full transition-all">
+                    Student Consultation
+                </button>
+                <button class="bg-white bg-opacity-20 hover:bg-opacity-30 backdrop-blur-sm text-white border border-white px-8 py-3 rounded-full transition-all">
+                    Book Appointment
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white hover:text-navy text-white px-8 py-3 rounded-full transition-all">
+                    Trip Deals
+                </button>
+                <button class="bg-white hover:bg-gray-100 text-navy px-8 py-3 rounded-full transition-all font-medium">
+                    Explore
+                </button>
             </div>
             
-          </div>
-          <div class="deeper" id="deepp">
-            <div class="words_2">
-              <h2 class="title_service">Ticket and Travel</h2>
-              <p class="sub_services">
-                We provide convenient and reliable booking services for all your travel needs, including:
-                <ul class="ulz">
-                  <li>Flight Booking</li>
-                  <li>Bus Booking</li>
-                  <li>Train Booking</li>
-                  <li>Cruise Booking</li>
-                  <li>Holiday and Vacation Packages</li>
-                  <li>Hotel Booking</li>
-                </ul>
-              </p>
-              <p class="learn_more">
-                <a href="Ticket_and_Travel.html">Learn More</a> ->
-              </p>
-            </div>
-            <div class="img_2">
-              <img
-                src="service_images/daniel-abadia-Njq3Nz6-5rQ-unsplash.jpg"
-                alt="travel"
-                class="title_img"
-              />
-            </div>
-          </div>
-          
-        </section>
-        <section class="divider">
-          <div class="lines"></div>
-        </section>
-        <section class="five">
-        </section>
-        <footer class="footer">
-          <div class="footer-col brand">
-            <h3>Donias .</h3>
-            <p>
-              Opening global doors through expert travel, education, and business
-              consultations. Start your journey with us.
+            <p class="text-sm text-gray-200 max-w-2xl mx-auto">
+                We guide individuals, families, and businesses through every stage of travel, study, work, or relocation abroad with professional expertise and care.
             </p>
-          </div>
-      
-          <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about_us.html">About Us</a></li>
-              <li><a href="Event.html">Events</a></li>
-              <li><a href="services.html">Our Services</a></li>
-            </ul>
-          </div>
-      
-          <div class="footer-col">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="contact_us.html">Help Center</a></li>
-              <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-          </div>
-      
-          <div class="footer-col">
-            <h4>Social Media</h4>
-            <ul>
-              <li><a href="https://www.instagram.com/doniasmegalink/">Instagram</a></li>
-              <li><a href="https://www.facebook.com/www.donias.com.ng/">Facebook</a></li>
-              <li><a href="https://ng.linkedin.com/company/donias-mega-link">LinkedIn</a></li>
-            </ul>
-          </div>
-        </footer>
+        </div>
         
-        <script src="travel.js"></script>
-      </body>
-    </html>
-  </body>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">About Us</p>
+                    <h2 class="text-3xl md:text-4xl font-light text-navy mb-6">
+                        We are a passionate team of travel enthusiasts dedicated to making your travel dreams come true.
+                    </h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Our mission is to provide you with the best travel experiences.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Donias Global Consultants has been at the forefront of simplifying global mobility for Nigerians. As a fully registered business with real office locations and years of proven experience, we pride ourselves on transparency, professionalism, and a track record of satisfied clients.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="stat-number">200+</div>
+                        <p class="text-gray-600 text-sm">Destinations</p>
+                    </div>
+                    <div>
+                        <div class="stat-number">65+</div>
+                        <p class="text-gray-600 text-sm">Partners</p>
+                    </div>
+                    <div>
+                        <div class="stat-number">250+</div>
+                        <p class="text-gray-600 text-sm">Packages</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">Our Service</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Explore endless options with our service
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Discover a variety of choices available through our services, offering limitless possibilities for exploration and enjoyment.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Tourist & Visitor Visas -->
+                <div class="image-card rounded-2xl overflow-hidden h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&h=600&fit=crop" alt="Beach vacation destination" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Tourist & Visitor Visas</h3>
+                        <p class="text-sm text-gray-200 mb-4">For vacations, conferences, pilgrimages, and family visits with full application support.</p>
+                        <button onclick="location.href = 'tourist_visas.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Study Abroad -->
+                <div class="image-card rounded-2xl overflow-hidden h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop" alt="University graduation students" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Study Abroad Programs</h3>
+                        <p class="text-sm text-gray-200 mb-4">End-to-end support for students seeking admission and visas for universities abroad.</p>
+                        <button onclick="location.href = 'sii.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Work & Skilled Migration -->
+                <div class="image-card rounded-2xl overflow-hidden h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800&h=600&fit=crop" alt="Professional business people working" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Work & Skilled Migration</h3>
+                        <p class="text-sm text-gray-200 mb-4">Opportunities to work abroad through licensed visa programs with full support.</p>
+                        <button onclick="location.href = 'work_skilled.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Business & Investment -->
+                <div class="image-card rounded-2xl overflow-hidden h-80 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop" alt="Business meeting investment" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Business & Investment</h3>
+                        <p class="text-sm text-gray-200 mb-4">For entrepreneurs or investors looking to expand ventures internationally.</p>
+                        <button onclick="location.href = 'business_invest.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Services Row -->
+            <div class="grid md:grid-cols-2 gap-6 mt-6">
+                <!-- Family Visas -->
+                <div class="image-card rounded-2xl overflow-hidden h-64 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=800&h=400&fit=crop" alt="Happy family traveling together" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-medium mb-2">Family & Dependent Visas</h3>
+                        <p class="text-sm text-gray-200 mb-3">Helping families reunite or join loved ones abroad.</p>
+                        <button onclick="location.href = 'family_dependent.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Medical Travel -->
+                <div class="image-card rounded-2xl overflow-hidden h-64 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=400&fit=crop" alt="Modern hospital medical facility" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-xl font-medium mb-2">Medical Travel Services</h3>
+                        <p class="text-sm text-gray-200 mb-3">Access world-class healthcare abroad with comprehensive support.</p>
+                        <button onclick="location.href = 'Medical_tourism.html'" class="text-white hover:text-gold transition-colors text-sm font-medium">
+                            Learn More →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-wrap items-center justify-center gap-12">
+                <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=120&h=40&fit=crop" alt="Partner" class="partner-logo h-8 object-contain"/>
+                <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=120&h=40&fit=crop" alt="Partner" class="partner-logo h-8 object-contain"/>
+                <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=120&h=40&fit=crop" alt="Partner" class="partner-logo h-8 object-contain"/>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=120&h=40&fit=crop" alt="Partner" class="partner-logo h-8 object-contain"/>
+                <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=120&h=40&fit=crop" alt="Partner" class="partner-logo h-8 object-contain"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages" class="py-20 px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">Packages</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Discover our exceptional selection of travel<br/>packages and destinations
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Package 1 -->
+                <div class="image-card rounded-2xl overflow-hidden h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=800&fit=crop" alt="Dubai skyline and beach" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="image-card-content absolute top-4 left-4 bg-burgundy text-white px-3 py-1 rounded-full text-xs font-medium">
+                        POPULAR
+                    </div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Dubai Explorer</h3>
+                        <p class="text-sm text-gray-200 mb-3">5 days luxury package with flights, hotels, visa and tours included</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">₦850,000</span>
+                            <button class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 2 -->
+                <div class="image-card rounded-2xl overflow-hidden h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1520986606214-8b456906c813?w=600&h=800&fit=crop" alt="London Big Ben landmark" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="image-card-content absolute top-4 left-4 bg-gold text-navy px-3 py-1 rounded-full text-xs font-medium">
+                        BEST VALUE
+                    </div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">London Experience</h3>
+                        <p class="text-sm text-gray-200 mb-3">7 days complete package with UK visa, tours and professional guide</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">₦1,250,000</span>
+                            <button class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="image-card rounded-2xl overflow-hidden h-96 cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&h=800&fit=crop" alt="Mecca Kaaba pilgrimage" class="w-full h-full object-cover"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+                    <div class="image-card-content absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        PILGRIMAGE
+                    </div>
+                    <div class="image-card-content absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 class="text-2xl font-medium mb-2">Hajj/Umrah 2025</h3>
+                        <p class="text-sm text-gray-200 mb-3">14 days complete pilgrimage package with scholar guide and 5-star hotels</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold">₦2,500,000</span>
+                            <button class="bg-white text-navy px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-100 transition-all">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">How It Works</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Your journey in 6 simple steps
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">1</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Consultation</h3>
+                    <p class="text-gray-600 text-sm">Initial assessment and eligibility check with our experts</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">2</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Documentation</h3>
+                    <p class="text-gray-600 text-sm">Guidance on gathering all required documents</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">3</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Application</h3>
+                    <p class="text-gray-600 text-sm">Professional form filling and submission support</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">4</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Submission</h3>
+                    <p class="text-gray-600 text-sm">Embassy submission and biometric assistance</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">5</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Follow-up</h3>
+                    <p class="text-gray-600 text-sm">Regular updates until decision is made</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-burgundy bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-burgundy">6</span>
+                    </div>
+                    <h3 class="text-lg font-medium text-navy mb-2">Pre-Departure</h3>
+                    <p class="text-gray-600 text-sm">Travel arrangements and final orientation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="py-20 px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">Destinations</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Popular destinations we serve
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- UK -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?w=600&h=400&fit=crop" alt="London Bridge UK" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇬🇧</span>
+                            <h3 class="text-xl font-medium text-navy">United Kingdom</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Study, work, or travel to the UK with expert guidance</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore UK Programs →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canada -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&h=400&fit=crop" alt="Toronto Canada skyline" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇨🇦</span>
+                            <h3 class="text-xl font-medium text-navy">Canada</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Access Canadian universities and work permits</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore Canada Programs →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- USA -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&h=400&fit=crop" alt="Paris France landmarks" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇺🇸</span>
+                            <h3 class="text-xl font-medium text-navy">United States</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Navigate the US visa system for study, work, or tourism</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore USA Programs →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- UAE -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=600&h=400&fit=crop" alt="Dubai Burj Khalifa UAE" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇦🇪</span>
+                            <h3 class="text-xl font-medium text-navy">UAE</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Business, work, and tourism visas to Dubai and beyond</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore UAE Programs →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Germany -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1560930950-5cc20e80e392?w=600&h=400&fit=crop" alt="Berlin Germany Brandenburg Gate" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇩🇪</span>
+                            <h3 class="text-xl font-medium text-navy">Germany</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Access Germany and 26 Schengen countries</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore Germany Programs →
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Australia -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
+                    <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&h=400&fit=crop" alt="Sydney Opera House Australia" class="w-full h-48 object-cover"/>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-2xl">🇦🇺</span>
+                            <h3 class="text-xl font-medium text-navy">Australia</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Study, skilled migration, and tourism visas down under</p>
+                        <button class="text-burgundy hover:text-opacity-80 text-sm font-medium">
+                            Explore Australia Programs →
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">FAQs</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600">
+                    Common questions we receive from our clients to address their concerns.
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(1)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">How do I book a trip with your travel service?</span>
+                        <svg id="faq-icon-1" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Booking a trip is easy! Simply browse our packages, select your preferred destination, fill out the booking form, and our consultants will contact you within 24 hours to finalize your arrangements.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(2)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">Can Donias guarantee visa approval?</span>
+                        <svg id="faq-icon-2" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            No one can guarantee visa approval as decisions rest solely with embassies. However, we maximize your chances through strong documentation, proper preparation, and expert guidance based on years of experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(3)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">What payment methods do you accept?</span>
+                        <svg id="faq-icon-3" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            We accept bank transfers, credit/debit cards, and offer flexible installment payment plans. Contact our office to discuss payment options that work for your budget.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(4)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">How long does visa processing take?</span>
+                        <svg id="faq-icon-4" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Processing times vary by country and visa type. Tourist visas typically take 2-4 weeks, student visas 4-8 weeks, and work visas 6-12 weeks. We keep you updated throughout the entire process.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(5)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">Do you offer group travel packages?</span>
+                        <svg id="faq-icon-5" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Yes! We offer special group packages for families, corporate teams, and organized tours. Group bookings often come with discounted rates and customized itineraries.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="border border-gray-200 rounded-lg">
+                    <button onclick="toggleFAQ(6)" class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors">
+                        <span class="font-medium text-navy">Do you offer travel insurance?</span>
+                        <svg id="faq-icon-6" class="w-5 h-5 text-gray-400 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="faq-content-6" class="hidden px-6 pb-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Yes, we provide comprehensive travel insurance options to protect you during your journey. Insurance is often required for visa applications and we can help you choose the right coverage.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <p class="text-burgundy text-sm font-medium mb-2 uppercase tracking-wide">Testimonials</p>
+                <h2 class="text-3xl md:text-4xl font-light text-navy mb-4">
+                    Your trusted partner in travel
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Client" class="w-16 h-16 rounded-full object-cover"/>
+                        <div>
+                            <h4 class="font-medium text-navy">Grace Adebayo</h4>
+                            <p class="text-sm text-gray-600">Lagos → United Kingdom</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "Donias made my dream of studying in the UK a reality. Their consultants were professional, transparent, and supportive throughout the entire process. I highly recommend their services to anyone looking to travel abroad."
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Client" class="w-16 h-16 rounded-full object-cover"/>
+                        <div>
+                            <h4 class="font-medium text-navy">Chidi Okonkwo</h4>
+                            <p class="text-sm text-gray-600">Abuja → Canada</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "I got my Canadian work permit in just 8 weeks! The team at Donias handled everything professionally and kept me updated at every stage. Their expertise made what seemed impossible, possible. Excellent service!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Client" class="w-16 h-16 rounded-full object-cover"/>
+                        <div>
+                            <h4 class="font-medium text-navy">Amina Bello</h4>
+                            <p class="text-sm text-gray-600">Kano → Germany</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "Donias helped me secure my Schengen visa for Germany with ease. The process was smooth and they were very transparent about requirements and timelines. I'm now pursuing my Masters degree. Thank you Donias!"
+                    </p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" alt="Client" class="w-16 h-16 rounded-full object-cover"/>
+                        <div>
+                            <h4 class="font-medium text-navy">Emeka Nwosu</h4>
+                            <p class="text-sm text-gray-600">Port Harcourt → UAE</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed">
+                        "The Dubai business visa process was seamless with Donias. They understood my business needs and provided tailored solutions. Their attention to detail and professionalism is unmatched. Highly recommended!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="relative py-32 px-6 lg:px-8">
+        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&h=800&fit=crop" alt="Passport and travel documents" class="absolute inset-0 w-full h-full object-cover"/>
+        <div class="absolute inset-0 bg-navy bg-opacity-70"></div>
+        
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-5xl font-light mb-6">
+                Don't wait any longer! Start your adventure<br/>and explore new experiences today
+            </h2>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <a href="tel:+2348012345678" class="bg-transparent border-2 border-white hover:bg-white hover:text-navy text-white px-8 py-3 rounded-full transition-all font-medium">
+                    Call us now: +234 801 234 5678
+                </a>
+                <button class="bg-burgundy hover:bg-opacity-90 text-white px-8 py-3 rounded-full transition-all font-medium">
+                    Book Now
+                </button>
+            </div>
+        </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12 px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">donias<span class="text-burgundy">travels</span></h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        Your trusted partner in global mobility since 2010.
+                    </p>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" class="w-8 h-8 bg-white bg-opacity-10 hover:bg-opacity-20 rounded-full flex items-center justify-center transition-all">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category -->
+                <div>
+                    <h4 class="font-semibold mb-4">Category</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Packages</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Support Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- More -->
+                <div>
+                    <h4 class="font-semibold mb-4">More</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">News & Events</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Success Stories</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Compliance Notice -->
+            <div class="border-t border-gray-700 pt-6 mb-6">
+                <div class="bg-burgundy bg-opacity-20 rounded-lg p-4">
+                    <p class="text-xs text-gray-300">
+                        <strong>CAC Registered: RC 1234567</strong> | Important: Visa decisions are made solely by embassies and consulates. Donias Global Consultants provides professional guidance and document support only. We do not guarantee visa approval.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-center text-sm text-gray-400">
+                <p>&copy; 2025 Donias Global Consultants. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+    </script>
+</body>
 </html>

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="business_style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>
+      Strategy and Business Transformation | Donias Global Consultants
+    </title>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants Logo"
+          class="w-[50px] h-[50px]"
+        />
+        <h2 class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block">
+          Donias Global Consultants
+        </h2>
+      </div>
+
+      <nav class="w-full relative lg:w-auto">
+        <button
+          class="hamburger absolute right-0 bg-[#a23342] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a23342] focus:ring-opacity-50 transition-all"
+          aria-label="Toggle menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <ul class="hidden lg:flex items-center space-x-8">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li><a class="header_achor" href="services.html">Services</a></li>
+          <li><a class="header_achor" href="sii.html">Study Abroad</a></li>
+          <li>
+            <a class="header_achor" href="Medical_tourism.html"
+              >Medical Tourism</a
+            >
+          </li>
+          <div class="hidden lg:block ml-8">
+            <button
+              class="bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-3 px-6 rounded-full text-[15px] font-semibold cursor-pointer transition-all duration-300 shadow-[0_4px_12px_rgba(162,51,66,0.3)] hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(162,51,66,0.4)]"
+              onclick="location.href='contact_us.html'"
+            >
+              Get Free Consultation
+            </button>
+          </div>
+        </ul>
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
+        >
+          <ul class="flex flex-col p-6 space-y-4">
+            <li>
+              <a class="header_achor block py-2" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="sii.html"
+                >Study Abroad</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="Medical_tourism.html"
+                >Medical Tourism</a
+              >
+            </li>
+            <li class="pt-4">
+              <button
+                class="w-full bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-3 px-6 rounded-full text-[15px] font-semibold cursor-pointer transition-all duration-300"
+                onclick="location.href='contact_us.html'"
+              >
+                Get Free Consultation
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-br from-[#a23342] to-[#8a2938] relative overflow-hidden py-20 md:py-32"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div
+              class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-6"
+            >
+              OUR SERVICES
+            </div>
+            <h1
+              class="text-[clamp(2.5rem,5vw,4.5rem)] leading-tight font-bold text-white mb-6"
+            >
+              Strategy and Business Transformation
+            </h1>
+            <p class="text-white/90 text-xl mb-8 leading-relaxed">
+              Strategic roadmaps for sustainable growth through innovative
+              business transformation solutions
+            </p>
+            <button
+              class="bg-white text-[#a23342] border-none py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl"
+              onclick="location.href='contact_us.html'"
+            >
+              Schedule a Consultation
+            </button>
+          </div>
+
+          <div class="flex justify-center lg:justify-end">
+            <div
+              class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-3xl flex items-center justify-center shadow-2xl"
+            >
+              <span class="text-8xl">🎯</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Transform Your Business Strategy
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              In today's rapidly evolving business landscape, having a clear,
+              actionable strategy is essential for sustainable growth. Our
+              Strategy and Business Transformation services help organizations
+              navigate complexity, identify opportunities, and execute
+              transformative change that drives lasting results.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              We work alongside your leadership team to develop strategic
+              roadmaps that align with your vision, leverage your strengths, and
+              position your business for long-term success in competitive
+              markets.
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+              alt="Business Strategy Planning Session"
+              class="rounded-3xl shadow-2xl w-full h-auto"
+            />
+            <div
+              class="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white p-6 rounded-2xl shadow-xl"
+            >
+              <div class="text-3xl font-bold">15+</div>
+              <div class="text-sm">Years of Strategic Excellence</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Services -->
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Our Strategic Services
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Comprehensive strategic solutions tailored to your business needs
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              01
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Market Analysis & Positioning
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Deep market insights and competitive analysis to position your
+              business for success. We identify market gaps, analyze
+              competitors, and develop strategies to capture market share.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              02
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Growth Strategy Development
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Customized growth strategies that align with your business
+              objectives. From market expansion to product diversification, we
+              create roadmaps for scalable growth.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              03
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Business Model Innovation
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Reimagine your business model to stay competitive. We help you
+              identify new revenue streams, optimize operations, and create
+              value in innovative ways.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              04
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Strategic Planning
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Comprehensive strategic planning that sets clear goals and
+              actionable steps. We develop multi-year plans that guide your
+              organization toward its vision.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              05
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Change Management
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Navigate organizational change with confidence. We provide change
+              management strategies that ensure smooth transitions and employee
+              buy-in.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              06
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Performance Optimization
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Maximize organizational performance through data-driven insights
+              and continuous improvement frameworks that drive efficiency and
+              results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+              alt="Business Strategy Meeting"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-2">Strategic Collaboration</h3>
+                <p class="text-white/90">
+                  Working together to build winning strategies
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80"
+              alt="Business Growth Analysis"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-2">Data-Driven Insights</h3>
+                <p class="text-white/90">
+                  Analytics that inform strategic decisions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80"
+              alt="Market Analysis Dashboard"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Market Intelligence</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&q=80"
+              alt="Team Collaboration"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Executive Leadership</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=600&q=80"
+              alt="Business Innovation"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Innovation Strategy</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Our Strategic Process
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            A proven methodology for business transformation
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Discovery & Analysis
+            </h3>
+            <p class="text-gray-600">
+              Deep dive into your business, market, and competitive landscape to
+              identify opportunities and challenges.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Strategy Development
+            </h3>
+            <p class="text-gray-600">
+              Collaborate to create comprehensive strategies aligned with your
+              vision and market realities.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Implementation Planning
+            </h3>
+            <p class="text-gray-600">
+              Develop detailed implementation roadmaps with clear milestones,
+              responsibilities, and timelines.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#a23342] to-[#8a2938] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Execution & Support
+            </h3>
+            <p class="text-gray-600">
+              Ongoing support during implementation to ensure successful
+              execution and achieve desired outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why Choose Our Strategic Services
+          </h2>
+          <p class="text-lg text-white/80 max-w-3xl mx-auto">
+            Partner with experts who understand your challenges and deliver
+            results
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">🏆</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Proven Track Record
+            </h3>
+            <p class="text-white/80">
+              15+ years of successful strategic transformations across diverse
+              industries with measurable results.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Tailored Approach
+            </h3>
+            <p class="text-white/80">
+              Every strategy is customized to your unique business context,
+              challenges, and opportunities.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Collaborative Partnership
+            </h3>
+            <p class="text-white/80">
+              We work alongside your team, transferring knowledge and building
+              internal capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-4xl text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Ready to Transform Your Business Strategy?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Let's discuss how our strategic expertise can help you achieve
+          sustainable growth and competitive advantage.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl"
+            onclick="location.href='contact_us.html'"
+          >
+            Schedule Free Consultation
+          </button>
+          <button
+            class="bg-white text-[#a23342] border-2 border-[#a23342] py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-[#a23342] hover:text-white"
+            onclick="location.href='services.html'"
+          >
+            View All Services
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white py-16"
+    >
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <img
+                src="icons/logo.png"
+                alt="Donias Global Consultants Logo"
+                class="w-12 h-12"
+              />
+              <h3 class="text-xl font-bold">Donias Global</h3>
+            </div>
+            <p class="text-white/80 mb-6">
+              Your trusted partner in business transformation and strategic
+              growth.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">📘</span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">🐦</span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">💼</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Our Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Support</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="contact_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Get In Touch</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">📍</span>
+                <span>Lagos, Nigeria</span>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">✉️</span>
+                <a
+                  href="mailto:info@doniasglobal.com"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  info@doniasglobal.com
+                </a>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">📞</span>
+                <a
+                  href="tel:+234XXXXXXXXXX"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  +234 XXX XXX XXXX
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8">
+          <p class="text-white/60 text-sm text-center">
+            © 2025 Donias Global Consultants. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="business_script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tourist & Visitor Visas - Vacations, Conferences, Pilgrimages | Donias
+      Travels
+    </title>
+    <meta
+      name="description"
+      content="Expert tourist visa support for vacations, conferences, pilgrimages, and family visits. End-to-end assistance from eligibility check to approval. Start your application today."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #8b2635;
+        --primary-dark: #6b1d2a;
+        --primary-light: #a63446;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+        --border: #e5e5e5;
+        --white: #ffffff;
+        --success: #28a745;
+        --warning: #ffc107;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo span:first-child {
+        color: var(--text-dark);
+      }
+
+      .logo span:last-child {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--primary);
+        text-decoration: underline;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 38, 53, 0.95),
+            rgba(107, 29, 42, 0.95)
+          ),
+          url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&h=900&fit=crop")
+            center/cover;
+        color: var(--white);
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .hero .btn-primary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+      }
+
+      .hero .btn-secondary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--white);
+        color: var(--white);
+        backdrop-filter: blur(10px);
+      }
+
+      .trust-row {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .stars {
+        color: #ffd700;
+        font-size: 1.2rem;
+      }
+
+      /* Quick Selector */
+      .quick-selector {
+        background: var(--white);
+        padding: 3rem 2rem;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        position: relative;
+        margin-top: -2rem;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .selector-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .tab-btn {
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-light);
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+      }
+
+      .tab-btn.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .selector-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .selector-card {
+        padding: 1.5rem;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .selector-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.15);
+      }
+
+      .selector-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .selector-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* How It Works */
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .step-card {
+        text-align: center;
+        padding: 2rem;
+        background: var(--bg-light);
+        border-radius: 12px;
+        transition: all 0.3s;
+      }
+
+      .step-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .step-number {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      .step-card h3 {
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+      }
+
+      .step-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .micro-proof {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(139, 38, 53, 0.05);
+        border-radius: 8px;
+      }
+
+      .proof-item {
+        text-align: center;
+      }
+
+      .proof-number {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .proof-label {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Eligibility Checker */
+      .eligibility-checker {
+        background: linear-gradient(135deg, var(--bg-light), #fff);
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 0.75rem;
+        border: 2px solid var(--border);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      /* Country Cards */
+      .country-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .country-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .country-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .country-image {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+      }
+
+      .country-content {
+        padding: 2rem;
+      }
+
+      .country-content h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+      }
+
+      .country-tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-list {
+        list-style: none;
+        margin: 1.5rem 0;
+      }
+
+      .info-list li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-light);
+      }
+
+      .info-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--success);
+        font-weight: 700;
+      }
+
+      /* Pricing */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .pricing-card {
+        background: var(--white);
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      .pricing-card.popular {
+        border-color: var(--primary);
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(139, 38, 53, 0.2);
+      }
+
+      .pricing-card.popular::before {
+        content: "MOST POPULAR";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.25rem 1rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .price-note {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      .features-list {
+        list-style: none;
+        text-align: left;
+        margin: 2rem 0;
+      }
+
+      .features-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-dark);
+      }
+
+      .features-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      /* Timeline */
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .timeline:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: var(--primary);
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .timeline-item:nth-child(odd) {
+        flex-direction: row;
+      }
+
+      .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-content {
+        flex: 1;
+        padding: 2rem;
+        background: var(--bg-light);
+        border-radius: 12px;
+        margin: 0 2rem;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--primary);
+        border: 4px solid var(--white);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(139, 38, 53, 0.2);
+      }
+
+      /* FAQs */
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 1.5rem;
+        background: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .faq-question:hover {
+        background: var(--bg-light);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        background: var(--bg-light);
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 1.5rem;
+        max-height: 500px;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Resources */
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .resource-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .resource-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .resource-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .resource-content {
+        padding: 1.5rem;
+      }
+
+      .resource-content h3 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .resource-content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        background: var(--bg-light);
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+      }
+
+      .contact-method {
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .disclaimer {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 1.5rem;
+        background: rgba(255, 193, 7, 0.1);
+        border-left: 4px solid var(--warning);
+        border-radius: 6px;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .timeline:before {
+          left: 20px;
+        }
+
+        .timeline-item {
+          flex-direction: column !important;
+        }
+
+        .timeline-dot {
+          left: 20px;
+        }
+
+        .timeline-content {
+          margin-left: 60px;
+          margin-right: 0;
+        }
+
+        .steps-grid,
+        .country-grid,
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeInUp 0.6s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo"><span>donias</span><span>travels</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#services">Visa Types</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faqs">FAQs</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#application" class="btn btn-primary">Start Application</a>
+          <a href="#consultation" class="btn btn-secondary">Book a Call</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- WhatsApp Float -->
+    <div
+      class="whatsapp-float"
+      onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')"
+    >
+      💬
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Tourist & Visitor Visas—Stress-Free Travel</h1>
+        <p>
+          Vacations, Conferences, Pilgrimages, and Family Visits—Expert prep,
+          fast scheduling, proactive tracking
+        </p>
+        <div class="hero-cta">
+          <a href="#eligibility" class="btn btn-primary"
+            >Check Eligibility (2 mins)</a
+          >
+          <a href="#consultation" class="btn btn-secondary"
+            >Free 10-min Consult</a
+          >
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="stars">★★★★★</span>
+            <span>4.9/5 Rating</span>
+          </div>
+          <div class="trust-item">
+            <span>✓</span>
+            <span>5,000+ Visas Processed</span>
+          </div>
+          <div class="trust-item">
+            <span>🔒</span>
+            <span>100% Secure & Confidential</span>
+          </div>
+          <div class="trust-item">
+            <span>⚡</span>
+            <span>48-72h Average Prep Time</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Selector -->
+    <section class="quick-selector">
+      <div class="selector-tabs">
+        <button class="tab-btn active" onclick="switchTab('purpose')">
+          By Visa Purpose
+        </button>
+        <button class="tab-btn" onclick="switchTab('destination')">
+          By Destination
+        </button>
+      </div>
+
+      <div id="purpose-tab" class="tab-content active">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>🏖️ Vacation</h3>
+            <p>Leisure travel, tourism, sightseeing</p>
+            <a href="#vacation" class="btn-ghost">View Requirements →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🎤 Conference/Business Visit</h3>
+            <p>Attend events, meetings, trade shows</p>
+            <a href="#conference" class="btn-ghost">View Requirements →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🕌 Pilgrimage</h3>
+            <p>Umrah, Hajj, religious journeys</p>
+            <a href="#pilgrimage" class="btn-ghost">View Requirements →</a>
+          </div>
+          <div class="selector-card">
+            <h3>👨‍👩‍👧 Family & Friends</h3>
+            <p>Visit relatives, family events</p>
+            <a href="#family" class="btn-ghost">View Requirements →</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="destination-tab" class="tab-content">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>🇬🇧 United Kingdom</h3>
+            <p>Standard Visitor Visa</p>
+            <a href="#uk" class="btn-ghost">Start Now →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🇪🇺 Schengen Zone</h3>
+            <p>26 European countries</p>
+            <a href="#schengen" class="btn-ghost">Start Now →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🇺🇸 United States</h3>
+            <p>B1/B2 Tourist Visa</p>
+            <a href="#usa" class="btn-ghost">Start Now →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🇨🇦 Canada</h3>
+            <p>Visitor Visa</p>
+            <a href="#canada" class="btn-ghost">Start Now →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🇦🇪 UAE</h3>
+            <p>Visit/Tourist Visa</p>
+            <a href="#uae" class="btn-ghost">Start Now →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🇸🇦 Saudi Arabia</h3>
+            <p>Umrah & Tourist Visa</p>
+            <a href="#saudi" class="btn-ghost">Start Now →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- How It Works -->
+      <section id="how-it-works" class="section">
+        <div class="section-header">
+          <h2>How It Works</h2>
+          <p>Five simple steps from eligibility check to visa approval</p>
+        </div>
+
+        <div class="steps-grid">
+          <div class="step-card animate-in">
+            <div class="step-number">1</div>
+            <h3>Check Eligibility</h3>
+            <p>
+              Quick 2-3 minute assessment to determine your visa eligibility and
+              requirements
+            </p>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-number">2</div>
+            <h3>Personalized Checklist</h3>
+            <p>
+              Auto-generated document list and templates tailored to your
+              specific case
+            </p>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-number">3</div>
+            <h3>File Preparation</h3>
+            <p>We prepare, review, and perfect your application documents</p>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-number">4</div>
+            <h3>Appointment & Biometrics</h3>
+            <p>
+              Schedule your appointment and guide you through the biometrics
+              process
+            </p>
+          </div>
+          <div class="step-card animate-in">
+            <div class="step-number">5</div>
+            <h3>Submission & Tracking</h3>
+            <p>
+              Submit your application and track status with real-time updates
+            </p>
+          </div>
+        </div>
+
+        <div class="micro-proof">
+          <div class="proof-item">
+            <div class="proof-number">48-72h</div>
+            <div class="proof-label">Average prep time</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number">95%</div>
+            <div class="proof-label">Files submitted error-free</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number">5,000+</div>
+            <div class="proof-label">Successful applications</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a href="#eligibility" class="btn btn-primary"
+            >Start Your Application</a
+          >
+        </div>
+      </section>
+
+      <!-- Eligibility Checker -->
+      <section id="eligibility" class="section">
+        <div class="section-header">
+          <h2>Check Your Eligibility</h2>
+          <p>Find out if you qualify in just 2-3 minutes</p>
+        </div>
+
+        <div class="eligibility-checker">
+          <form id="eligibility-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nationality">Nationality</label>
+                <select id="nationality" required>
+                  <option value="">Select country</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="GH">Ghana</option>
+                  <option value="KE">Kenya</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="destination">Destination Country</label>
+                <select id="destination" required>
+                  <option value="">Select destination</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="Schengen">Schengen Zone</option>
+                  <option value="USA">United States</option>
+                  <option value="Canada">Canada</option>
+                  <option value="UAE">UAE</option>
+                  <option value="Saudi">Saudi Arabia</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="purpose">Purpose of Visit</label>
+                <select id="purpose" required>
+                  <option value="">Select purpose</option>
+                  <option value="vacation">Vacation/Tourism</option>
+                  <option value="conference">Conference/Business</option>
+                  <option value="pilgrimage">Pilgrimage</option>
+                  <option value="family">Family & Friends</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="travel-date">Intended Travel Date</label>
+                <input type="date" id="travel-date" required />
+              </div>
+              <div class="form-group">
+                <label for="employment">Employment Status</label>
+                <select id="employment" required>
+                  <option value="">Select status</option>
+                  <option value="employed">Employed</option>
+                  <option value="self-employed">Self-Employed</option>
+                  <option value="student">Student</option>
+                  <option value="retired">Retired</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="funding">Who is funding your trip?</label>
+                <select id="funding" required>
+                  <option value="">Select option</option>
+                  <option value="self">Self-funded</option>
+                  <option value="sponsor">Sponsor</option>
+                  <option value="company">Company/Organization</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem">
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-bottom: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Save your results by entering your email
+              </p>
+              <div class="form-grid" style="max-width: 600px; margin: 0 auto">
+                <div class="form-group">
+                  <input type="text" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Email Address" required />
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="margin-top: 1.5rem"
+              >
+                Check Eligibility
+              </button>
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                  font-size: 0.85rem;
+                "
+              >
+                Takes 3-5 minutes • No payment required
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Popular Destinations -->
+      <section id="destinations" class="section">
+        <div class="section-header">
+          <h2>Popular Destinations</h2>
+          <p>Comprehensive visa support for your dream destinations</p>
+        </div>
+
+        <div class="country-grid">
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop"
+              alt="UK"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>United Kingdom</h3>
+              <span class="country-tag">Standard Visitor Visa</span>
+              <p>
+                Perfect for tourism, family visits, conferences, and business
+                meetings up to 6 months.
+              </p>
+              <ul class="info-list">
+                <li>Typical stay: Up to 6 months</li>
+                <li>Processing: 3-8 weeks</li>
+                <li>Multiple entry available</li>
+                <li>Biometrics required</li>
+              </ul>
+              <a
+                href="#uk-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&h=400&fit=crop"
+              alt="Schengen"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>Schengen Zone</h3>
+              <span class="country-tag">Type C Short-Stay Visa</span>
+              <p>
+                Access 26 European countries with one visa. Perfect for European
+                tours and business trips.
+              </p>
+              <ul class="info-list">
+                <li>Typical stay: Up to 90 days</li>
+                <li>Processing: 2-4 weeks</li>
+                <li>26 countries access</li>
+                <li>Travel insurance mandatory</li>
+              </ul>
+              <a
+                href="#schengen-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&h=400&fit=crop"
+              alt="USA"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>United States</h3>
+              <span class="country-tag">B1/B2 Tourist Visa</span>
+              <p>
+                For tourism, business visits, medical treatment, or visiting
+                family and friends.
+              </p>
+              <ul class="info-list">
+                <li>Typical stay: Up to 6 months</li>
+                <li>Processing: 2-8 weeks</li>
+                <li>Interview required</li>
+                <li>Multiple entry (up to 10 years)</li>
+              </ul>
+              <a
+                href="#usa-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&h=400&fit=crop"
+              alt="Canada"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>Canada</h3>
+              <span class="country-tag">Temporary Resident Visa</span>
+              <p>
+                Visit Canada for tourism, family visits, or attending business
+                conferences.
+              </p>
+              <ul class="info-list">
+                <li>Typical stay: Up to 6 months</li>
+                <li>Processing: 2-6 weeks</li>
+                <li>Single/multiple entry options</li>
+                <li>Biometrics required</li>
+              </ul>
+              <a
+                href="#canada-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop"
+              alt="UAE"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>United Arab Emirates</h3>
+              <span class="country-tag">Visit/Tourist Visa</span>
+              <p>
+                Explore Dubai, Abu Dhabi, and other emirates with flexible
+                tourist visa options.
+              </p>
+              <ul class="info-list">
+                <li>Typical stay: 30-90 days</li>
+                <li>Processing: 3-7 days</li>
+                <li>Fast processing available</li>
+                <li>Single/multiple entry</li>
+              </ul>
+              <a
+                href="#uae-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=600&h=400&fit=crop"
+              alt="Saudi Arabia"
+              class="country-image"
+            />
+            <div class="country-content">
+              <h3>Saudi Arabia</h3>
+              <span class="country-tag">Umrah/Tourist Visa</span>
+              <p>
+                Perform Umrah or explore Saudi Arabia's rich culture and
+                heritage.
+              </p>
+              <ul class="info-list">
+                <li>Umrah: 30 days</li>
+                <li>Tourist: 90 days</li>
+                <li>Processing: 1-2 weeks</li>
+                <li>Multiple entry available</li>
+              </ul>
+              <a
+                href="#saudi-details"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More & Apply</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing & Packages -->
+      <section id="pricing" class="section">
+        <div class="section-header">
+          <h2>Pricing & Packages</h2>
+          <p>Transparent pricing with packages designed for every need</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Basic</h3>
+            <div class="price">₦50,000</div>
+            <p class="price-note">DIY Support Package</p>
+            <ul class="features-list">
+              <li>Personalized document checklist</li>
+              <li>Application form templates</li>
+              <li>Pre-submission review</li>
+              <li>Email support</li>
+              <li>Resource library access</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Standard</h3>
+            <div class="price">₦120,000</div>
+            <p class="price-note">Full Service Package</p>
+            <ul class="features-list">
+              <li>Everything in Basic</li>
+              <li>Complete file preparation</li>
+              <li>Appointment booking</li>
+              <li>Interview coaching (if required)</li>
+              <li>Application status tracking</li>
+              <li>Priority email & WhatsApp support</li>
+              <li>Document review & corrections</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Premium</h3>
+            <div class="price">₦200,000</div>
+            <p class="price-note">White-Glove Service</p>
+            <ul class="features-list">
+              <li>Everything in Standard</li>
+              <li>Expedited preparation (24-48h)</li>
+              <li>Concierge document pickup</li>
+              <li>Priority appointment booking</li>
+              <li>Dedicated account manager</li>
+              <li>24/7 priority support</li>
+              <li>Appeal & reapplication guidance</li>
+              <li>Success consultation</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <p
+            style="
+              color: var(--text-light);
+              font-size: 0.95rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <strong>Optional Add-ons:</strong> Travel insurance, flight
+            itinerary, hotel booking, translation services, notarization,
+            courier services
+          </p>
+          <p style="color: var(--warning); font-weight: 600">
+            ⚠️ Government visa fees not included • Prices vary by destination
+          </p>
+        </div>
+      </section>
+
+      <!-- Timeline -->
+      <section id="timeline" class="section">
+        <div class="section-header">
+          <h2>Application Timeline</h2>
+          <p>Understanding the visa processing journey</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Application Preparation</h3>
+              <p><strong>Duration:</strong> 2-7 days</p>
+              <p>
+                We gather and review your documents, prepare your application
+                forms, and ensure everything meets requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Appointment & Biometrics</h3>
+              <p><strong>Duration:</strong> 1-4 weeks (varies by season)</p>
+              <p>
+                We book your appointment, brief you on what to expect, and guide
+                you through the biometrics process.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Application Submission</h3>
+              <p><strong>Duration:</strong> Same day</p>
+              <p>
+                Your complete application is submitted to the visa application
+                center or embassy.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Processing & Decision</h3>
+              <p>
+                <strong>Duration:</strong> 2-8 weeks (destination dependent)
+              </p>
+              <p>
+                The embassy reviews your application. We track the status and
+                keep you updated throughout.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Passport Return</h3>
+              <p><strong>Duration:</strong> 1-3 days after decision</p>
+              <p>
+                Your passport is returned with the visa decision. We coordinate
+                pickup or delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="#eligibility" class="btn btn-primary"
+            >See My Estimated Timeline</a
+          >
+        </div>
+      </section>
+
+      <!-- Document Checklist Generator -->
+      <section id="checklist" class="section">
+        <div class="section-header">
+          <h2>Get Your Personalized Checklist</h2>
+          <p>Know exactly what documents you need for your visa application</p>
+        </div>
+
+        <div class="eligibility-checker">
+          <div style="text-align: center; margin-bottom: 2rem">
+            <p style="color: var(--text-light); font-size: 1.1rem">
+              Answer a few questions and download your custom checklist with
+              templates
+            </p>
+          </div>
+
+          <div class="form-grid" style="max-width: 800px; margin: 0 auto 2rem">
+            <div class="form-group">
+              <label>Destination</label>
+              <select>
+                <option>United Kingdom</option>
+                <option>Schengen Zone</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option>UAE</option>
+                <option>Saudi Arabia</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Purpose</label>
+              <select>
+                <option>Vacation/Tourism</option>
+                <option>Conference/Business</option>
+                <option>Pilgrimage</option>
+                <option>Family Visit</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Employment Status</label>
+              <select>
+                <option>Employed</option>
+                <option>Self-Employed</option>
+                <option>Student</option>
+                <option>Retired</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Marital Status</label>
+              <select>
+                <option>Single</option>
+                <option>Married</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="text-align: center">
+            <button class="btn btn-primary">Generate My Checklist</button>
+            <p
+              style="
+                color: var(--text-light);
+                margin-top: 1rem;
+                font-size: 0.9rem;
+              "
+            >
+              Includes downloadable PDF + email copy
+            </p>
+          </div>
+
+          <div
+            style="
+              margin-top: 3rem;
+              padding-top: 2rem;
+              border-top: 1px solid var(--border);
+            "
+          >
+            <h3 style="text-align: center; margin-bottom: 1.5rem">
+              Free Templates & Guides
+            </h3>
+            <div class="selector-grid">
+              <a href="#" class="selector-card">
+                <h4>📄 Bank Statement Guide</h4>
+                <p>What embassies look for</p>
+              </a>
+              <a href="#" class="selector-card">
+                <h4>✉️ Sponsorship Letter</h4>
+                <p>Template & sample</p>
+              </a>
+              <a href="#" class="selector-card">
+                <h4>💼 Employer Letter</h4>
+                <p>Leave approval template</p>
+              </a>
+              <a href="#" class="selector-card">
+                <h4>🎤 Conference Invitation</h4>
+                <p>Sample format</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Proof -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Success Stories</h2>
+          <p>Real results from real clients</p>
+        </div>
+
+        <div class="country-grid">
+          <div class="country-card">
+            <div class="country-content">
+              <div
+                class="stars"
+                style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                ★★★★★
+              </div>
+              <p style="font-style: italic; margin-bottom: 1rem">
+                "Donias Travels made my UK visa process so smooth! They caught
+                errors I didn't even know existed and my visa was approved in 3
+                weeks. Highly recommended!"
+              </p>
+              <p style="font-weight: 600">— Chioma A.</p>
+              <span class="country-tag">UK Standard Visitor Visa</span>
+            </div>
+          </div>
+
+          <div class="country-card">
+            <div class="country-content">
+              <div
+                class="stars"
+                style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                ★★★★★
+              </div>
+              <p style="font-style: italic; margin-bottom: 1rem">
+                "I was nervous about the US visa interview but their coaching
+                gave me confidence. Got approved on my first try for a 10-year
+                multiple entry visa!"
+              </p>
+              <p style="font-weight: 600">— Ibrahim K.</p>
+              <span class="country-tag">US B1/B2 Tourist Visa</span>
+            </div>
+          </div>
+
+          <div class="country-card">
+            <div class="country-content">
+              <div
+                class="stars"
+                style="color: #ffd700; font-size: 1.5rem; margin-bottom: 1rem"
+              >
+                ★★★★★
+              </div>
+              <p style="font-style: italic; margin-bottom: 1rem">
+                "Perfect service for my Umrah visa! They handled everything
+                including the hotel bookings and flights. Made the spiritual
+                journey stress-free."
+              </p>
+              <p style="font-weight: 600">— Fatima M.</p>
+              <span class="country-tag">Saudi Umrah Visa</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="micro-proof" style="margin-top: 3rem">
+          <div class="proof-item">
+            <div class="proof-number">92%</div>
+            <div class="proof-label">Approval rate for complete files</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number">3,200+</div>
+            <div class="proof-label">Repeat & referred clients</div>
+          </div>
+          <div class="proof-item">
+            <div class="proof-number">8+</div>
+            <div class="proof-label">Years in business</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section id="faqs" class="section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our visa services</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How long does it take to prepare my application?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Our average preparation time is 48-72 hours for Standard and
+                Premium packages, depending on document availability and
+                completeness. Basic package users get immediate access to
+                checklists and templates.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What funds or proof of ties are typically required?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Requirements vary by destination, but generally include 3-6
+                months of bank statements showing consistent income/savings,
+                employment letter, property ownership, family ties, and return
+                ticket bookings. We provide specific guidance based on your
+                destination during the eligibility check.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Do you guarantee visa approval?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No one can guarantee visa approval as the final decision rests
+                with the embassy or consulate. However, we focus on submitting
+                complete, accurate, and strong applications that meet all
+                official requirements, which significantly improves your
+                chances. Our 92% success rate speaks to our thoroughness.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can you book my appointment and biometrics?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes! All Standard and Premium packages include appointment
+                booking service. We monitor availability, secure your slot, and
+                send you all necessary confirmation details and preparation
+                instructions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What happens if my application is refused?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Premium package clients receive appeal and reapplication
+                guidance at no extra cost. For other packages, we offer
+                discounted reapplication support. We'll review the refusal
+                reasons and help strengthen your case for the next attempt.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Are government visa fees included in your pricing?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                No, our service fees cover our professional assistance only.
+                Government visa application fees are paid directly to the
+                embassy/consulate and vary by destination (typically $100-$200
+                USD equivalent). We provide a transparent breakdown of all costs
+                upfront.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do you keep my data secure?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We use bank-level encryption (SSL/TLS) for all data transmission
+                and storage. Your documents are stored on secure servers with
+                restricted access. We comply with NDPR (Nigeria Data Protection
+                Regulation) and GDPR standards. Data is retained only as long as
+                necessary and can be deleted upon request.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Do you offer refunds if I change my mind?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we offer full refunds if you cancel before we begin work on
+                your file. Once document preparation has started, partial
+                refunds apply based on work completed. No refunds are possible
+                after submission. See our full refund policy in the Terms &
+                Conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources -->
+      <section id="resources" class="section">
+        <div class="section-header">
+          <h2>Helpful Resources</h2>
+          <p>Expert guides to make your visa journey easier</p>
+        </div>
+
+        <div class="resources-grid">
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1554224311-beee92fda0f8?w=400&h=300&fit=crop"
+              alt="Travel Insurance"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>Travel Insurance Guide</h3>
+              <p>
+                Understanding requirements and choosing the right coverage for
+                your trip
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=300&fit=crop"
+              alt="Proof of Funds"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>Proof of Funds Explained</h3>
+              <p>
+                How much you need and what embassies look for in bank statements
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&h=300&fit=crop"
+              alt="Invitation Letters"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>Writing Invitation Letters</h3>
+              <p>
+                Templates and tips for family, business, and conference
+                invitations
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=300&fit=crop"
+              alt="First Time Traveler"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>First-Time Traveler's Guide</h3>
+              <p>
+                Everything you need to know for your first international trip
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=400&h=300&fit=crop"
+              alt="Umrah Guide"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>Umrah & Hajj Planning</h3>
+              <p>
+                Visa requirements, timelines, and spiritual journey preparation
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400&h=300&fit=crop"
+              alt="Conference Travel"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <h3>Conference Travel Checklist</h3>
+              <p>Documents and planning for business events abroad</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Start Your Application?</h2>
+          <p>Get in touch with our visa experts today</p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <h4>Email Us</h4>
+            <p>info@doniastravels.com</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Response within 2 hours
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">💬</div>
+            <h4>WhatsApp</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Instant messaging
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📞</div>
+            <h4>Call Us</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Mon-Sat, 9AM-6PM WAT
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <h4>Visit Office</h4>
+            <p>Lagos, Nigeria</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              By appointment only
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a
+            href="#eligibility"
+            class="btn btn-primary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Start Application Now</a
+          >
+          <p style="margin-top: 1rem; color: var(--text-light)">Or</p>
+          <a
+            href="#consultation"
+            class="btn btn-secondary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Book Free Consultation</a
+          >
+        </div>
+
+        <div class="disclaimer">
+          <p>
+            <strong>Important Notice:</strong> Donias Travels is an independent
+            visa consultancy service. We are not an embassy, consulate, or
+            government authority and do not make visa decisions. We prepare
+            applications based on published guidelines and submit them on your
+            behalf. Final visa decisions rest with the relevant embassy or
+            consulate.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h4>Donias Travels</h4>
+          <p>
+            Your trusted partner for stress-free visa applications and
+            international travel planning.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Tourist & Visitor Visas</a></li>
+            <li><a href="#">Study Abroad Programs</a></li>
+            <li><a href="#">Work & Skilled Migration</a></li>
+            <li><a href="#">Business & Investment</a></li>
+            <li><a href="#">Flight & Hotel Booking</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Data Protection</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Donias Travels. All rights reserved. | Registered Travel
+          Agency | NDPR Compliant
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Tab Switching
+      function switchTab(tab) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((content) => content.classList.remove("active"));
+
+        event.target.classList.add("active");
+        document.getElementById(tab + "-tab").classList.add("active");
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQs
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Form Submission Handler
+      document
+        .getElementById("eligibility-form")
+        ?.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert(
+            "Thank you! We'll send your eligibility results to your email shortly."
+          );
+          // Add actual form submission logic here
+        });
+
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".step-card, .country-card, .pricing-card")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="business_style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Operations Excellence | Donias Global Consultants</title>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="flex items-center justify-between px-4 md:px-8 py-4 sticky top-0 bg-white/95 backdrop-blur-sm z-50 shadow-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants Logo"
+          class="w-[50px] h-[50px]"
+        />
+        <h2 class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block">
+          Donias Global Consultants
+        </h2>
+      </div>
+
+      <nav class="w-full relative lg:w-auto">
+        <button
+          class="hamburger absolute right-0 bg-[#a23342] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#a23342] focus:ring-opacity-50 transition-all"
+          aria-label="Toggle menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white mb-1.5 transition-all duration-300"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+
+        <ul class="hidden lg:flex items-center space-x-8">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li><a class="header_achor" href="services.html">Services</a></li>
+          <li><a class="header_achor" href="sii.html">Study Abroad</a></li>
+          <li>
+            <a class="header_achor" href="Medical_tourism.html"
+              >Medical Tourism</a
+            >
+          </li>
+          <div class="hidden lg:block ml-8">
+            <button
+              class="bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-3 px-6 rounded-full text-[15px] font-semibold cursor-pointer transition-all duration-300 shadow-[0_4px_12px_rgba(162,51,66,0.3)] hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(162,51,66,0.4)]"
+              onclick="location.href='contact_us.html'"
+            >
+              Get Free Consultation
+            </button>
+          </div>
+        </ul>
+
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
+        >
+          <ul class="flex flex-col p-6 space-y-4">
+            <li>
+              <a class="header_achor block py-2" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="services.html"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="sii.html"
+                >Study Abroad</a
+              >
+            </li>
+            <li>
+              <a class="header_achor block py-2" href="Medical_tourism.html"
+                >Medical Tourism</a
+              >
+            </li>
+            <li class="pt-4">
+              <button
+                class="w-full bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-3 px-6 rounded-full text-[15px] font-semibold cursor-pointer transition-all duration-300"
+                onclick="location.href='contact_us.html'"
+              >
+                Get Free Consultation
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] relative overflow-hidden py-20 md:py-32"
+    >
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div
+              class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white rounded-full text-sm font-semibold mb-6"
+            >
+              OUR SERVICES
+            </div>
+            <h1
+              class="text-[clamp(2.5rem,5vw,4.5rem)] leading-tight font-bold text-white mb-6"
+            >
+              Operations Excellence
+            </h1>
+            <p class="text-white/90 text-xl mb-8 leading-relaxed">
+              Streamline processes for maximum efficiency and sustainable
+              operational performance
+            </p>
+            <button
+              class="bg-white text-[#06213a] border-none py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl"
+              onclick="location.href='contact_us.html'"
+            >
+              Schedule a Consultation
+            </button>
+          </div>
+
+          <div class="flex justify-center lg:justify-end">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80"
+                alt="Operations Excellence"
+                class="w-full h-[400px] object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent flex items-end p-8"
+              >
+                <div class="text-white">
+                  <div class="text-4xl font-bold mb-2">⚙️</div>
+                  <p class="text-lg font-semibold">
+                    Optimizing Your Operations
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+          <div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Optimize Your Operations for Peak Performance
+            </h2>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+              In today's competitive business environment, operational
+              excellence is not just an advantage—it's a necessity. Our
+              Operations Excellence services help you streamline processes,
+              reduce costs, and enhance productivity across your entire
+              organization.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              We leverage proven methodologies, industry best practices, and
+              cutting-edge technology to transform your operations into a
+              well-oiled machine that delivers consistent, measurable results.
+            </p>
+          </div>
+          <div class="relative">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+              alt="Operations Team Collaboration"
+              class="rounded-3xl shadow-2xl w-full h-auto"
+            />
+            <div
+              class="absolute -bottom-6 -left-6 bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white p-6 rounded-2xl shadow-xl"
+            >
+              <div class="text-3xl font-bold">500+</div>
+              <div class="text-sm">Successful Optimizations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Services -->
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Our Operations Services
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Comprehensive operational solutions designed to maximize efficiency
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              01
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Process Mapping & Redesign
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Analyze and redesign your business processes to eliminate
+              inefficiencies, reduce bottlenecks, and create streamlined
+              workflows that drive productivity.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              02
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Supply Chain Optimization
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Enhance your supply chain efficiency through strategic planning,
+              vendor management, and logistics optimization for improved
+              delivery and cost savings.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              03
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Cost Reduction Strategies
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Identify and implement cost-saving opportunities without
+              compromising quality. Strategic cost management that improves your
+              bottom line.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              04
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Quality Assurance Systems
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Implement robust quality management systems to ensure consistent
+              product and service quality that meets and exceeds customer
+              expectations.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              05
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Automation & Technology Integration
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Leverage automation and technology to streamline operations,
+              reduce manual work, and increase accuracy across your business
+              processes.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-xl flex items-center justify-center mb-6 text-white text-2xl font-bold"
+            >
+              06
+            </div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+              Performance Management
+            </h3>
+            <p class="text-gray-600 leading-relaxed">
+              Develop KPIs and performance metrics to monitor operational
+              efficiency and drive continuous improvement initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Showcase Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80"
+              alt="Manufacturing Operations"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-2">Streamlined Production</h3>
+                <p class="text-white/90">
+                  Optimizing manufacturing for efficiency
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1565514020179-026b92b84bb6?w=800&q=80"
+              alt="Warehouse Operations"
+              class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-8"
+            >
+              <div class="text-white">
+                <h3 class="text-2xl font-bold mb-2">Supply Chain Excellence</h3>
+                <p class="text-white/90">
+                  Efficient logistics and inventory management
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80"
+              alt="Process Analysis"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Process Optimization</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?w=600&q=80"
+              alt="Quality Control"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Quality Assurance</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative overflow-hidden rounded-3xl shadow-xl group">
+            <img
+              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=600&q=80"
+              alt="Technology Integration"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6"
+            >
+              <div class="text-white">
+                <h3 class="text-xl font-bold">Tech Integration</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="bg-gray-50 py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            Our Operations Improvement Process
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            A systematic approach to operational excellence
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Assessment & Diagnosis
+            </h3>
+            <p class="text-gray-600">
+              Comprehensive evaluation of current operations to identify
+              inefficiencies and improvement opportunities.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Solution Design
+            </h3>
+            <p class="text-gray-600">
+              Create customized operational solutions tailored to your specific
+              business needs and goals.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Implementation</h3>
+            <p class="text-gray-600">
+              Execute improvements with minimal disruption, ensuring smooth
+              transition and employee adoption.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-gradient-to-br from-[#06213a] to-[#0a2f52] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold shadow-lg"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Monitor & Optimize
+            </h3>
+            <p class="text-gray-600">
+              Continuous monitoring and refinement to ensure sustained
+              performance improvements and ROI.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-gradient-to-br from-[#a23342] to-[#8a2938] py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Why Choose Our Operations Services
+          </h2>
+          <p class="text-lg text-white/80 max-w-3xl mx-auto">
+            Trusted expertise that delivers measurable operational improvements
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Data-Driven Results
+            </h3>
+            <p class="text-white/80">
+              Our solutions are backed by rigorous data analysis and proven
+              methodologies that deliver tangible results.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">⚡</div>
+            <h3 class="text-2xl font-bold text-white mb-4">
+              Rapid Implementation
+            </h3>
+            <p class="text-white/80">
+              Quick deployment of solutions with minimal disruption to your
+              ongoing operations.
+            </p>
+          </div>
+
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20"
+          >
+            <div class="text-4xl mb-4">💰</div>
+            <h3 class="text-2xl font-bold text-white mb-4">Cost Efficiency</h3>
+            <p class="text-white/80">
+              Significant cost savings through process optimization and waste
+              reduction initiatives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-4 md:px-8 max-w-4xl text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          Ready to Optimize Your Operations?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Let's discuss how we can streamline your processes and drive
+          operational excellence across your organization.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white border-none py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 shadow-lg hover:-translate-y-0.5 hover:shadow-xl"
+            onclick="location.href='contact_us.html'"
+          >
+            Schedule Free Consultation
+          </button>
+          <button
+            class="bg-white text-[#06213a] border-2 border-[#06213a] py-4 px-8 rounded-full text-base font-semibold cursor-pointer transition-all duration-300 hover:bg-[#06213a] hover:text-white"
+            onclick="location.href='services.html'"
+          >
+            View All Services
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white py-16"
+    >
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <img
+                src="icons/logo.png"
+                alt="Donias Global Consultants Logo"
+                class="w-12 h-12"
+              />
+              <h3 class="text-xl font-bold">Donias Global</h3>
+            </div>
+            <p class="text-white/80 mb-6">
+              Your trusted partner in business transformation and operational
+              excellence.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">📘</span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">🐦</span>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#fbbf24] transition-all duration-300"
+              >
+                <span class="text-lg">💼</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Our Services
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Support</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="contact_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Get In Touch</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">📍</span>
+                <span>Lagos, Nigeria</span>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">✉️</span>
+                <a
+                  href="mailto:info@doniasglobal.com"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  info@doniasglobal.com
+                </a>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <span class="text-[#fbbf24]">📞</span>
+                <a
+                  href="tel:+234XXXXXXXXXX"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  +234 XXX XXX XXXX
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8">
+          <p class="text-white/60 text-sm text-center">
+            © 2025 Donias Global Consultants. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="business_script.js"></script>
+  </body>
+</html>

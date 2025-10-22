@@ -1,0 +1,2881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Work & Skilled Migration - Build Your Career Abroad | Donias Travels
+    </title>
+    <meta
+      name="description"
+      content="Expert work visa and skilled migration support. From job search to PR pathways. Australia, Canada, UK, Germany, UAE and more. Start your journey today."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #8b2635;
+        --primary-dark: #6b1d2a;
+        --primary-light: #a63446;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+        --border: #e5e5e5;
+        --white: #ffffff;
+        --success: #28a745;
+        --warning: #ffc107;
+        --info: #17a2b8;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo span:first-child {
+        color: var(--text-dark);
+      }
+
+      .logo span:last-child {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--primary);
+        text-decoration: underline;
+        padding: 0.5rem 1rem;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 38, 53, 0.95),
+            rgba(107, 29, 42, 0.95)
+          ),
+          url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&h=900&fit=crop")
+            center/cover;
+        color: var(--white);
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .hero .btn-primary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+      }
+
+      .hero .btn-secondary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--white);
+        color: var(--white);
+        backdrop-filter: blur(10px);
+      }
+
+      .trust-row {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .stars {
+        color: #ffd700;
+        font-size: 1.2rem;
+      }
+
+      /* Quick Selector */
+      .quick-selector {
+        background: var(--white);
+        padding: 3rem 2rem;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        position: relative;
+        margin-top: -2rem;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .selector-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--border);
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-light);
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+      }
+
+      .tab-btn.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .selector-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .selector-card {
+        padding: 1.5rem;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .selector-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.15);
+      }
+
+      .selector-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .selector-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Pathway Cards */
+      .pathway-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .pathway-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .pathway-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .pathway-header {
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: var(--white);
+        text-align: center;
+      }
+
+      .pathway-header h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .pathway-header .badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        font-size: 0.85rem;
+      }
+
+      .pathway-content {
+        padding: 2rem;
+      }
+
+      .info-list {
+        list-style: none;
+        margin: 1.5rem 0;
+      }
+
+      .info-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-dark);
+        border-bottom: 1px solid var(--bg-light);
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+
+      .info-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--success);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .info-list li strong {
+        color: var(--text-dark);
+        display: block;
+        margin-bottom: 0.25rem;
+      }
+
+      .info-list li span {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      /* Points Calculator */
+      .calculator {
+        background: linear-gradient(135deg, var(--bg-light), #fff);
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 0.75rem;
+        border: 2px solid var(--border);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .score-display {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        margin-top: 2rem;
+        border: 3px solid var(--primary);
+      }
+
+      .score-number {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .score-label {
+        font-size: 1.2rem;
+        color: var(--text-light);
+      }
+
+      .score-breakdown {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .score-item {
+        background: var(--bg-light);
+        padding: 1rem;
+        border-radius: 8px;
+      }
+
+      .score-item strong {
+        display: block;
+        color: var(--primary);
+        font-size: 1.5rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .score-item span {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Job Categories */
+      .job-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .job-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        border: 2px solid var(--border);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .job-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .job-icon {
+        width: 60px;
+        height: 60px;
+        background: rgba(139, 38, 53, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .job-card h3 {
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+      }
+
+      .job-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      .demand-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .demand-high {
+        background: rgba(40, 167, 69, 0.1);
+        color: var(--success);
+      }
+
+      .demand-medium {
+        background: rgba(255, 193, 7, 0.1);
+        color: var(--warning);
+      }
+
+      /* Process Steps */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        position: relative;
+      }
+
+      .process-card {
+        background: var(--bg-light);
+        padding: 2rem;
+        border-radius: 12px;
+        text-align: center;
+        position: relative;
+      }
+
+      .process-number {
+        width: 60px;
+        height: 60px;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+      }
+
+      .process-card h3 {
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+      }
+
+      .process-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .timeline-label {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* Country Comparison */
+      .comparison-table {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .comparison-table th {
+        background: var(--primary);
+        color: var(--white);
+        padding: 1.5rem 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1.5rem 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .comparison-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .comparison-table tr:hover {
+        background: var(--bg-light);
+      }
+
+      .check-icon {
+        color: var(--success);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .cross-icon {
+        color: #dc3545;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      /* Pricing Cards */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .pricing-card {
+        background: var(--white);
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      .pricing-card.popular {
+        border-color: var(--primary);
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(139, 38, 53, 0.2);
+      }
+
+      .pricing-card.popular::before {
+        content: "MOST POPULAR";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.25rem 1rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .price-note {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      .features-list {
+        list-style: none;
+        text-align: left;
+        margin: 2rem 0;
+      }
+
+      .features-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-dark);
+      }
+
+      .features-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      /* FAQs */
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-category {
+        margin-bottom: 3rem;
+      }
+
+      .faq-category h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--primary);
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 1.5rem;
+        background: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .faq-question:hover {
+        background: var(--bg-light);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        background: var(--bg-light);
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 1.5rem;
+        max-height: 800px;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Success Stories */
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .story-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .story-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .story-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .story-info h4 {
+        margin-bottom: 0.25rem;
+      }
+
+      .story-info p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .story-content p {
+        color: var(--text-dark);
+        font-style: italic;
+        margin-bottom: 1rem;
+      }
+
+      .story-outcome {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(40, 167, 69, 0.1);
+        color: var(--success);
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      /* Resources */
+      .resources-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .resource-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .resource-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .resource-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .resource-content {
+        padding: 1.5rem;
+      }
+
+      .resource-content h3 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .resource-content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .resource-tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        background: var(--bg-light);
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+      }
+
+      .contact-method {
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .disclaimer {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 1.5rem;
+        background: rgba(255, 193, 7, 0.1);
+        border-left: 4px solid var(--warning);
+        border-radius: 6px;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .pathway-grid,
+        .job-grid,
+        .pricing-grid,
+        .story-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .comparison-table {
+          overflow-x: auto;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      /* Stat Cards */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--text-light);
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo"><span>donias</span><span>travels</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#pathways">Pathways</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#calculator">Points Calculator</a>
+          <a href="#process">Process</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faqs">FAQs</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#assessment" class="btn btn-primary">Free Assessment</a>
+          <a href="#consultation" class="btn btn-secondary">Book Expert Call</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- WhatsApp Float -->
+    <div
+      class="whatsapp-float"
+      onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')"
+    >
+      💬
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Work & Skilled Migration—Build Your Career Abroad</h1>
+        <p>
+          From job search to permanent residency. Expert guidance for skilled
+          workers, professionals, and entrepreneurs seeking global
+          opportunities.
+        </p>
+        <div class="hero-cta">
+          <a href="#calculator" class="btn btn-primary"
+            >Calculate Your Points (Free)</a
+          >
+          <a href="#assessment" class="btn btn-secondary"
+            >Get Personalized Assessment</a
+          >
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="stars">★★★★★</span>
+            <span>4.9/5 Rating</span>
+          </div>
+          <div class="trust-item">
+            <span>✓</span>
+            <span>2,500+ Successful Migrations</span>
+          </div>
+          <div class="trust-item">
+            <span>🔒</span>
+            <span>Licensed Migration Agents</span>
+          </div>
+          <div class="trust-item">
+            <span>⚡</span>
+            <span>14-Day Application Prep</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Selector -->
+    <section class="quick-selector">
+      <div class="selector-tabs">
+        <button class="tab-btn active" onclick="switchTab('pathway')">
+          By Pathway
+        </button>
+        <button class="tab-btn" onclick="switchTab('profession')">
+          By Profession
+        </button>
+        <button class="tab-btn" onclick="switchTab('country')">
+          By Country
+        </button>
+      </div>
+
+      <div id="pathway-tab" class="tab-content active">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>💼 Skilled Worker Visa</h3>
+            <p>Employment-based migration</p>
+            <a href="#skilled" class="btn-ghost">Explore Pathway →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🎓 Graduate Routes</h3>
+            <p>Post-study work opportunities</p>
+            <a href="#graduate" class="btn-ghost">Explore Pathway →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🏆 Points-Based Systems</h3>
+            <p>Canada Express Entry, Australia PR</p>
+            <a href="#points" class="btn-ghost">Explore Pathway →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🚀 Startup & Entrepreneur</h3>
+            <p>Business innovation visas</p>
+            <a href="#startup" class="btn-ghost">Explore Pathway →</a>
+          </div>
+          <div class="selector-card">
+            <h3>👨‍⚕️ Healthcare Professionals</h3>
+            <p>Doctors, nurses, specialists</p>
+            <a href="#healthcare" class="btn-ghost">Explore Pathway →</a>
+          </div>
+          <div class="selector-card">
+            <h3>🏗️ Trade & Blue Collar</h3>
+            <p>Skilled trades in demand</p>
+            <a href="#trades" class="btn-ghost">Explore Pathway →</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="profession-tab" class="tab-content">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>💻 IT & Technology</h3>
+            <p>Developers, analysts, engineers</p>
+          </div>
+          <div class="selector-card">
+            <h3>👨‍⚕️ Healthcare</h3>
+            <p>Doctors, nurses, therapists</p>
+          </div>
+          <div class="selector-card">
+            <h3>🏗️ Engineering</h3>
+            <p>Civil, mechanical, electrical</p>
+          </div>
+          <div class="selector-card">
+            <h3>📊 Business & Finance</h3>
+            <p>Accountants, managers, analysts</p>
+          </div>
+          <div class="selector-card">
+            <h3>🎓 Education</h3>
+            <p>Teachers, lecturers, trainers</p>
+          </div>
+          <div class="selector-card">
+            <h3>🔧 Skilled Trades</h3>
+            <p>Electricians, plumbers, welders</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="country-tab" class="tab-content">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>🇦🇺 Australia</h3>
+            <p>Skilled Independent (189), TSS</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇨🇦 Canada</h3>
+            <p>Express Entry, Provincial Nominee</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇬🇧 United Kingdom</h3>
+            <p>Skilled Worker, Health & Care</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇩🇪 Germany</h3>
+            <p>EU Blue Card, Job Seeker</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇦🇪 UAE</h3>
+            <p>Employment visa, Golden Visa</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇳🇿 New Zealand</h3>
+            <p>Skilled Migrant Category</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Popular Pathways -->
+      <section id="pathways" class="section">
+        <div class="section-header">
+          <h2>Popular Migration Pathways</h2>
+          <p>Find the right route to your international career</p>
+        </div>
+
+        <div class="pathway-grid">
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇦🇺 Australia</h3>
+              <span class="badge">Skilled Independent 189</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                Points-based permanent residency for skilled workers without
+                employer sponsorship.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>Minimum Points:</strong>
+                  <span>65 points (competitive 85+)</span>
+                </li>
+                <li>
+                  <strong>Age Limit:</strong>
+                  <span>Under 45 years</span>
+                </li>
+                <li>
+                  <strong>English:</strong>
+                  <span>IELTS 6+ (Competent)</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>6-12 months</span>
+                </li>
+                <li>
+                  <strong>Pathway to PR:</strong>
+                  <span>Direct permanent residency</span>
+                </li>
+              </ul>
+              <a
+                href="#australia"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇨🇦 Canada</h3>
+              <span class="badge">Express Entry</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                Fast-track permanent residence for skilled workers through CRS
+                ranking system.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>CRS Score:</strong>
+                  <span>Competitive 470+ (varies)</span>
+                </li>
+                <li>
+                  <strong>Age Limit:</strong>
+                  <span>No strict limit (points peak 20-29)</span>
+                </li>
+                <li>
+                  <strong>English/French:</strong>
+                  <span>CLB 7+ required</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>6 months post-ITA</span>
+                </li>
+                <li>
+                  <strong>Pathway to PR:</strong>
+                  <span>Direct permanent residency</span>
+                </li>
+              </ul>
+              <a
+                href="#canada"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Calculate CRS Score</a
+              >
+            </div>
+          </div>
+
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇬🇧 United Kingdom</h3>
+              <span class="badge">Skilled Worker Visa</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                Work visa with employer sponsorship leading to settlement after
+                5 years.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>Job Offer:</strong>
+                  <span>Required from licensed sponsor</span>
+                </li>
+                <li>
+                  <strong>Salary Threshold:</strong>
+                  <span>£38,700 or occupation rate</span>
+                </li>
+                <li>
+                  <strong>English:</strong>
+                  <span>B1 CEFR level (IELTS 4.0+)</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>3-8 weeks</span>
+                </li>
+                <li>
+                  <strong>Pathway to PR:</strong>
+                  <span>Indefinite Leave after 5 years</span>
+                </li>
+              </ul>
+              <a
+                href="#uk"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Find UK Jobs</a
+              >
+            </div>
+          </div>
+
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇩🇪 Germany</h3>
+              <span class="badge">EU Blue Card</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                For highly qualified non-EU workers with university degrees and
+                job offers.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>Qualification:</strong>
+                  <span>University degree required</span>
+                </li>
+                <li>
+                  <strong>Salary Minimum:</strong>
+                  <span>€45,300 (€41,041.80 shortage)</span>
+                </li>
+                <li>
+                  <strong>German Language:</strong>
+                  <span>Not mandatory (A1 helpful)</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>4-12 weeks</span>
+                </li>
+                <li>
+                  <strong>Pathway to PR:</strong>
+                  <span>33 months (21 with B1 German)</span>
+                </li>
+              </ul>
+              <a
+                href="#germany"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇦🇪 UAE</h3>
+              <span class="badge">Employment & Golden Visa</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                Employer-sponsored work permits and long-term residence for
+                skilled professionals.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>Job Offer:</strong>
+                  <span>Employment contract required</span>
+                </li>
+                <li>
+                  <strong>Golden Visa:</strong>
+                  <span>5-10 years for specialists</span>
+                </li>
+                <li>
+                  <strong>Qualifications:</strong>
+                  <span>Degree + 2 years experience</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>2-4 weeks</span>
+                </li>
+                <li>
+                  <strong>Tax Benefits:</strong>
+                  <span>0% personal income tax</span>
+                </li>
+              </ul>
+              <a
+                href="#uae"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Explore UAE Jobs</a
+              >
+            </div>
+          </div>
+
+          <div class="pathway-card">
+            <div class="pathway-header">
+              <h3>🇳🇿 New Zealand</h3>
+              <span class="badge">Skilled Migrant Category</span>
+            </div>
+            <div class="pathway-content">
+              <p>
+                Points-based system for skilled workers seeking NZ permanent
+                residence.
+              </p>
+              <ul class="info-list">
+                <li>
+                  <strong>Minimum Points:</strong>
+                  <span>160 points (selection varies)</span>
+                </li>
+                <li>
+                  <strong>Age Limit:</strong>
+                  <span>Under 55 years</span>
+                </li>
+                <li>
+                  <strong>English:</strong>
+                  <span>IELTS 6.5 overall</span>
+                </li>
+                <li>
+                  <strong>Processing:</strong>
+                  <span>6-12 months</span>
+                </li>
+                <li>
+                  <strong>Pathway to PR:</strong>
+                  <span>Direct permanent residence</span>
+                </li>
+              </ul>
+              <a
+                href="#nz"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Calculate Points</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Points Calculator -->
+      <section id="calculator" class="section">
+        <div class="section-header">
+          <h2>Migration Points Calculator</h2>
+          <p>
+            Estimate your eligibility for points-based systems
+            (Australia/Canada/NZ)
+          </p>
+        </div>
+
+        <div class="calculator">
+          <form id="points-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="country-calc">Select Country</label>
+                <select id="country-calc" required>
+                  <option value="">Choose country</option>
+                  <option value="australia">Australia (189)</option>
+                  <option value="canada">Canada (Express Entry)</option>
+                  <option value="newzealand">New Zealand (SMC)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="age">Your Age</label>
+                <select id="age" required>
+                  <option value="">Select age range</option>
+                  <option value="18-24">18-24 years</option>
+                  <option value="25-32">25-32 years</option>
+                  <option value="33-39">33-39 years</option>
+                  <option value="40-44">40-44 years</option>
+                  <option value="45+">45+ years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="education">Education Level</label>
+                <select id="education" required>
+                  <option value="">Select qualification</option>
+                  <option value="phd">Doctorate/PhD</option>
+                  <option value="masters">Master's Degree</option>
+                  <option value="bachelors">Bachelor's Degree</option>
+                  <option value="diploma">Diploma/Certificate</option>
+                  <option value="high-school">High School</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="work-experience">Work Experience</label>
+                <select id="work-experience" required>
+                  <option value="">Select years</option>
+                  <option value="0-1">Less than 1 year</option>
+                  <option value="1-3">1-3 years</option>
+                  <option value="3-5">3-5 years</option>
+                  <option value="5-8">5-8 years</option>
+                  <option value="8+">8+ years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="english">English Test Score</label>
+                <select id="english" required>
+                  <option value="">Select level</option>
+                  <option value="superior">Superior (IELTS 8+ each)</option>
+                  <option value="proficient">Proficient (IELTS 7+ each)</option>
+                  <option value="competent">Competent (IELTS 6+ each)</option>
+                  <option value="functional">Functional (IELTS 5+ each)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="partner">Partner Skills</label>
+                <select id="partner" required>
+                  <option value="">Select option</option>
+                  <option value="skilled">
+                    Partner with skilled qualification
+                  </option>
+                  <option value="competent">
+                    Partner with competent English
+                  </option>
+                  <option value="none">No partner / Not applicable</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="occupation">Occupation on Skilled List?</label>
+                <select id="occupation" required>
+                  <option value="">Select option</option>
+                  <option value="yes">Yes, on shortage list</option>
+                  <option value="medium">Yes, medium list</option>
+                  <option value="no">Not sure / No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="regional">Regional/Provincial Nomination?</label>
+                <select id="regional" required>
+                  <option value="">Select option</option>
+                  <option value="yes">Yes / Planning to apply</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem">
+              <button
+                type="button"
+                onclick="calculatePoints()"
+                class="btn btn-primary"
+              >
+                Calculate My Points
+              </button>
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Free assessment • Results in seconds
+              </p>
+            </div>
+          </form>
+
+          <div id="score-results" style="display: none">
+            <div class="score-display">
+              <div class="score-number" id="total-points">0</div>
+              <div class="score-label">Estimated Points</div>
+              <div style="margin-top: 1rem">
+                <span
+                  id="eligibility-status"
+                  style="
+                    display: inline-block;
+                    padding: 0.5rem 1.5rem;
+                    border-radius: 20px;
+                    font-weight: 600;
+                  "
+                ></span>
+              </div>
+            </div>
+
+            <div class="score-breakdown">
+              <div class="score-item">
+                <strong id="age-points">0</strong>
+                <span>Age Points</span>
+              </div>
+              <div class="score-item">
+                <strong id="edu-points">0</strong>
+                <span>Education</span>
+              </div>
+              <div class="score-item">
+                <strong id="work-points">0</strong>
+                <span>Experience</span>
+              </div>
+              <div class="score-item">
+                <strong id="english-points">0</strong>
+                <span>English</span>
+              </div>
+              <div class="score-item">
+                <strong id="other-points">0</strong>
+                <span>Other Factors</span>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem">
+              <h3 style="margin-bottom: 1rem">Next Steps:</h3>
+              <p
+                id="next-steps-text"
+                style="color: var(--text-light); margin-bottom: 1.5rem"
+              ></p>
+              <a href="#assessment" class="btn btn-primary"
+                >Get Detailed Assessment</a
+              >
+              <a href="#consultation" class="btn btn-secondary"
+                >Book Migration Consultation</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- In-Demand Jobs -->
+      <section id="jobs" class="section">
+        <div class="section-header">
+          <h2>High-Demand Occupations</h2>
+          <p>Industries actively seeking skilled migrants</p>
+        </div>
+
+        <div class="job-grid">
+          <div class="job-card">
+            <div class="job-icon">💻</div>
+            <h3>Software Development</h3>
+            <p>
+              Full-stack developers, mobile app developers, DevOps engineers,
+              cloud architects
+            </p>
+            <span class="demand-badge demand-high">🔥 Very High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">👨‍⚕️</div>
+            <h3>Healthcare & Nursing</h3>
+            <p>
+              Registered nurses, doctors, physiotherapists, medical specialists,
+              aged care
+            </p>
+            <span class="demand-badge demand-high">🔥 Very High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🏗️</div>
+            <h3>Civil Engineering</h3>
+            <p>
+              Civil engineers, structural engineers, project managers, quantity
+              surveyors
+            </p>
+            <span class="demand-badge demand-high">🔥 Very High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">📊</div>
+            <h3>Accounting & Finance</h3>
+            <p>
+              Chartered accountants, financial analysts, auditors, management
+              accountants
+            </p>
+            <span class="demand-badge demand-medium">⚡ High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🔧</div>
+            <h3>Skilled Trades</h3>
+            <p>Electricians, plumbers, welders, carpenters, HVAC technicians</p>
+            <span class="demand-badge demand-high">🔥 Very High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🎓</div>
+            <h3>Education</h3>
+            <p>
+              Secondary teachers, early childhood teachers, special education,
+              university lecturers
+            </p>
+            <span class="demand-badge demand-medium">⚡ High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">⚙️</div>
+            <h3>Mechanical Engineering</h3>
+            <p>
+              Mechanical engineers, industrial engineers, automation engineers
+            </p>
+            <span class="demand-badge demand-medium">⚡ High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">🔬</div>
+            <h3>Science & Research</h3>
+            <p>
+              Research scientists, chemists, environmental scientists,
+              biotechnology
+            </p>
+            <span class="demand-badge demand-medium">⚡ High Demand</span>
+          </div>
+
+          <div class="job-card">
+            <div class="job-icon">📱</div>
+            <h3>Digital Marketing</h3>
+            <p>
+              SEO specialists, digital strategists, content managers, social
+              media experts
+            </p>
+            <span class="demand-badge demand-medium">⚡ High Demand</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <p style="color: var(--text-light); margin-bottom: 1rem">
+            Not sure if your occupation is in demand?
+          </p>
+          <a href="#assessment" class="btn btn-primary"
+            >Check Occupation List</a
+          >
+        </div>
+      </section>
+
+      <!-- Process Timeline -->
+      <section id="process" class="section">
+        <div class="section-header">
+          <h2>Your Migration Journey</h2>
+          <p>Step-by-step guidance from assessment to arrival</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Eligibility Assessment</h3>
+            <p>
+              We evaluate your profile, calculate points, identify best
+              pathways, and provide honest recommendations.
+            </p>
+            <span class="timeline-label">1-2 days</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Skill Assessment</h3>
+            <p>
+              Arrange professional qualification recognition and skill authority
+              assessment for your occupation.
+            </p>
+            <span class="timeline-label">8-16 weeks</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>English Language Test</h3>
+            <p>
+              Guidance on IELTS/PTE/TOEFL preparation, test booking, and
+              achieving required scores.
+            </p>
+            <span class="timeline-label">4-8 weeks</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <h3>Expression of Interest</h3>
+            <p>
+              Create and submit EOI profile, optimize points, monitor draws and
+              invitations.
+            </p>
+            <span class="timeline-label">Ongoing</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">5</div>
+            <h3>Job Search Support</h3>
+            <p>
+              Resume optimization, LinkedIn profile, interview coaching,
+              employer connections (if required).
+            </p>
+            <span class="timeline-label">2-6 months</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">6</div>
+            <h3>Visa Application</h3>
+            <p>
+              Complete application prep, document collection, medical exams,
+              police clearances, submission.
+            </p>
+            <span class="timeline-label">6-12 months</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">7</div>
+            <h3>Pre-Departure Support</h3>
+            <p>
+              Travel arrangements, accommodation, bank setup, orientation,
+              settlement planning.
+            </p>
+            <span class="timeline-label">2-4 weeks</span>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">8</div>
+            <h3>Post-Arrival Assistance</h3>
+            <p>
+              Airport pickup, temporary housing, job placement support,
+              registration assistance.
+            </p>
+            <span class="timeline-label">Ongoing</span>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number">12-18</div>
+            <div class="stat-label">Average months to visa</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">87%</div>
+            <div class="stat-label">Success rate (complete applications)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">2,500+</div>
+            <div class="stat-label">Successful migrations</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Countries served</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Country Comparison -->
+      <section id="comparison" class="section">
+        <div class="section-header">
+          <h2>Country Comparison</h2>
+          <p>Compare key factors across popular migration destinations</p>
+        </div>
+
+        <div class="comparison-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>🇦🇺 Australia</th>
+                <th>🇨🇦 Canada</th>
+                <th>🇬🇧 UK</th>
+                <th>🇩🇪 Germany</th>
+                <th>🇦🇪 UAE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Job Offer Required</strong></td>
+                <td><span class="cross-icon">✗</span> (189 visa)</td>
+                <td><span class="cross-icon">✗</span> (Express Entry)</td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+              <tr>
+                <td><strong>Direct PR Route</strong></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="cross-icon">✗</span> (5 years)</td>
+                <td><span class="cross-icon">✗</span> (21-33 months)</td>
+                <td><span class="cross-icon">✗</span> (No PR)</td>
+              </tr>
+              <tr>
+                <td><strong>Age Limit</strong></td>
+                <td>Under 45</td>
+                <td>No strict limit</td>
+                <td>No limit</td>
+                <td>No limit</td>
+                <td>No limit</td>
+              </tr>
+              <tr>
+                <td><strong>Processing Time</strong></td>
+                <td>6-12 months</td>
+                <td>6 months</td>
+                <td>3-8 weeks</td>
+                <td>4-12 weeks</td>
+                <td>2-4 weeks</td>
+              </tr>
+              <tr>
+                <td><strong>Language Required</strong></td>
+                <td>English (IELTS 6+)</td>
+                <td>English/French (CLB 7+)</td>
+                <td>English (B1)</td>
+                <td>Optional</td>
+                <td>English</td>
+              </tr>
+              <tr>
+                <td><strong>Salary Range</strong></td>
+                <td>$60k-$120k AUD</td>
+                <td>$45k-$100k CAD</td>
+                <td>£30k-£60k GBP</td>
+                <td>€45k-€80k EUR</td>
+                <td>$36k-$100k USD</td>
+              </tr>
+              <tr>
+                <td><strong>Cost of Living</strong></td>
+                <td>High</td>
+                <td>Medium-High</td>
+                <td>High</td>
+                <td>Medium</td>
+                <td>Medium-High</td>
+              </tr>
+              <tr>
+                <td><strong>Healthcare</strong></td>
+                <td>Universal (Medicare)</td>
+                <td>Universal</td>
+                <td>Universal (NHS)</td>
+                <td>Universal</td>
+                <td>Employer-provided</td>
+              </tr>
+              <tr>
+                <td><strong>Tax Rate</strong></td>
+                <td>19-45%</td>
+                <td>15-33%</td>
+                <td>20-45%</td>
+                <td>14-45%</td>
+                <td>0%</td>
+              </tr>
+              <tr>
+                <td><strong>Family Inclusion</strong></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+                <td><span class="check-icon">✓</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <p style="color: var(--text-light); margin-bottom: 1rem">
+            Need help deciding which country is right for you?
+          </p>
+          <a href="#consultation" class="btn btn-primary"
+            >Book Strategy Session</a
+          >
+        </div>
+      </section>
+
+      <!-- Pricing & Packages -->
+      <section id="pricing" class="section">
+        <div class="section-header">
+          <h2>Service Packages</h2>
+          <p>Comprehensive support at every stage of your migration journey</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Assessment</h3>
+            <div class="price">₦75,000</div>
+            <p class="price-note">Initial Evaluation</p>
+            <ul class="features-list">
+              <li>Detailed eligibility assessment</li>
+              <li>Points calculation</li>
+              <li>Pathway recommendations</li>
+              <li>Skill assessment guidance</li>
+              <li>Document checklist</li>
+              <li>30-min consultation</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Full Service</h3>
+            <div class="price">₦850,000</div>
+            <p class="price-note">End-to-End Support</p>
+            <ul class="features-list">
+              <li>Everything in Assessment</li>
+              <li>Skill assessment coordination</li>
+              <li>English test guidance & prep</li>
+              <li>EOI/profile creation & submission</li>
+              <li>Complete visa application prep</li>
+              <li>Document review & verification</li>
+              <li>Medical & police clearance support</li>
+              <li>Interview preparation (if needed)</li>
+              <li>Application tracking & updates</li>
+              <li>Dedicated case manager</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Premium</h3>
+            <div class="price">₦1,500,000</div>
+            <p class="price-note">White-Glove Migration</p>
+            <ul class="features-list">
+              <li>Everything in Full Service</li>
+              <li>Job search assistance</li>
+              <li>Resume & LinkedIn optimization</li>
+              <li>Employer networking & introductions</li>
+              <li>Interview coaching (5 sessions)</li>
+              <li>Pre-departure orientation</li>
+              <li>Accommodation assistance</li>
+              <li>Bank account setup support</li>
+              <li>Post-arrival settlement support</li>
+              <li>Family member applications</li>
+              <li>Priority support (24/7)</li>
+              <li>Success guarantee terms</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <p
+            style="
+              color: var(--text-light);
+              font-size: 0.95rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <strong>Additional Services:</strong> Partner applications, appeals
+            & reviews, compliance monitoring, citizenship applications
+          </p>
+          <p style="color: var(--warning); font-weight: 600">
+            ⚠️ Government fees, skill assessments, medical exams, and English
+            tests not included • Pricing varies by destination
+          </p>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section id="success" class="section">
+        <div class="section-header">
+          <h2>Success Stories</h2>
+          <p>Real people, real journeys, real results</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">AO</div>
+              <div class="story-info">
+                <h4>Adewale O.</h4>
+                <p>Software Engineer</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "I was skeptical about my chances with only 3 years experience,
+                but Donias Travels optimized my profile and helped me score 485
+                CRS points. Got my ITA in 3 months and now working in Toronto!"
+              </p>
+              <span class="story-outcome">✓ Canada PR - Express Entry</span>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">CN</div>
+              <div class="story-info">
+                <h4>Chidinma N.</h4>
+                <p>Registered Nurse</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "The team guided me through NMC registration, IELTS preparation,
+                and UK job applications. Within 6 months, I had a Skilled Worker
+                visa and now work in Manchester. Worth every penny!"
+              </p>
+              <span class="story-outcome">✓ UK Skilled Worker Visa</span>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">OE</div>
+              <div class="story-info">
+                <h4>Oluwaseun E.</h4>
+                <p>Civil Engineer</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "After two refusals on my own, Donias rebuilt my application
+                from scratch. Their attention to detail and knowledge of
+                Engineers Australia requirements made the difference. Got my 189
+                visa!"
+              </p>
+              <span class="story-outcome">✓ Australia PR (Subclass 189)</span>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">IK</div>
+              <div class="story-info">
+                <h4>Ibrahim K.</h4>
+                <p>Accountant</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "The Premium package was incredible. They found me a job in
+                Dubai with a Golden Visa sponsorship! The interview prep alone
+                was worth it. Now earning 3x my Nigerian salary."
+              </p>
+              <span class="story-outcome">✓ UAE Golden Visa</span>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">FM</div>
+              <div class="story-info">
+                <h4>Folake M.</h4>
+                <p>Marketing Manager</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "I thought I was too old at 42, but they showed me pathways I
+                didn't know existed. Provincial nomination through SINP, and now
+                I'm a Canadian PR with my entire family. Dreams do come true!"
+              </p>
+              <span class="story-outcome">✓ Canada PR - SINP</span>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-header">
+              <div class="story-avatar">TA</div>
+              <div class="story-info">
+                <h4>Tunde A.</h4>
+                <p>Electrician</p>
+              </div>
+            </div>
+            <div class="story-content">
+              <p>
+                "As a tradesperson, I didn't think I qualified. Wrong! The team
+                helped with TRA skill assessment and regional sponsorship.
+                Living in Perth now with my family. Best decision ever."
+              </p>
+              <span class="story-outcome">✓ Australia PR (Subclass 491)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-grid" style="margin-top: 3rem">
+          <div class="stat-card">
+            <div class="stat-number">2,500+</div>
+            <div class="stat-label">Successful migrations</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">87%</div>
+            <div class="stat-label">Application approval rate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">4.9/5</div>
+            <div class="stat-label">Client satisfaction</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">8+</div>
+            <div class="stat-label">Years of expertise</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section id="faqs" class="section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about skilled migration</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-category">
+            <h3>General Questions</h3>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What is skilled migration and who qualifies?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Skilled migration allows qualified professionals to work and
+                  live permanently in another country based on their skills,
+                  qualifications, and work experience. To qualify, you typically
+                  need: (1) A qualification or trade skill in demand, (2)
+                  Relevant work experience (usually 2-5+ years), (3) English
+                  language proficiency, (4) To meet age requirements (varies by
+                  country), and (5) Good health and character. Each country has
+                  specific occupation lists and points systems.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span
+                  >Do I need a job offer to apply for skilled migration?</span
+                >
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  It depends on the country and pathway. Australia (189), Canada
+                  (Express Entry), and New Zealand (SMC) allow you to apply
+                  without a job offer through points-based systems. However, UK,
+                  Germany, and UAE require a job offer from a licensed sponsor.
+                  Having a job offer can boost your points even in countries
+                  where it's not mandatory.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How long does the entire migration process take?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  The timeline varies significantly: Skill assessment (8-16
+                  weeks), English test (4-8 weeks), EOI/profile creation (1-2
+                  weeks), Waiting for invitation (1-12+ months depending on draw
+                  frequency and your points), Visa processing after invitation
+                  (3-12 months). Total average timeline: 12-24 months from
+                  initial assessment to visa grant. Express pathways exist for
+                  in-demand occupations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-category">
+            <h3>Points & Eligibility</h3>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>How many points do I need to migrate?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Minimum requirements vary: Australia (189) - 65 points
+                  minimum, but competitive scores are 85-95+; Canada Express
+                  Entry - No minimum, but competitive CRS is 470-490+; New
+                  Zealand - 160 points to submit EOI. Points are awarded for
+                  age, education, work experience, English proficiency, and
+                  other factors. We help optimize your profile to maximize
+                  points.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span
+                  >What if my occupation is not on the skilled occupation
+                  list?</span
+                >
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  If your occupation isn't listed, you have several options: (1)
+                  Look for closely related occupations that match your duties,
+                  (2) Consider employer-sponsored visas (which often have
+                  broader occupation lists), (3) Explore regional/provincial
+                  nomination programs with extended lists, (4) Check other
+                  countries where your occupation may be in demand, or (5)
+                  Consider upskilling or gaining qualifications in a listed
+                  occupation. We assess all viable alternatives during
+                  consultation.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I improve my points score?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! Common strategies include: Improving English test scores
+                  (can add 10-20 points), Gaining additional work experience,
+                  Completing higher education (Masters/PhD), Getting partner
+                  assessed for skills, Securing state/provincial nomination
+                  (+5-15 points), Professional year programs in Australia,
+                  Learning French for Canada. We provide personalized strategies
+                  to boost your competitiveness.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-category">
+            <h3>Costs & Payments</h3>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What are the total costs for skilled migration?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Total costs typically include: Our service fees (₦850k-₦1.5M),
+                  Skill assessment ($300-$1,200 USD), English test ($200-$350
+                  USD), Visa application fees ($2,000-$5,000 USD depending on
+                  destination), Medical exams ($200-$400), Police clearances
+                  ($50-$150), Document translations/certifications ($200-$500).
+                  Total range: ₦2.5M - ₦4.5M depending on pathway and family
+                  size. We provide detailed cost breakdowns during assessment.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Do you offer payment plans?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes, we offer flexible payment plans for our service fees: 40%
+                  at contract signing, 30% at EOI/profile submission, 30% at
+                  visa lodgement. For Premium packages, we can structure
+                  payments across 6-12 months. Government fees and third-party
+                  costs are paid directly by you when due.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-category">
+            <h3>Family & Dependents</h3>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>Can I include my family in my application?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Yes! You can include your spouse/partner and dependent
+                  children (typically under 18, sometimes under 23 if studying)
+                  in your primary application. They receive the same visa rights
+                  as you. Additional costs apply for dependent assessments,
+                  medicals, and police checks. In points-based systems, a
+                  skilled partner can actually increase your points.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span
+                  >What if I'm refused? Do you offer reapplication
+                  support?</span
+                >
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  While our success rate is 87% for complete applications,
+                  refusals can happen. Premium clients get free reapplication
+                  support. For other packages, we review refusal reasons and
+                  provide discounted reapplication services (50% off). Most
+                  refusals are due to incomplete evidence or skill assessment
+                  issues—we help address these for stronger resubmission.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-category">
+            <h3>Work & Settlement</h3>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span
+                  >Will you help me find a job in my destination country?</span
+                >
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Our Full Service package includes basic job search guidance.
+                  The Premium package provides comprehensive job search support:
+                  resume optimization, LinkedIn profile enhancement, employer
+                  networking, interview coaching, and introductions to
+                  recruitment agencies. While we don't guarantee job placement,
+                  we significantly improve your chances through professional
+                  positioning and connections.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question" onclick="toggleFAQ(this)">
+                <span>What support do you provide after I arrive?</span>
+                <span class="faq-icon">▼</span>
+              </div>
+              <div class="faq-answer">
+                <p>
+                  Premium package includes 90-day post-arrival support:
+                  temporary accommodation assistance, bank account setup
+                  guidance, tax file/social insurance number applications,
+                  mobile/internet connections, school enrollment for kids (if
+                  applicable), orientation to local area and services, job
+                  search follow-up, and ongoing consultation access. We ensure
+                  you settle smoothly in your new home.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resources -->
+      <section id="resources" class="section">
+        <div class="section-header">
+          <h2>Migration Resources</h2>
+          <p>Guides, tools, and insights for your journey</p>
+        </div>
+
+        <div class="resources-grid">
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&h=300&fit=crop"
+              alt="Skills Assessment"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Guide</span>
+              <h3>Complete Skills Assessment Guide</h3>
+              <p>
+                Everything about professional recognition for your occupation
+              </p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop"
+              alt="IELTS Prep"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Preparation</span>
+              <h3>English Test Preparation</h3>
+              <p>IELTS, PTE, TOEFL strategies to achieve your target score</p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=300&fit=crop"
+              alt="Resume"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Templates</span>
+              <h3>International Resume Templates</h3>
+              <p>Country-specific CV formats that get interviews</p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+              alt="Cost Calculator"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Tool</span>
+              <h3>Migration Cost Calculator</h3>
+              <p>Estimate your total expenses by destination and pathway</p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=400&h=300&fit=crop"
+              alt="Interview"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Guide</span>
+              <h3>International Interview Guide</h3>
+              <p>Ace your overseas job interviews with confidence</p>
+            </div>
+          </a>
+
+          <a href="#" class="resource-card">
+            <img
+              src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=400&h=300&fit=crop"
+              alt="Settlement"
+              class="resource-image"
+            />
+            <div class="resource-content">
+              <span class="resource-tag">Checklist</span>
+              <h3>Settlement Essentials Checklist</h3>
+              <p>What to do in your first 30 days after arrival</p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Start Your Migration Journey?</h2>
+          <p>Book your free assessment with our licensed migration experts</p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <h4>Email Us</h4>
+            <p>migration@doniastravels.com</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Response within 4 hours
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">💬</div>
+            <h4>WhatsApp</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Instant messaging
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📞</div>
+            <h4>Call Us</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Mon-Fri, 9AM-7PM WAT
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <h4>Visit Office</h4>
+            <p>Lagos, Nigeria</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              By appointment only
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a
+            href="#calculator"
+            class="btn btn-primary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Calculate My Points</a
+          >
+          <p style="margin-top: 1rem; color: var(--text-light)">Or</p>
+          <a
+            href="#assessment"
+            class="btn btn-secondary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Book Free Assessment</a
+          >
+        </div>
+
+        <div class="disclaimer">
+          <p>
+            <strong>Important Notice:</strong> Donias Travels provides
+            professional migration consulting services. We are registered
+            migration consultants but are not government authorities. We prepare
+            applications based on current immigration laws and submit them on
+            your behalf. Final visa decisions rest with the relevant immigration
+            authorities. Success is not guaranteed, but we maintain an 87%
+            approval rate for complete applications through thorough preparation
+            and compliance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h4>Donias Travels</h4>
+          <p>
+            Your trusted partner for skilled migration and international
+            careers. Licensed agents with 8+ years of expertise.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#pathways">Migration Pathways</a></li>
+            <li><a href="#calculator">Points Calculator</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Popular Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#">Australia Migration</a></li>
+            <li><a href="#">Canada Express Entry</a></li>
+            <li><a href="#">UK Skilled Worker</a></li>
+            <li><a href="#">Germany EU Blue Card</a></li>
+            <li><a href="#">UAE Work Visa</a></li>
+            <li><a href="#">New Zealand SMC</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Professional Standards</a></li>
+            <li><a href="#">Licensing</a></li>
+            <li><a href="#">Complaints</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Donias Travels. All rights reserved. | Licensed Migration
+          Consultancy | MARA/ICCRC Compliant | NDPR Registered
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Tab Switching
+      function switchTab(tab) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((content) => content.classList.remove("active"));
+
+        event.target.classList.add("active");
+        document.getElementById(tab + "-tab").classList.add("active");
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQs in the same category
+        const category = faqItem.closest(".faq-category");
+        category.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }
+
+      // Points Calculator
+      function calculatePoints() {
+        // This is a simplified calculator - you'd implement full logic based on country
+        const country = document.getElementById("country-calc").value;
+        const age = document.getElementById("age").value;
+        const education = document.getElementById("education").value;
+        const workExp = document.getElementById("work-experience").value;
+        const english = document.getElementById("english").value;
+
+        if (!country || !age || !education || !workExp || !english) {
+          alert("Please fill in all required fields");
+          return;
+        }
+
+        // Simplified points calculation (Australia example)
+        let points = 0;
+        let agePoints = 0,
+          eduPoints = 0,
+          workPoints = 0,
+          engPoints = 0,
+          otherPoints = 0;
+
+        // Age points
+        if (age === "25-32") agePoints = 30;
+        else if (age === "18-24" || age === "33-39") agePoints = 25;
+        else if (age === "40-44") agePoints = 15;
+
+        // Education points
+        if (education === "phd") eduPoints = 20;
+        else if (education === "masters") eduPoints = 15;
+        else if (education === "bachelors") eduPoints = 15;
+        else if (education === "diploma") eduPoints = 10;
+
+        // Work experience points
+        if (workExp === "8+") workPoints = 20;
+        else if (workExp === "5-8") workPoints = 15;
+        else if (workExp === "3-5") workPoints = 10;
+        else if (workExp === "1-3") workPoints = 5;
+
+        // English points
+        if (english === "superior") engPoints = 20;
+        else if (english === "proficient") engPoints = 10;
+        else if (english === "competent") engPoints = 0;
+
+        // Other factors (simplified)
+        const partner = document.getElementById("partner").value;
+        if (partner === "skilled") otherPoints += 10;
+        else if (partner === "competent") otherPoints += 5;
+
+        const regional = document.getElementById("regional").value;
+        if (regional === "yes") otherPoints += 15;
+
+        points = agePoints + eduPoints + workPoints + engPoints + otherPoints;
+
+        // Display results
+        document.getElementById("total-points").textContent = points;
+        document.getElementById("age-points").textContent = agePoints;
+        document.getElementById("edu-points").textContent = eduPoints;
+        document.getElementById("work-points").textContent = workPoints;
+        document.getElementById("english-points").textContent = engPoints;
+        document.getElementById("other-points").textContent = otherPoints;
+
+        const statusElement = document.getElementById("eligibility-status");
+        const nextStepsElement = document.getElementById("next-steps-text");
+
+        if (points >= 85) {
+          statusElement.textContent = "✓ Highly Competitive";
+          statusElement.style.background = "rgba(40, 167, 69, 0.1)";
+          statusElement.style.color = "#28a745";
+          nextStepsElement.textContent =
+            "Excellent score! You're in a strong position. We recommend proceeding with skill assessment and EOI submission immediately.";
+        } else if (points >= 65) {
+          statusElement.textContent = "⚡ Competitive";
+          statusElement.style.background = "rgba(255, 193, 7, 0.1)";
+          statusElement.style.color = "#ffc107";
+          nextStepsElement.textContent =
+            "Good score! Consider improving English or getting state nomination to boost competitiveness. Let's discuss optimization strategies.";
+        } else {
+          statusElement.textContent = "⚠ Below Threshold";
+          statusElement.style.background = "rgba(220, 53, 69, 0.1)";
+          statusElement.style.color = "#dc3545";
+          nextStepsElement.textContent =
+            "Your current score is below the minimum. We can help identify ways to increase points or explore alternative pathways that may suit your profile better.";
+        }
+
+        document.getElementById("score-results").style.display = "block";
+        document
+          .getElementById("score-results")
+          .scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(
+          ".pathway-card, .job-card, .process-card, .story-card, .pricing-card"
+        )
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>

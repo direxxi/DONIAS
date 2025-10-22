@@ -1,0 +1,2652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Family & Dependent Visas - Reunite With Your Loved Ones | Donias Travels
+    </title>
+    <meta
+      name="description"
+      content="Expert support for family reunion visas, spouse visas, parent sponsorship, and dependent visas. Bring your family together across UK, Canada, USA, Australia and more."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #8b2635;
+        --primary-dark: #6b1d2a;
+        --primary-light: #a63446;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+        --border: #e5e5e5;
+        --white: #ffffff;
+        --success: #28a745;
+        --warning: #ffc107;
+        --info: #17a2b8;
+        --heart: #e74c3c;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo span:first-child {
+        color: var(--text-dark);
+      }
+
+      .logo span:last-child {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-ghost {
+        background: transparent;
+        color: var(--primary);
+        text-decoration: underline;
+        padding: 0.5rem 1rem;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 38, 53, 0.92),
+            rgba(107, 29, 42, 0.92)
+          ),
+          url("https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1600&h=900&fit=crop")
+            center/cover;
+        color: var(--white);
+        padding: 6rem 2rem;
+        text-align: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+      }
+
+      .hero .btn-primary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+      }
+
+      .hero .btn-secondary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-color: var(--white);
+        color: var(--white);
+        backdrop-filter: blur(10px);
+      }
+
+      .trust-row {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .trust-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      /* Quick Selector */
+      .quick-selector {
+        background: var(--white);
+        padding: 3rem 2rem;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+        position: relative;
+        margin-top: -2rem;
+        border-radius: 12px;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .selector-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 2px solid var(--border);
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 1rem 2rem;
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-light);
+        cursor: pointer;
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s;
+      }
+
+      .tab-btn.active {
+        color: var(--primary);
+        border-bottom-color: var(--primary);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      .selector-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .selector-card {
+        padding: 1.5rem;
+        border: 2px solid var(--border);
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+      }
+
+      .selector-card:hover {
+        border-color: var(--primary);
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.15);
+      }
+
+      .selector-card h3 {
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .selector-card p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Visa Type Cards */
+      .visa-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .visa-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        border: 2px solid transparent;
+      }
+
+      .visa-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        border-color: var(--primary);
+      }
+
+      .visa-header {
+        padding: 2rem;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: var(--white);
+      }
+
+      .visa-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .visa-header h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .visa-header p {
+        opacity: 0.95;
+        font-size: 1rem;
+      }
+
+      .visa-content {
+        padding: 2rem;
+      }
+
+      .timeline-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .info-list {
+        list-style: none;
+        margin: 1.5rem 0;
+      }
+
+      .info-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-dark);
+        border-bottom: 1px solid var(--bg-light);
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+
+      .info-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--success);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .requirements-box {
+        background: var(--bg-light);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .requirements-box h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .requirements-box ul {
+        list-style: none;
+        margin: 0;
+      }
+
+      .requirements-box ul li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--text-dark);
+        font-size: 0.95rem;
+      }
+
+      .requirements-box ul li:before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      /* Eligibility Checker */
+      .checker {
+        background: linear-gradient(135deg, var(--bg-light), #fff);
+        padding: 3rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group label {
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .form-group input,
+      .form-group select {
+        padding: 0.75rem;
+        border: 2px solid var(--border);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+
+      .form-group input:focus,
+      .form-group select:focus {
+        outline: none;
+        border-color: var(--primary);
+      }
+
+      .result-box {
+        background: var(--white);
+        padding: 2.5rem;
+        border-radius: 12px;
+        margin-top: 2rem;
+        border: 3px solid var(--success);
+      }
+
+      .result-box h3 {
+        color: var(--success);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      /* Process Timeline */
+      .timeline {
+        position: relative;
+        padding: 2rem 0;
+      }
+
+      .timeline:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: var(--primary);
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 3rem;
+        position: relative;
+      }
+
+      .timeline-item:nth-child(odd) {
+        flex-direction: row;
+      }
+
+      .timeline-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+
+      .timeline-content {
+        flex: 1;
+        padding: 2rem;
+        background: var(--bg-light);
+        border-radius: 12px;
+        margin: 0 2rem;
+      }
+
+      .timeline-dot {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 20px;
+        background: var(--primary);
+        border: 4px solid var(--white);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px rgba(139, 38, 53, 0.2);
+      }
+
+      .timeline-content h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .timeline-duration {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: var(--primary);
+        color: var(--white);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Success Stories */
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .story-card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-left: 4px solid var(--primary);
+      }
+
+      .story-quote {
+        font-size: 3rem;
+        color: var(--primary);
+        opacity: 0.3;
+        line-height: 1;
+        margin-bottom: 1rem;
+      }
+
+      .story-content p {
+        font-style: italic;
+        color: var(--text-dark);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+      }
+
+      .story-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1.5rem;
+        border-top: 2px solid var(--bg-light);
+      }
+
+      .story-avatar {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      .story-info h4 {
+        margin-bottom: 0.25rem;
+        font-size: 1.1rem;
+      }
+
+      .story-info p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+
+      .story-visa-type {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+
+      /* Country Specific */
+      .country-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .country-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+      }
+
+      .country-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .country-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .country-content {
+        padding: 2rem;
+      }
+
+      .country-flag {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .country-content h3 {
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+        font-size: 1.5rem;
+      }
+
+      /* Pricing Cards */
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .pricing-card {
+        background: var(--white);
+        border: 2px solid var(--border);
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+      }
+
+      .pricing-card.popular {
+        border-color: var(--primary);
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(139, 38, 53, 0.2);
+      }
+
+      .pricing-card.popular::before {
+        content: "MOST POPULAR";
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.25rem 1rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+
+      .pricing-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .pricing-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .price {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .price-note {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+      }
+
+      .features-list {
+        list-style: none;
+        text-align: left;
+        margin: 2rem 0;
+      }
+
+      .features-list li {
+        padding: 0.75rem 0;
+        padding-left: 2rem;
+        position: relative;
+        color: var(--text-dark);
+      }
+
+      .features-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      /* FAQs */
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 1.5rem;
+        background: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .faq-question:hover {
+        background: var(--bg-light);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        background: var(--bg-light);
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 1.5rem;
+        max-height: 800px;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Stats */
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: var(--text-light);
+        font-size: 1rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        background: var(--bg-light);
+        padding: 4rem 2rem;
+        text-align: center;
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+      }
+
+      .contact-method {
+        padding: 2rem;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .contact-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .disclaimer {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 1.5rem;
+        background: rgba(255, 193, 7, 0.1);
+        border-left: 4px solid var(--warning);
+        border-radius: 6px;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .timeline:before {
+          left: 20px;
+        }
+
+        .timeline-item {
+          flex-direction: column !important;
+        }
+
+        .timeline-dot {
+          left: 20px;
+        }
+
+        .timeline-content {
+          margin-left: 60px;
+          margin-right: 0;
+        }
+
+        .visa-grid,
+        .story-grid,
+        .country-grid,
+        .pricing-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      /* Emotional Elements */
+      .heart-icon {
+        color: var(--heart);
+        font-size: 1.2rem;
+      }
+
+      .emotional-highlight {
+        background: linear-gradient(
+          135deg,
+          rgba(139, 38, 53, 0.05),
+          rgba(231, 76, 60, 0.05)
+        );
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 4px solid var(--heart);
+        margin: 2rem 0;
+      }
+
+      .emotional-highlight h3 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo"><span>donias</span><span>travels</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#visa-types">Visa Types</a>
+          <a href="#eligibility">Check Eligibility</a>
+          <a href="#process">Process</a>
+          <a href="#countries">Countries</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faqs">FAQs</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#eligibility" class="btn btn-primary">Check Eligibility</a>
+          <a href="#consultation" class="btn btn-secondary"
+            >Book Consultation</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- WhatsApp Float -->
+    <div
+      class="whatsapp-float"
+      onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')"
+    >
+      💬
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Family & Dependent Visas—Reunite With Those You Love</h1>
+        <p>
+          Bring your spouse, children, parents, or partners to join you. Expert
+          support for family reunion across UK, Canada, USA, Australia, and
+          more.
+        </p>
+        <div class="hero-cta">
+          <a href="#eligibility" class="btn btn-primary"
+            >Check Eligibility Now</a
+          >
+          <a href="#consultation" class="btn btn-secondary"
+            >Free Family Assessment</a
+          >
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <span class="heart-icon">❤️</span>
+            <span>3,200+ Families Reunited</span>
+          </div>
+          <div class="trust-item">
+            <span>✓</span>
+            <span>94% Approval Rate</span>
+          </div>
+          <div class="trust-item">
+            <span>🔒</span>
+            <span>100% Confidential</span>
+          </div>
+          <div class="trust-item">
+            <span>⚡</span>
+            <span>8-16 Week Processing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Selector -->
+    <section class="quick-selector">
+      <div class="selector-tabs">
+        <button class="tab-btn active" onclick="switchTab('relationship')">
+          By Relationship
+        </button>
+        <button class="tab-btn" onclick="switchTab('sponsor')">
+          By Sponsor Status
+        </button>
+        <button class="tab-btn" onclick="switchTab('destination')">
+          By Destination
+        </button>
+      </div>
+
+      <div id="relationship-tab" class="tab-content active">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>💑 Spouse/Partner Visa</h3>
+            <p>Married or unmarried partners</p>
+            <a href="#spouse" class="btn-ghost">Learn More →</a>
+          </div>
+          <div class="selector-card">
+            <h3>👶 Child Dependent Visa</h3>
+            <p>Children under 18 or studying</p>
+            <a href="#child" class="btn-ghost">Learn More →</a>
+          </div>
+          <div class="selector-card">
+            <h3>👵 Parent/Grandparent</h3>
+            <p>Elderly parent sponsorship</p>
+            <a href="#parent" class="btn-ghost">Learn More →</a>
+          </div>
+          <div class="selector-card">
+            <h3>💍 Fiancé(e) Visa</h3>
+            <p>Planning to marry abroad</p>
+            <a href="#fiance" class="btn-ghost">Learn More →</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="sponsor-tab" class="tab-content">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>🇬🇧 UK Citizen/ILR Holder</h3>
+            <p>Sponsoring family members</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇨🇦 Canadian PR/Citizen</h3>
+            <p>Family class sponsorship</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇦🇺 Australian PR/Citizen</h3>
+            <p>Partner & family visas</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇺🇸 US Citizen/Green Card</h3>
+            <p>IR/CR/F family categories</p>
+          </div>
+          <div class="selector-card">
+            <h3>💼 Work Visa Holder</h3>
+            <p>Dependent on work visa</p>
+          </div>
+          <div class="selector-card">
+            <h3>🎓 Student Visa Holder</h3>
+            <p>Dependent on student visa</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="destination-tab" class="tab-content">
+        <div class="selector-grid">
+          <div class="selector-card">
+            <h3>🇬🇧 United Kingdom</h3>
+            <p>Family & Spouse Visa Routes</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇨🇦 Canada</h3>
+            <p>Family Class Sponsorship</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇺🇸 United States</h3>
+            <p>IR/CR/K Visa Categories</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇦🇺 Australia</h3>
+            <p>Partner & Family Stream</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇳🇿 New Zealand</h3>
+            <p>Partnership & Dependent</p>
+          </div>
+          <div class="selector-card">
+            <h3>🇦🇪 UAE</h3>
+            <p>Family Residence Visa</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Visa Types -->
+      <section id="visa-types" class="section">
+        <div class="section-header">
+          <h2>Family Visa Categories</h2>
+          <p>Find the right pathway to bring your loved ones together</p>
+        </div>
+
+        <div class="visa-grid">
+          <!-- Spouse/Partner Visa -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">💑</div>
+              <h3>Spouse & Partner Visa</h3>
+              <p>For married couples and long-term partners</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 8-24 weeks processing</span>
+
+              <ul class="info-list">
+                <li>Married spouses (civil or religious marriage)</li>
+                <li>Civil partners (legal partnership)</li>
+                <li>Unmarried partners (2+ years cohabitation)</li>
+                <li>Full work rights for sponsored partner</li>
+                <li>Path to permanent residence</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Genuine & subsisting relationship</li>
+                  <li>Met in person (not online only)</li>
+                  <li>Sponsor meets income threshold</li>
+                  <li>Adequate accommodation</li>
+                  <li>English language requirement (varies)</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <!-- Child Dependent -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">👶</div>
+              <h3>Child Dependent Visa</h3>
+              <p>For children under 18 or full-time students</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 6-12 weeks processing</span>
+
+              <ul class="info-list">
+                <li>Biological children under 18</li>
+                <li>Adopted children (legal adoption)</li>
+                <li>Stepchildren in some cases</li>
+                <li>Students over 18 (restrictions apply)</li>
+                <li>Access to public education</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Parent has legal custody/consent</li>
+                  <li>Child financially dependent</li>
+                  <li>Not married or in civil partnership</li>
+                  <li>Will live with sponsoring parent</li>
+                  <li>Other parent consent (if applicable)</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <!-- Parent/Grandparent -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">👵</div>
+              <h3>Parent & Grandparent Visa</h3>
+              <p>For elderly dependent parents</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 12-24 weeks processing</span>
+
+              <ul class="info-list">
+                <li>Elderly parents requiring care</li>
+                <li>Financial dependence on sponsor</li>
+                <li>Long-term care needs</li>
+                <li>Limited to specific countries/programs</li>
+                <li>May include super visa options</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Financial dependence proof</li>
+                  <li>Long-term care needs evidence</li>
+                  <li>Care not available in home country</li>
+                  <li>Sponsor financial capability</li>
+                  <li>Medical insurance (some countries)</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <!-- Fiancé(e) -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">💍</div>
+              <h3>Fiancé(e) Visa</h3>
+              <p>To marry in destination country</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 8-12 weeks processing</span>
+
+              <ul class="info-list">
+                <li>Planning to marry within 6 months</li>
+                <li>Genuine relationship evidence</li>
+                <li>Switch to spouse visa after marriage</li>
+                <li>Limited work rights (varies)</li>
+                <li>Must meet sponsor income threshold</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Intention to marry (notice given)</li>
+                  <li>Met in person within last 2 years</li>
+                  <li>Relationship evidence (photos, messages)</li>
+                  <li>Both free to marry (not already married)</li>
+                  <li>English language (varies by country)</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <!-- Dependent on Work Visa -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">💼</div>
+              <h3>Dependent on Work Visa</h3>
+              <p>Family joining work visa holder</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 4-8 weeks processing</span>
+
+              <ul class="info-list">
+                <li>Spouse gets work authorization</li>
+                <li>Children access education</li>
+                <li>Same duration as main visa</li>
+                <li>Can be applied simultaneously</li>
+                <li>Healthcare benefits included</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Main applicant holds valid work visa</li>
+                  <li>Relationship proof (marriage cert, birth cert)</li>
+                  <li>Financial maintenance (varies)</li>
+                  <li>Medical exams (some countries)</li>
+                  <li>Police clearance certificates</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+
+          <!-- Dependent on Student Visa -->
+          <div class="visa-card">
+            <div class="visa-header">
+              <div class="visa-icon">🎓</div>
+              <h3>Dependent on Student Visa</h3>
+              <p>Family joining student visa holder</p>
+            </div>
+            <div class="visa-content">
+              <span class="timeline-badge">⏱ 4-8 weeks processing</span>
+
+              <ul class="info-list">
+                <li>For postgraduate students (usually)</li>
+                <li>Spouse may have work rights</li>
+                <li>Children access public schools</li>
+                <li>Must show financial capacity</li>
+                <li>Limited to certain study levels</li>
+              </ul>
+
+              <div class="requirements-box">
+                <h4>Key Requirements:</h4>
+                <ul>
+                  <li>Student enrolled in eligible program</li>
+                  <li>Sufficient funds for family maintenance</li>
+                  <li>Relationship documentation</li>
+                  <li>Usually postgraduate level required</li>
+                  <li>May vary by institution & country</li>
+                </ul>
+              </div>
+
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Eligibility</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Emotional Highlight -->
+      <div class="emotional-highlight">
+        <h3>❤️ Why Family Reunion Matters</h3>
+        <p style="line-height: 1.8; color: var(--text-dark)">
+          We understand that being separated from your loved ones is one of
+          life's greatest challenges. Whether you're waiting to hold your
+          children again, longing to be reunited with your spouse, or hoping to
+          provide care for aging parents, every day apart feels like an
+          eternity. That's why we treat every family reunion case with the
+          urgency, care, and dedication it deserves. Our team has helped over
+          3,200 families close the distance and start their new chapters
+          together. Let us help yours become the next success story.
+        </p>
+      </div>
+
+      <!-- Eligibility Checker -->
+      <section id="eligibility" class="section">
+        <div class="section-header">
+          <h2>Check Your Eligibility</h2>
+          <p>Find out if you qualify for family sponsorship in 3 minutes</p>
+        </div>
+
+        <div class="checker">
+          <form id="eligibility-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="sponsor-location"
+                  >Where is the sponsor based?</label
+                >
+                <select id="sponsor-location" required>
+                  <option value="">Select country</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">United States</option>
+                  <option value="australia">Australia</option>
+                  <option value="nz">New Zealand</option>
+                  <option value="uae">UAE</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sponsor-status">Sponsor's Immigration Status</label>
+                <select id="sponsor-status" required>
+                  <option value="">Select status</option>
+                  <option value="citizen">Citizen</option>
+                  <option value="pr">Permanent Resident</option>
+                  <option value="work">Work Visa Holder</option>
+                  <option value="student">Student Visa Holder</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="relationship">Relationship to Sponsor</label>
+                <select id="relationship" required>
+                  <option value="">Select relationship</option>
+                  <option value="spouse">Spouse (married)</option>
+                  <option value="partner">Unmarried Partner</option>
+                  <option value="fiance">Fiancé(e)</option>
+                  <option value="child">Child (under 18)</option>
+                  <option value="parent">Parent/Grandparent</option>
+                  <option value="sibling">Sibling</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="marriage-duration"
+                  >How long together/married?</label
+                >
+                <select id="marriage-duration">
+                  <option value="">Select duration</option>
+                  <option value="less1">Less than 1 year</option>
+                  <option value="1-2">1-2 years</option>
+                  <option value="2-5">2-5 years</option>
+                  <option value="5+">5+ years</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="income">Sponsor's Annual Income</label>
+                <select id="income" required>
+                  <option value="">Select range</option>
+                  <option value="below">Below threshold</option>
+                  <option value="meets">Meets minimum</option>
+                  <option value="above">Well above threshold</option>
+                  <option value="unsure">Not sure</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="english">Applicant's English Level</label>
+                <select id="english">
+                  <option value="">Select level</option>
+                  <option value="native">Native speaker</option>
+                  <option value="fluent">Fluent (can take test)</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="basic">Basic/None</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="previous-refusals">Previous Visa Refusals?</label>
+                <select id="previous-refusals" required>
+                  <option value="">Select option</option>
+                  <option value="no">No</option>
+                  <option value="yes-family">Yes (family visa)</option>
+                  <option value="yes-other">Yes (other visa type)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="criminal-record">Any Criminal Record?</label>
+                <select id="criminal-record" required>
+                  <option value="">Select option</option>
+                  <option value="no">No</option>
+                  <option value="minor">Minor offenses</option>
+                  <option value="serious">Serious offenses</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem">
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-bottom: 1rem;
+                  font-size: 0.9rem;
+                "
+              >
+                Save your results by entering your details
+              </p>
+              <div class="form-grid" style="max-width: 600px; margin: 0 auto">
+                <div class="form-group">
+                  <input type="text" placeholder="Full Name" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="Email Address" required />
+                </div>
+              </div>
+              <button
+                type="button"
+                onclick="checkEligibility()"
+                class="btn btn-primary"
+                style="margin-top: 1.5rem"
+              >
+                Check My Eligibility
+              </button>
+              <p
+                style="
+                  color: var(--text-light);
+                  margin-top: 1rem;
+                  font-size: 0.85rem;
+                "
+              >
+                Takes 3 minutes • 100% confidential • No payment required
+              </p>
+            </div>
+          </form>
+
+          <div id="eligibility-results" style="display: none">
+            <div class="result-box">
+              <h3 id="result-title">✓ You May Be Eligible!</h3>
+              <p
+                id="result-message"
+                style="font-size: 1.1rem; line-height: 1.8; margin: 1.5rem 0"
+              ></p>
+
+              <div
+                style="
+                  background: var(--bg-light);
+                  padding: 1.5rem;
+                  border-radius: 8px;
+                  margin: 1.5rem 0;
+                "
+              >
+                <h4 style="color: var(--primary); margin-bottom: 1rem">
+                  Next Steps:
+                </h4>
+                <ol style="padding-left: 1.5rem; color: var(--text-dark)">
+                  <li style="margin-bottom: 0.75rem">
+                    Book a detailed consultation to review your case
+                  </li>
+                  <li style="margin-bottom: 0.75rem">
+                    Gather relationship evidence and financial documents
+                  </li>
+                  <li style="margin-bottom: 0.75rem">
+                    Prepare sponsor's proof of income/status
+                  </li>
+                  <li style="margin-bottom: 0.75rem">
+                    Start English language test if required
+                  </li>
+                </ol>
+              </div>
+
+              <div style="text-align: center; margin-top: 2rem">
+                <a
+                  href="#consultation"
+                  class="btn btn-primary"
+                  style="padding: 1rem 2rem"
+                  >Book Free Consultation</a
+                >
+                <a
+                  href="#pricing"
+                  class="btn btn-secondary"
+                  style="padding: 1rem 2rem"
+                  >View Pricing</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process Timeline -->
+      <section id="process" class="section">
+        <div class="section-header">
+          <h2>The Reunion Journey</h2>
+          <p>Your step-by-step path to bringing your family together</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 1-2</span>
+              <h3>Initial Assessment & Strategy</h3>
+              <p>
+                We review your relationship, sponsor's situation, and determine
+                the best visa route. Identify potential challenges and create a
+                personalized action plan.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 2-4</span>
+              <h3>Document Collection</h3>
+              <p>
+                Gather relationship evidence (photos, messages, calls),
+                financial documents, sponsor's proof of status, and all
+                supporting materials.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 4-6</span>
+              <h3>Application Preparation</h3>
+              <p>
+                Complete visa forms, prepare supporting statement, organize
+                documents chronologically, and ensure everything meets
+                requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 6-8</span>
+              <h3>English Test & Medical (if required)</h3>
+              <p>
+                Book and complete English language test if needed. Attend
+                medical examination at approved clinic. Obtain police clearance
+                certificates.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 8</span>
+              <h3>Application Submission</h3>
+              <p>
+                Submit complete application online or at visa center. Pay
+                government fees. Provide biometrics (fingerprints and photo).
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Week 8-24</span>
+              <h3>Processing & Updates</h3>
+              <p>
+                We track your application, respond to any requests for
+                additional information, and keep you updated on progress
+                throughout.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-duration">Decision Day</span>
+              <h3>Visa Decision & Reunion!</h3>
+              <p>
+                Receive visa approval. Book flights. Prepare for arrival.
+                Finally reunite with your loved ones and start your new chapter
+                together!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat-card">
+            <div class="stat-number">8-24</div>
+            <div class="stat-label">Weeks average processing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">94%</div>
+            <div class="stat-label">Approval rate (complete files)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">3,200+</div>
+            <div class="stat-label">Families reunited</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">48-72h</div>
+            <div class="stat-label">Document review time</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Countries -->
+      <section id="countries" class="section">
+        <div class="section-header">
+          <h2>Popular Destinations</h2>
+          <p>Family reunion programs by country</p>
+        </div>
+
+        <div class="country-grid">
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&h=400&fit=crop"
+              alt="UK"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇬🇧</div>
+              <h3>United Kingdom</h3>
+              <ul class="info-list">
+                <li><strong>Spouse Visa:</strong> £29,000 income threshold</li>
+                <li><strong>Child Dependent:</strong> No additional income</li>
+                <li><strong>Processing:</strong> 12-24 weeks</li>
+                <li><strong>English:</strong> A1 CEFR (IELTS 4.0)</li>
+                <li><strong>Path to ILR:</strong> 5 years</li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check UK Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=600&h=400&fit=crop"
+              alt="Canada"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇨🇦</div>
+              <h3>Canada</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>Spouse Sponsorship:</strong> No minimum income if no
+                  kids
+                </li>
+                <li>
+                  <strong>Parent/Grandparent:</strong> Income requirements apply
+                </li>
+                <li>
+                  <strong>Processing:</strong> 12 months (inland), 12-18
+                  (outland)
+                </li>
+                <li><strong>English:</strong> Not required for family class</li>
+                <li><strong>Path to PR:</strong> Direct permanent residence</li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Canada Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=600&h=400&fit=crop"
+              alt="USA"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇺🇸</div>
+              <h3>United States</h3>
+              <ul class="info-list">
+                <li><strong>IR/CR Visa:</strong> Immediate relatives</li>
+                <li><strong>K-1 Fiancé:</strong> 90 days to marry</li>
+                <li><strong>Processing:</strong> 12-24 months</li>
+                <li><strong>Income:</strong> 125% poverty guideline</li>
+                <li>
+                  <strong>Green Card:</strong> Conditional 2yr → Permanent
+                </li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check USA Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&h=400&fit=crop"
+              alt="Australia"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇦🇺</div>
+              <h3>Australia</h3>
+              <ul class="info-list">
+                <li><strong>Partner Visa:</strong> 820/801 or 309/100</li>
+                <li><strong>Child Visa:</strong> 101/802/445</li>
+                <li><strong>Processing:</strong> 24-36 months</li>
+                <li>
+                  <strong>English:</strong> Functional level waived if paying
+                </li>
+                <li><strong>Two-stage:</strong> Temporary → Permanent</li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check Australia Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&h=400&fit=crop"
+              alt="New Zealand"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇳🇿</div>
+              <h3>New Zealand</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>Partnership:</strong> Living together 12+ months
+                </li>
+                <li><strong>Dependent Child:</strong> Under 24 if studying</li>
+                <li><strong>Processing:</strong> 6-12 months</li>
+                <li><strong>English:</strong> No requirement</li>
+                <li><strong>Residence:</strong> Direct pathway to PR</li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check NZ Eligibility</a
+              >
+            </div>
+          </div>
+
+          <div class="country-card">
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&h=400&fit=crop"
+              alt="UAE"
+              class="country-image"
+            />
+            <div class="country-content">
+              <div class="country-flag">🇦🇪</div>
+              <h3>UAE</h3>
+              <ul class="info-list">
+                <li>
+                  <strong>Family Residence:</strong> Spouse, children, parents
+                </li>
+                <li>
+                  <strong>Income:</strong> AED 4,000-10,000 (varies by emirate)
+                </li>
+                <li><strong>Processing:</strong> 2-4 weeks</li>
+                <li>
+                  <strong>Requirements:</strong> Sponsor employment/business
+                </li>
+                <li><strong>Renewable:</strong> Tied to sponsor's visa</li>
+              </ul>
+              <a
+                href="#eligibility"
+                class="btn btn-primary"
+                style="width: 100%; margin-top: 1rem"
+                >Check UAE Eligibility</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section id="success" class="section">
+        <div class="section-header">
+          <h2>Reunion Stories That Warm Our Hearts</h2>
+          <p>Real families who trusted us to bring them back together</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                After 18 months apart, I can finally hold my wife and baby
+                daughter again. Donias Travels handled our UK spouse visa
+                perfectly—every document, every detail. The day we reunited at
+                Heathrow is a memory I'll treasure forever. Thank you for making
+                it happen!
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">KO</div>
+              <div class="story-info">
+                <h4>Kunle O.</h4>
+                <p>Software Engineer, London</p>
+                <span class="story-visa-type">UK Spouse Visa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                Bringing my elderly mother to Canada seemed impossible until we
+                found Donias Travels. They navigated the complex parent
+                sponsorship process with so much care. Mom arrived last month
+                and seeing her with her grandchildren every day has been the
+                greatest blessing.
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">NK</div>
+              <div class="story-info">
+                <h4>Ngozi K.</h4>
+                <p>Nurse, Toronto</p>
+                <span class="story-visa-type">Canada Parent Sponsorship</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                My fiancée and I were worried about the K-1 visa process, but
+                the team made it straightforward. They caught details we would
+                have missed. We got married in California and she now has her
+                green card. Starting our forever together was worth every step!
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">TA</div>
+              <div class="story-info">
+                <h4>Tunde A.</h4>
+                <p>Business Analyst, Los Angeles</p>
+                <span class="story-visa-type">US K-1 Fiancé Visa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                The Australia partner visa process is notoriously long, but
+                Donias kept us informed every step of the way. After 28 months,
+                we finally got the approval! My partner is here in Melbourne and
+                we're planning our wedding. Dreams really do come true!
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">AC</div>
+              <div class="story-info">
+                <h4>Adaeze C.</h4>
+                <p>Teacher, Melbourne</p>
+                <span class="story-visa-type"
+                  >Australia Partner Visa (820/801)</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                Bringing my three children to join me in Dubai was my biggest
+                priority. Donias Travels handled all the paperwork, school
+                enrollments, and medical requirements. My kids are thriving here
+                and our family is finally whole again. Priceless!
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">YB</div>
+              <div class="story-info">
+                <h4>Yemi B.</h4>
+                <p>Project Manager, Dubai</p>
+                <span class="story-visa-type">UAE Family Residence Visa</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-card">
+            <div class="story-quote">"</div>
+            <div class="story-content">
+              <p>
+                We had one previous refusal and were terrified to try again.
+                Donias identified exactly what went wrong and fixed it. Our UK
+                spouse visa was approved in 14 weeks! Professional, caring, and
+                they genuinely wanted us to succeed. Forever grateful.
+              </p>
+            </div>
+            <div class="story-author">
+              <div class="story-avatar">OF</div>
+              <div class="story-info">
+                <h4>Oluwaseun F.</h4>
+                <p>Accountant, Birmingham</p>
+                <span class="story-visa-type"
+                  >UK Spouse Visa (After Refusal)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="section">
+        <div class="section-header">
+          <h2>Service Packages</h2>
+          <p>Affordable, transparent pricing for family reunion support</p>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Essential</h3>
+            <div class="price">₦180,000</div>
+            <p class="price-note">Basic Support Package</p>
+            <ul class="features-list">
+              <li>Eligibility assessment</li>
+              <li>Document checklist</li>
+              <li>Form completion guidance</li>
+              <li>Application review (1 round)</li>
+              <li>Email support</li>
+              <li>Resource library access</li>
+            </ul>
+            <a href="#contact" class="btn btn-secondary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card popular">
+            <h3>Premium</h3>
+            <div class="price">₦450,000</div>
+            <p class="price-note">Full Service Package</p>
+            <ul class="features-list">
+              <li>Everything in Essential</li>
+              <li>Complete application preparation</li>
+              <li>Relationship evidence portfolio</li>
+              <li>Sponsor letter drafting</li>
+              <li>English test guidance</li>
+              <li>Document translation coordination</li>
+              <li>Multiple review rounds</li>
+              <li>Submission checklist & support</li>
+              <li>Priority email & WhatsApp support</li>
+              <li>Status tracking until decision</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+
+          <div class="pricing-card">
+            <h3>Concierge</h3>
+            <div class="price">₦850,000</div>
+            <p class="price-note">White-Glove Service</p>
+            <ul class="features-list">
+              <li>Everything in Premium</li>
+              <li>Dedicated case manager</li>
+              <li>Home visit for document collection</li>
+              <li>Professional photography session</li>
+              <li>Expedited document processing</li>
+              <li>Interview preparation (3 sessions)</li>
+              <li>Appeal support (if needed)</li>
+              <li>Post-arrival settlement guidance</li>
+              <li>Travel booking assistance</li>
+              <li>24/7 priority support</li>
+              <li>Success guarantee terms</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary" style="width: 100%"
+              >Get Started</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <p
+            style="
+              color: var(--text-light);
+              font-size: 0.95rem;
+              margin-bottom: 1rem;
+            "
+          >
+            <strong>Additional Services:</strong> Urgent processing,
+            reapplications after refusal, appeals, document translation,
+            notarization
+          </p>
+          <p style="color: var(--warning); font-weight: 600">
+            ⚠️ Government visa fees, English tests, medicals, and translations
+            not included • Pricing may vary by complexity
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section id="faqs" class="section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about family visas</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do we prove our relationship is genuine?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Immigration authorities look for consistent evidence spanning
+                your entire relationship. Provide: Photos together (dated,
+                showing progression of relationship), Communication records
+                (WhatsApp, calls, emails - samples showing regular contact),
+                Joint activities (trips, events, family gatherings), Financial
+                ties (joint accounts, remittances, shared expenses), Third-party
+                evidence (letters from friends/family who know you as a couple),
+                Statutory declarations from both partners. Quality matters more
+                than quantity - we help you create a compelling narrative with
+                the right evidence mix.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What are the income requirements for sponsorship?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Requirements vary by country: <strong>UK:</strong> £29,000
+                minimum (spouse only), additional amounts for children;
+                <strong>USA:</strong> 125% of poverty guideline (varies by
+                family size, ~$22k for 2 people); <strong>Canada:</strong> No
+                minimum for spouse/partner sponsorship (unless receiving social
+                assistance), LICO requirements for parent/grandparent;
+                <strong>Australia:</strong> No set minimum, but must show
+                financial capacity; <strong>UAE:</strong> AED 4,000-10,000
+                depending on emirate. Income can come from employment,
+                self-employment, savings (some countries), or investments. We
+                help calculate your specific requirement and identify all
+                eligible income sources.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How long does the family visa process take?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Processing times vary by country and visa type:
+                <strong>Fast (2-4 months):</strong> UAE family visa, NZ
+                partnership; <strong>Standard (6-12 months):</strong> Canada
+                spouse (inland), UK spouse visa;
+                <strong>Long (12-24 months):</strong> USA spouse visa, Canada
+                spouse (outland), UK appeals;
+                <strong>Very Long (24-36 months):</strong> Australia partner
+                visa, Canada parent sponsorship. Preparation phase before
+                submission: 2-3 months typically. Factors affecting speed:
+                completeness of application, current processing backlogs,
+                whether interview required, any requests for additional info. We
+                track processing times weekly and set realistic expectations.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can we apply while visiting on a tourist visa?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Depends on the country: <strong>Yes (allowed):</strong> Canada
+                inland sponsorship - can apply while visiting, get work permit
+                while waiting; USA adjustment of status if entered legally;
+                Australia onshore partner visa (if eligible visa).
+                <strong>No (not allowed):</strong> UK - must apply from outside
+                UK (with few exceptions); Most countries don't permit tourist
+                visa to family visa switching. <strong>Risks:</strong> Entry may
+                be denied if immigration suspects intent to stay; Better to
+                apply from home country for most routes; Overstaying can lead to
+                bans. We advise on the safest, legal pathways for your specific
+                situation.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What happens if we get refused?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Refusals are not the end! Options include:
+                <strong>Administrative Review:</strong> Challenge factual errors
+                or procedural mistakes (time-limited);
+                <strong>Appeal:</strong> Full hearing where you can submit new
+                evidence (available in UK, some countries);
+                <strong>Reapplication:</strong> Address refusal reasons and
+                reapply with stronger case;
+                <strong>Judicial Review:</strong> Challenge unlawful decisions
+                (complex, expensive). Common refusal reasons we help overcome:
+                Insufficient relationship evidence, income/financial
+                requirements not met, English language issues, sham marriage
+                concerns, incomplete documentation. Our Concierge package
+                includes appeal support. For previous refusals, we offer
+                specialized reapplication services with 87% success rate on
+                second attempt.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Do children get automatic citizenship?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Citizenship rules vary:
+                <strong>Born in destination country:</strong> USA & Canada -
+                citizenship by birth; UK, Australia - only if parent is
+                citizen/settled;
+                <strong>Dependent children on family visa:</strong> Must apply
+                for citizenship separately after residence period; Usually
+                eligible when sponsoring parent naturalizes; May need to meet
+                residence requirements. <strong>Timelines:</strong> UK - 5 years
+                residence, Australia - 4 years, Canada - 3 years (with parent).
+                Children under 18 often have simplified processes. We guide you
+                through both immigration and eventual citizenship pathways for
+                the whole family.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What if we're not legally married yet?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Several options available: <strong>Fiancé(e) visa:</strong> For
+                couples planning to marry (UK K-1 USA, Prospective Marriage
+                Australia). Must marry within 3-6 months, then switch to spouse
+                visa; <strong>Unmarried partner visa:</strong> Must prove
+                cohabitation for 2+ years (UK, Australia, NZ). Same requirements
+                as marriage except marriage certificate;
+                <strong>Common-law partnership:</strong> Canada recognizes 12+
+                months cohabitation as equivalent to marriage;
+                <strong>Civil partnership:</strong> Available in some countries,
+                equivalent to marriage. If in a relationship but can't prove
+                cohabitation: Consider getting married first (can be small
+                ceremony), then apply for spouse visa which is often easier to
+                prove. We help determine which pathway suits your situation
+                best.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can my spouse work immediately upon arrival?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Work rights vary by visa type:
+                <strong>Full work rights from arrival:</strong> UK spouse visa -
+                unrestricted employment; Canada PR through sponsorship - full
+                work rights; Australia partner visa (820/309) - work rights
+                included; USA green card (IR/CR) - can work immediately.
+                <strong>Restricted:</strong> Some dependent visas on
+                work/student sponsors may have conditions; Usually need to apply
+                for separate work permit.
+                <strong>No work rights:</strong> Tourist visas, visitor visas;
+                Some fiancé visas until marriage completed. Check specific visa
+                conditions as unauthorized work can lead to deportation. We
+                clarify work rights for your exact visa route.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What documents will we need?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Core documents for most family visas:
+                <strong>Relationship proof:</strong> Marriage certificate
+                (original + certified translation), Photos spanning
+                relationship, Communication evidence, Cohabitation proof if
+                unmarried;
+                <strong>Sponsor documents:</strong> Citizenship/residence proof,
+                Passport, Income evidence (payslips, tax returns, employment
+                letter), Accommodation proof (tenancy/ownership);
+                <strong>Applicant documents:</strong> Passport, Birth
+                certificate, Police clearance certificates, Medical examination
+                (approved doctors), English language test results (if required);
+                <strong>Supporting documents:</strong> Relationship statements
+                from both partners, Letters from family/friends, Evidence of
+                visits/trips together. Documents in other languages need
+                certified translations. We provide comprehensive checklists
+                tailored to your visa type and country.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How much does a family visa cost in total?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Total costs breakdown: <strong>Government fees:</strong> UK
+                spouse - £1,846 + £1,035 NHS; USA spouse - $535-$1,225; Canada
+                spouse - CAD $1,365; Australia partner - AUD $8,850.
+                <strong>English test:</strong> £150-200 (IELTS).
+                <strong>Medical exam:</strong> $100-$300.
+                <strong>Police clearances:</strong> $50-$150 per country.
+                <strong>Translations & notarization:</strong> $200-$500.
+                <strong>Travel for biometrics/interview:</strong> Varies.
+                <strong>Our service fees:</strong> ₦180k-₦850k depending on
+                package. <strong>Total estimate:</strong> ₦800k-₦2.5M+ for most
+                routes. Costs higher if appeals needed or multiple dependents.
+                We provide detailed cost breakdowns during consultation so there
+                are no surprises.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Reunite Your Family?</h2>
+          <p>Book your free consultation and take the first step</p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <h4>Email Us</h4>
+            <p>family@doniastravels.com</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Response within 4 hours
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">💬</div>
+            <h4>WhatsApp</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Instant support
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📞</div>
+            <h4>Call Us</h4>
+            <p>+234 XXX XXX XXXX</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              Mon-Sat, 8AM-8PM WAT
+            </p>
+          </div>
+          <div class="contact-method">
+            <div class="contact-icon">📍</div>
+            <h4>Visit Office</h4>
+            <p>Lagos, Nigeria</p>
+            <p style="font-size: 0.9rem; color: var(--text-light)">
+              By appointment
+            </p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a
+            href="#eligibility"
+            class="btn btn-primary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Check Eligibility Now</a
+          >
+          <p style="margin-top: 1rem; color: var(--text-light)">Or</p>
+          <a
+            href="#consultation"
+            class="btn btn-secondary"
+            style="padding: 1rem 3rem; font-size: 1.1rem"
+            >Book Free Consultation</a
+          >
+        </div>
+
+        <div class="disclaimer">
+          <p>
+            <strong>Important Notice:</strong> Donias Travels is an independent
+            immigration consultancy. We prepare family visa applications based
+            on published immigration rules but do not make visa decisions. Final
+            approval rests with the relevant immigration authority. While we
+            maintain a 94% success rate for complete applications, we cannot
+            guarantee outcomes as each case is assessed individually by
+            immigration officers. We provide honest assessments and only proceed
+            with viable cases.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h4>Donias Travels</h4>
+          <p>
+            Reuniting families across borders since 2017. Expert support for
+            spouse visas, child dependents, and family sponsorship.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#visa-types">Visa Types</a></li>
+            <li><a href="#eligibility">Check Eligibility</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Popular Routes</h4>
+          <ul class="footer-links">
+            <li><a href="#">UK Spouse Visa</a></li>
+            <li><a href="#">Canada Spousal Sponsorship</a></li>
+            <li><a href="#">USA Marriage Green Card</a></li>
+            <li><a href="#">Australia Partner Visa</a></li>
+            <li><a href="#">Child Dependent Visas</a></li>
+            <li><a href="#">Parent Sponsorship</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Professional Standards</a></li>
+            <li><a href="#">Data Protection</a></li>
+            <li><a href="#">Complaints</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Donias Travels. All rights reserved. | Registered
+          Immigration Consultancy | 3,200+ Families Reunited | NDPR Compliant
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Tab Switching
+      function switchTab(tab) {
+        document
+          .querySelectorAll(".tab-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((content) => content.classList.remove("active"));
+
+        event.target.classList.add("active");
+        document.getElementById(tab + "-tab").classList.add("active");
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQs
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }
+
+      // Eligibility Checker
+      function checkEligibility() {
+        const sponsorLocation =
+          document.getElementById("sponsor-location").value;
+        const sponsorStatus = document.getElementById("sponsor-status").value;
+        const relationship = document.getElementById("relationship").value;
+        const income = document.getElementById("income").value;
+
+        if (!sponsorLocation || !sponsorStatus || !relationship || !income) {
+          alert("Please fill in all required fields");
+          return;
+        }
+
+        // Simplified eligibility logic
+        let eligible = true;
+        let message = "";
+
+        if (income === "below") {
+          eligible = false;
+          message =
+            "Based on your responses, you may not currently meet the income requirements. However, there are alternative ways to meet financial requirements such as savings, assets, or co-sponsorship. We recommend booking a consultation to explore all options.";
+        } else if (relationship === "sibling") {
+          eligible = false;
+          message =
+            "Unfortunately, sibling sponsorship is very limited and only available in specific countries (like Canada) with long waiting times. We can explore other immigration pathways that might work for your family situation.";
+        } else {
+          message = `Great news! Based on your responses, you appear to meet the basic eligibility criteria for ${sponsorLocation.toUpperCase()} family sponsorship. The next steps would be to gather detailed relationship evidence, prepare financial documentation, and complete the application forms. We're here to guide you through every step.`;
+        }
+
+        // Display results
+        document.getElementById("result-title").textContent = eligible
+          ? "✓ You May Be Eligible!"
+          : "⚠ Additional Review Needed";
+        document.getElementById("result-message").textContent = message;
+
+        const resultBox = document.querySelector(".result-box");
+        resultBox.style.borderColor = eligible
+          ? "var(--success)"
+          : "var(--warning)";
+        document.getElementById("result-title").style.color = eligible
+          ? "var(--success)"
+          : "var(--warning)";
+
+        document.getElementById("eligibility-results").style.display = "block";
+        document
+          .getElementById("eligibility-results")
+          .scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(
+          ".visa-card, .story-card, .country-card, .pricing-card"
+        )
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
