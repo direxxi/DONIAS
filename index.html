@@ -122,6 +122,33 @@
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
+
+      /* Mobile Menu Styles */
+      .mobile-nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      .mobile-nav-menu.active {
+        max-height: 500px;
+      }
+
+      .hamburger span {
+        transition: all 0.3s ease;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
     </style>
   </head>
   <body class="bg-gray-50">
@@ -144,6 +171,8 @@
             Donias Global Consultants
           </h2>
         </div>
+
+        <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center space-x-8">
           <a
             href="index.html"
@@ -177,11 +206,53 @@
             Get Free Consultation
           </button>
         </nav>
-        <button class="lg:hidden hamburger">
+
+        <!-- Hamburger Button -->
+        <button class="lg:hidden hamburger" id="hamburger-btn">
           <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
           <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
           <span class="block w-6 h-0.5 bg-gray-800"></span>
         </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        class="mobile-nav-menu lg:hidden bg-white border-t border-gray-100"
+        id="mobile-menu"
+      >
+        <nav class="flex flex-col p-4 space-y-4">
+          <a
+            href="index.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors py-2 border-b border-gray-100"
+            >Home</a
+          >
+          <a
+            href="about_us.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors py-2 border-b border-gray-100"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors py-2 border-b border-gray-100"
+            >Services</a
+          >
+          <a
+            href="sii.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors py-2 border-b border-gray-100"
+            >Study Abroad</a
+          >
+          <a
+            href="Medical_tourism.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors py-2 border-b border-gray-100"
+            >Medical Tourism</a
+          >
+          <button
+            class="bg-gradient-to-r from-[#a23342] to-[#8a2938] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all text-center"
+            onclick="location.href='contact_us.html'"
+          >
+            Get Free Consultation
+          </button>
+        </nav>
       </div>
     </header>
 
@@ -513,7 +584,7 @@
                 for farmers and agro-industries.
               </p>
               <a
-                href="Agribusiness.html"
+                href="agribusiness-website.html"
                 class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
                 >Learn More</a
               >
@@ -563,7 +634,7 @@
                 growth and drive development.
               </p>
               <a
-                href="power.html"
+                href="power-infrastructure.html"
                 class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
                 >Learn More</a
               >
@@ -588,7 +659,7 @@
                 corporate to large-scale events.
               </p>
               <a
-                href="Event.html"
+                href="event-management.html"
                 class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
                 >Learn More</a
               >
@@ -873,7 +944,6 @@
     <footer
       class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white py-16 relative overflow-hidden"
     >
-      <!-- Background decorative elements -->
       <div
         class="absolute top-0 right-0 w-64 h-64 bg-[#a23342]/10 rounded-full blur-3xl"
       ></div>
@@ -882,11 +952,9 @@
       ></div>
 
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <!-- Main Footer Content -->
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
         >
-          <!-- Company Info -->
           <div>
             <div class="flex items-center space-x-3 mb-6">
               <img
@@ -900,10 +968,9 @@
               Opening global doors through expert travel, education, and
               business consultations. Start your journey with us.
             </p>
-            <!-- Social Media Icons -->
             <div class="flex gap-4">
               <a
-                href="#"
+                href="https://www.instagram.com/doniasmegalink/"
                 class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
               >
@@ -915,7 +982,7 @@
               </a>
 
               <a
-                href="#"
+                href="https://www.facebook.com/www.donias.com.ng/"
                 class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="Facebook"
               >
@@ -927,7 +994,7 @@
               </a>
 
               <a
-                href="#"
+                href="https://ng.linkedin.com/company/donias-mega-link"
                 class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
                 aria-label="LinkedIn"
               >
@@ -952,7 +1019,6 @@
             </div>
           </div>
 
-          <!-- Company Links -->
           <div>
             <h4 class="text-lg font-bold mb-6">Company</h4>
             <ul class="space-y-3">
@@ -999,7 +1065,6 @@
             </ul>
           </div>
 
-          <!-- Support Links -->
           <div>
             <h4 class="text-lg font-bold mb-6">Support</h4>
             <ul class="space-y-3">
@@ -1046,7 +1111,6 @@
             </ul>
           </div>
 
-          <!-- Contact Info -->
           <div>
             <h4 class="text-lg font-bold mb-6">Get In Touch</h4>
             <ul class="space-y-4">
@@ -1116,7 +1180,6 @@
               </li>
             </ul>
 
-            <!-- Newsletter -->
             <div class="mt-6">
               <h5 class="font-semibold mb-3">Subscribe to Newsletter</h5>
               <form class="flex gap-2">
@@ -1136,7 +1199,6 @@
           </div>
         </div>
 
-        <!-- Bottom Bar -->
         <div class="border-t border-white/10 pt-8">
           <div
             class="flex flex-col md:flex-row justify-between items-center gap-4"
@@ -1169,6 +1231,24 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Hamburger Menu Toggle
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        hamburgerBtn.addEventListener("click", function () {
+          hamburgerBtn.classList.toggle("active");
+          mobileMenu.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            hamburgerBtn.classList.remove("active");
+            mobileMenu.classList.remove("active");
+          });
+        });
+
         // Typing Effect
         const words = [
           "Travels",
@@ -1216,17 +1296,6 @@
           pagination: { el: ".swiper-pagination", clickable: true },
           autoplay: { delay: 5000 },
         });
-
-        // Mobile Menu Toggle
-        const hamburger = document.querySelector(".hamburger");
-        const mobileMenu = document.querySelector(".mobile-nav-menu");
-
-        if (hamburger && mobileMenu) {
-          hamburger.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden");
-            hamburger.classList.toggle("open");
-          });
-        }
       });
     </script>
   </body>
