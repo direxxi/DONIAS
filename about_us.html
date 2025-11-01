@@ -14,6 +14,80 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>About Us - Donias Global Consultants</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+      .header_achor {
+        text-decoration: none;
+        color: #374151;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      .header_achor:hover,
+      .header_achor:focus {
+        color: #a23342;
+      }
+      .header_achor::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: #a23342;
+        transition: width 0.3s ease;
+      }
+      .header_achor:hover::after {
+        width: 100%;
+      }
+      .stat-box {
+        transition: all 0.3s ease;
+      }
+      .stat-box:hover {
+        transform: translateY(-8px);
+      }
+      .team-card {
+        transition: all 0.3s ease;
+      }
+      .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+      .choice {
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .choice:hover {
+        transform: translateX(10px);
+      }
+      .choice.active {
+        border-left: 4px solid #a23342;
+        padding-left: 20px;
+      }
+    </style>
   </head>
   <body class="bg-gray-50">
     <!-- Header -->
@@ -30,7 +104,6 @@
           Donias Global Consultants
         </h2>
       </div>
-
       <nav class="w-full relative lg:w-auto">
         <button
           class="hamburger absolute right-0 bg-[#a23342] lg:hidden inline-flex flex-col items-center justify-center w-12 h-12 rounded-lg focus:outline-none transition-all"
@@ -46,8 +119,6 @@
             class="block w-6 h-0.5 bg-white transition-all duration-300"
           ></span>
         </button>
-
-        <!-- Desktop nav -->
         <ul class="hidden lg:flex items-center space-x-8">
           <li><a class="header_achor" href="index.html">Home</a></li>
           <li><a class="header_achor" href="about_us.html">About Us</a></li>
@@ -58,7 +129,6 @@
               >Medical Tourism</a
             >
           </li>
-          <!-- kept visual design; wrapped button in <li> to fix invalid <div> inside <ul> -->
           <li class="ml-8">
             <button
               class="bg-gradient-to-br from-[#a23342] to-[#8a2938] text-white border-none py-3 px-6 rounded-full text-[15px] font-semibold cursor-pointer transition-all duration-300 shadow-[0_4px_12px_rgba(162,51,66,0.3)] hover:-translate-y-0.5"
@@ -68,8 +138,6 @@
             </button>
           </li>
         </ul>
-
-        <!-- Mobile nav -->
         <div
           id="mobile-menu"
           class="lg:hidden hidden absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border border-gray-200 rounded-lg shadow-lg mx-4"
@@ -121,7 +189,6 @@
       <div
         class="absolute bottom-0 left-0 w-96 h-96 bg-[#fbbf24]/10 rounded-full blur-3xl"
       ></div>
-
       <div class="container mx-auto px-4 md:px-8 max-w-7xl relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="animate-fade-in">
@@ -147,8 +214,6 @@
               Talk to Us
             </button>
           </div>
-
-          <!-- Image Mosaic Grid -->
           <div class="grid grid-cols-3 gap-3">
             <div class="col-span-2 row-span-2">
               <img
@@ -234,7 +299,6 @@
               competitiveness through innovative strategies and expert guidance.
             </p>
           </div>
-
           <div
             class="bg-gradient-to-br from-[#06213a]/5 to-[#06213a]/10 rounded-[30px] p-10"
           >
@@ -322,7 +386,6 @@
             class="w-24 h-1 bg-gradient-to-r from-[#a23342] to-[#fbbf24] mx-auto"
           ></div>
         </div>
-
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div class="space-y-6">
             <div
@@ -378,7 +441,6 @@
               </p>
             </div>
           </div>
-
           <div class="rounded-[30px] overflow-hidden shadow-2xl h-full">
             <img
               src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800"
@@ -404,33 +466,25 @@
           <div
             class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
           >
-            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
-              <span class="counter" data-target="25">0</span>+
-            </h3>
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">25+</h3>
             <p class="text-white text-lg">Countries Served Globally</p>
           </div>
           <div
             class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
           >
-            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
-              <span class="counter" data-target="500">0</span>+
-            </h3>
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">500+</h3>
             <p class="text-white text-lg">Successful Projects</p>
           </div>
           <div
             class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
           >
-            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
-              <span class="counter" data-target="2000">0</span>+
-            </h3>
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">2000+</h3>
             <p class="text-white text-lg">Consultations Completed</p>
           </div>
           <div
             class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
           >
-            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
-              <span class="counter" data-target="98">0</span>%
-            </h3>
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">98%</h3>
             <p class="text-white text-lg">Client Satisfaction Rate</p>
           </div>
         </div>
@@ -452,9 +506,7 @@
             across industries, markets, and continents.
           </p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Cards unchanged (content/design preserved) -->
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -471,8 +523,7 @@
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
                 Visionary leader with over 15 years driving business
                 transformation across Africa. Specializes in strategic growth
-                planning and operational excellence, helping organizations
-                achieve sustainable competitive advantages.
+                planning and operational excellence.
               </p>
               <a
                 href="#"
@@ -487,7 +538,6 @@
               </a>
             </div>
           </div>
-
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -503,9 +553,7 @@
               <p class="text-[#a23342] font-semibold mb-3">Director</p>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
                 Expert in organizational development and change management.
-                Brings extensive experience in optimizing business processes and
-                building high-performance teams that deliver exceptional
-                results.
+                Brings extensive experience in optimizing business processes.
               </p>
               <a
                 href="#"
@@ -520,7 +568,6 @@
               </a>
             </div>
           </div>
-
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -536,8 +583,7 @@
               <p class="text-[#a23342] font-semibold mb-3">Director</p>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
                 Strategic advisor specializing in corporate governance and risk
-                management. Renowned for developing innovative frameworks that
-                enhance organizational resilience and long-term value creation.
+                management. Develops innovative frameworks for resilience.
               </p>
               <a
                 href="#"
@@ -552,7 +598,6 @@
               </a>
             </div>
           </div>
-
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -567,9 +612,8 @@
               </h3>
               <p class="text-[#a23342] font-semibold mb-3">Director</p>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                International business strategist with deep expertise in market
-                expansion and cross-border operations. Drives successful entry
-                strategies for companies entering African and Asian markets.
+                International business strategist with expertise in market
+                expansion and cross-border operations.
               </p>
               <a
                 href="#"
@@ -584,7 +628,6 @@
               </a>
             </div>
           </div>
-
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -600,8 +643,7 @@
               <p class="text-[#a23342] font-semibold mb-3">Director</p>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
                 Technology and digital transformation leader specializing in
-                leveraging emerging technologies to drive business innovation.
-                Champions data-driven decision-making and automation strategies.
+                emerging technologies and business innovation.
               </p>
               <a
                 href="https://in.linkedin.com/in/sachin-kumar-chansarkar-076349b"
@@ -616,7 +658,6 @@
               </a>
             </div>
           </div>
-
           <div
             class="team-card bg-white rounded-[25px] overflow-hidden shadow-lg"
           >
@@ -630,9 +671,7 @@
               <p class="text-[#a23342] font-semibold mb-3">Director</p>
               <p class="text-gray-600 text-sm leading-relaxed mb-4">
                 Financial advisory expert with proven track record in corporate
-                finance and investment strategy. Guides clients through complex
-                financial decisions to optimize capital structure and
-                profitability.
+                finance and investment strategy.
               </p>
               <a
                 href="#"
@@ -647,6 +686,252 @@
               </a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <div
+            class="inline-block px-4 py-2 bg-[#a23342]/10 rounded-full text-sm font-semibold text-[#a23342] mb-4"
+          >
+            OUR TEAM
+          </div>
+          <h2 class="text-[clamp(2rem,4vw,3rem)] font-bold text-gray-800 mb-4">
+            The People Behind Our Success
+          </h2>
+          <div
+            class="w-24 h-1 bg-gradient-to-r from-[#a23342] to-[#fbbf24] mx-auto mb-6"
+          ></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our dedicated team of professionals brings together diverse
+            expertise and a shared commitment to delivering exceptional results
+            for our clients.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">
+                Sarah Johnson
+              </h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Senior Consultant
+              </p>
+              <p class="text-gray-600 text-sm">
+                Specializes in business strategy and market analysis with 8+
+                years experience.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">Michael Chen</h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Operations Manager
+              </p>
+              <p class="text-gray-600 text-sm">
+                Expert in operational excellence and process optimization across
+                industries.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">Priya Sharma</h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Financial Analyst
+              </p>
+              <p class="text-gray-600 text-sm">
+                Provides strategic financial insights and advisory for complex
+                projects.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">
+                David Okonkwo
+              </h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Project Coordinator
+              </p>
+              <p class="text-gray-600 text-sm">
+                Ensures seamless project delivery and client satisfaction across
+                all engagements.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">
+                Emily Williams
+              </h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Marketing Strategist
+              </p>
+              <p class="text-gray-600 text-sm">
+                Develops innovative marketing strategies that drive business
+                growth.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">
+                James Adeyemi
+              </h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                IT Specialist
+              </p>
+              <p class="text-gray-600 text-sm">
+                Provides technical solutions and digital transformation
+                expertise.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">Amara Nwosu</h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Client Relations Manager
+              </p>
+              <p class="text-gray-600 text-sm">
+                Dedicated to building strong relationships and ensuring client
+                success.
+              </p>
+            </div>
+          </div>
+          <div
+            class="group bg-gradient-to-br from-gray-50 to-white rounded-[20px] overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+                alt="Team Member"
+                class="w-full h-[280px] object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-[#06213a]/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              ></div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-800 mb-1">
+                Robert Martinez
+              </h3>
+              <p class="text-[#a23342] font-semibold text-sm mb-3">
+                Business Analyst
+              </p>
+              <p class="text-gray-600 text-sm">
+                Transforms data into actionable insights for strategic
+                decision-making.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-16 text-center bg-gradient-to-br from-[#06213a]/5 to-[#a23342]/5 rounded-[30px] p-12"
+        >
+          <h3 class="text-3xl font-bold text-gray-800 mb-4">
+            Want to Join Our Team?
+          </h3>
+          <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+            We're always looking for talented individuals who are passionate
+            about making a difference. Explore career opportunities with Donias
+            Global Consultants.
+          </p>
+          <button
+            class="bg-gradient-to-r from-[#a23342] to-[#06213a] text-white px-8 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all hover:-translate-y-1"
+            onclick="location.href='contact_us.html'"
+          >
+            View Open Positions
+          </button>
         </div>
       </div>
     </section>
@@ -973,6 +1258,43 @@
         </div>
       </div>
     </footer>
-    <script src="about_Script.js"></script>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+      const spans = hamburger.querySelectorAll("span");
+
+      hamburger.addEventListener("click", function () {
+        const isHidden = mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden");
+        if (isHidden) {
+          spans[0].style.transform = "rotate(45deg) translate(5px, 5px)";
+          spans[1].style.opacity = "0";
+          spans[2].style.transform = "rotate(-45deg) translate(7px, -6px)";
+        } else {
+          spans[0].style.transform = "";
+          spans[1].style.opacity = "";
+          spans[2].style.transform = "";
+        }
+      });
+
+      mobileMenuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          spans[0].style.transform = "";
+          spans[1].style.opacity = "";
+          spans[2].style.transform = "";
+        });
+      });
+
+      const choices = document.querySelectorAll(".choice");
+      choices.forEach((choice) => {
+        choice.addEventListener("click", () => {
+          choices.forEach((c) => c.classList.remove("active"));
+          choice.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>

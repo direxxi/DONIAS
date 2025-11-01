@@ -1,0 +1,2163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tour Packages - Unforgettable Experiences Worldwide | Donias Travels
+    </title>
+    <meta
+      name="description"
+      content="Exclusive tour packages to Dubai, Doha, Morocco AFCON, London, Paris, New York, and more. All-inclusive vacation deals with visa, accommodation, and tours."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #8b2635;
+        --primary-dark: #6b1d2a;
+        --primary-light: #a63446;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+        --border: #e5e5e5;
+        --white: #ffffff;
+        --success: #28a745;
+        --warning: #ffc107;
+        --info: #17a2b8;
+        --gold: #ffd700;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo span:first-child {
+        color: var(--text-dark);
+      }
+
+      .logo span:last-child {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 38, 53, 0.92),
+            rgba(107, 29, 42, 0.92)
+          ),
+          url("https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&h=900&fit=crop")
+            center/cover;
+        color: var(--white);
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .stats-row {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .stat-label {
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      /* Filter Section */
+      .filter-section {
+        background: var(--white);
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 70px;
+        z-index: 100;
+      }
+
+      .filter-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .filter-label {
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.2rem;
+        background: var(--bg-light);
+        border: 2px solid var(--border);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+        color: var(--text-dark);
+      }
+
+      .filter-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      .filter-btn.active {
+        background: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Package Cards */
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 4rem;
+      }
+
+      .package-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .package-image {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        position: relative;
+      }
+
+      .package-overlay {
+        position: relative;
+      }
+
+      .package-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .hot-badge {
+        background: #ff4757;
+      }
+
+      .new-badge {
+        background: #5f27cd;
+      }
+
+      .limited-badge {
+        background: #ffa502;
+      }
+
+      .popular-badge {
+        background: var(--gold);
+        color: var(--text-dark);
+      }
+
+      .package-content {
+        padding: 2rem;
+      }
+
+      .package-header {
+        margin-bottom: 1.5rem;
+      }
+
+      .package-destination {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .destination-flag {
+        font-size: 2rem;
+      }
+
+      .package-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+      }
+
+      .package-subtitle {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .package-details {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .detail-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      .detail-icon {
+        color: var(--primary);
+      }
+
+      .package-includes {
+        background: var(--bg-light);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .package-includes h4 {
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .includes-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+      }
+
+      .includes-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+        color: var(--text-dark);
+      }
+
+      .includes-icon {
+        color: var(--success);
+        font-weight: 700;
+      }
+
+      .package-pricing {
+        border-top: 2px solid var(--border);
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .pricing-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 1.5rem;
+      }
+
+      .price-option {
+        text-align: left;
+      }
+
+      .price-label {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin-bottom: 0.25rem;
+      }
+
+      .price-amount {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .price-period {
+        font-size: 0.85rem;
+        color: var(--text-light);
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .cta-buttons .btn {
+        flex: 1;
+        text-align: center;
+      }
+
+      /* Featured Package */
+      .featured-package {
+        border: 3px solid var(--gold);
+        box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+      }
+
+      .featured-package .package-content {
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 215, 0, 0.05),
+          transparent
+        );
+      }
+
+      /* Special Offers Section */
+      .special-offers {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: var(--white);
+        padding: 3rem;
+        border-radius: 12px;
+        margin: 3rem 0;
+        text-align: center;
+      }
+
+      .special-offers h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .special-offers p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .offers-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .offer-card {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 2rem;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+      }
+
+      .offer-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .offer-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background: var(--bg-light);
+        padding: 4rem 2rem;
+        margin: 4rem 0;
+        border-radius: 12px;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .testimonial-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .testimonial-stars {
+        color: var(--gold);
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--primary);
+        color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+
+      .author-info h4 {
+        margin-bottom: 0.25rem;
+      }
+
+      .author-info p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* FAQ */
+      .faq-container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .faq-item {
+        margin-bottom: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .faq-question {
+        padding: 1.5rem;
+        background: var(--white);
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .faq-question:hover {
+        background: var(--bg-light);
+      }
+
+      .faq-answer {
+        padding: 0 1.5rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s;
+        background: var(--bg-light);
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 1.5rem;
+        max-height: 500px;
+      }
+
+      .faq-icon {
+        transition: transform 0.3s;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .includes-list {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-options {
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeInUp 0.6s ease-out;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo"><span>donias</span><span>travels</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#packages">Packages</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- WhatsApp Float -->
+    <div
+      class="whatsapp-float"
+      onclick="window.open('https://wa.me/2348037162368', '_blank')"
+    >
+      💬
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Explore the World With Us</h1>
+        <p>
+          All-inclusive tour packages with visa, accommodation, tours, and
+          unforgettable experiences
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Tour Packages</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Destinations</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">5,000+</div>
+            <div class="stat-label">Happy Travelers</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Satisfaction Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="filter-container">
+        <span class="filter-label">Filter by:</span>
+        <button class="filter-btn active" onclick="filterPackages('all')">
+          All Packages
+        </button>
+        <button class="filter-btn" onclick="filterPackages('holiday')">
+          Holiday Packages
+        </button>
+        <button class="filter-btn" onclick="filterPackages('sports')">
+          Sports & Events
+        </button>
+        <button class="filter-btn" onclick="filterPackages('culture')">
+          Culture & Heritage
+        </button>
+        <button class="filter-btn" onclick="filterPackages('adventure')">
+          Adventure
+        </button>
+        <button class="filter-btn" onclick="filterPackages('luxury')">
+          Luxury
+        </button>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Featured/Hot Packages -->
+      <section id="hot-packages" class="section">
+        <div class="section-header">
+          <h2>🔥 Hot Deals & Featured Packages</h2>
+          <p>Limited-time offers and our most popular packages</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- AFCON Experience 2025 -->
+          <div class="package-card featured-package" data-category="sports">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=600&fit=crop"
+                alt="AFCON Morocco 2025"
+                class="package-image"
+              />
+              <span class="package-badge hot-badge">🔥 HOT DEAL</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🏆</span>
+                  <div>
+                    <h3>AFCON Experience 2025</h3>
+                    <p class="package-subtitle">
+                      Africa Cup of Nations - Morocco
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>7 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">✈️</span>
+                  <span>Flights Included</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🎫</span>
+                  <span>Match Tickets</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>7 Nights Accommodation</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Morocco Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Airport Transfers</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Stadium Transportation</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Travel Insurance</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Single Person</p>
+                    <p class="price-amount">$2,125</p>
+                  </div>
+                  <div class="price-option">
+                    <p class="price-label">Two Persons Sharing</p>
+                    <p class="price-amount">$1,705</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                  <div class="price-option">
+                    <p class="price-label">Group of Five</p>
+                    <p class="price-amount">$1,595</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >📞 Call to Book</a
+                  >
+                  <a
+                    href="mailto:tourism@donias.com.ng"
+                    class="btn btn-secondary"
+                    >📧 Email Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dubai Christmas Package -->
+          <div class="package-card" data-category="holiday luxury">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=600&fit=crop"
+                alt="Dubai Christmas"
+                class="package-image"
+              />
+              <span class="package-badge limited-badge">⏰ LIMITED</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇦🇪</span>
+                  <div>
+                    <h3>Explore Dubai This Christmas</h3>
+                    <p class="package-subtitle">
+                      Luxury desert & city experience
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>4 Days</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">⭐</span>
+                  <span>4-Star Hotel</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🎄</span>
+                  <span>Christmas Special</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Airport Transfers</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>4 Days Hotel Stay</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Dubai City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Travel Insurance</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Meet & Greet Service</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Per Person Sharing</p>
+                    <p class="price-amount">$1,200</p>
+                  </div>
+                  <div class="price-option">
+                    <p class="price-label">Family of 4</p>
+                    <p class="price-amount">$3,675</p>
+                    <p class="price-period">total package</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >📞 Call to Book</a
+                  >
+                  <a
+                    href="mailto:tourism@donias.com.ng"
+                    class="btn btn-secondary"
+                    >📧 Email Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doha Christmas Package -->
+          <div class="package-card" data-category="holiday">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1614201286271-840c02911d16?w=800&h=600&fit=crop"
+                alt="Doha Christmas"
+                class="package-image"
+              />
+              <span class="package-badge new-badge">🎁 NEW</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇶🇦</span>
+                  <div>
+                    <h3>Explore Doha This Christmas</h3>
+                    <p class="package-subtitle">
+                      Modern marvels & cultural wonders
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>6 Days</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🏨</span>
+                  <span>Premium Hotel</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🎄</span>
+                  <span>Christmas Package</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>6 Days Accommodation</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Airport Transfers</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Doha Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Museum Visit</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Quest Theme Park</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Travel Insurance</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Per Person Sharing</p>
+                    <p class="price-amount">$4,162</p>
+                  </div>
+                  <div class="price-option">
+                    <p class="price-label">Family of 4</p>
+                    <p class="price-amount">$11,112</p>
+                    <p class="price-period">2 adults + 2 kids</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >📞 Call to Book</a
+                  >
+                  <a
+                    href="mailto:tourism@donias.com.ng"
+                    class="btn btn-secondary"
+                    >📧 Email Us</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Packages -->
+      <section id="all-packages" class="section">
+        <div class="section-header">
+          <h2>All Tour Packages</h2>
+          <p>Discover your next adventure</p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- London Heritage Tour -->
+          <div class="package-card" data-category="culture">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=600&fit=crop"
+                alt="London"
+                class="package-image"
+              />
+              <span class="package-badge popular-badge">⭐ POPULAR</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇬🇧</span>
+                  <div>
+                    <h3>London Heritage Experience</h3>
+                    <p class="package-subtitle">
+                      History, culture & royal palaces
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>5 Days / 4 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🏰</span>
+                  <span>Historic Sites</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>UK Visa Support</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>4 Nights Hotel</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Thames River Cruise</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Airport Transfers</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$2,850</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paris Romance Package -->
+          <div class="package-card" data-category="culture luxury">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=600&fit=crop"
+                alt="Paris"
+                class="package-image"
+              />
+              <span class="package-badge">💝 ROMANCE</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇫🇷</span>
+                  <div>
+                    <h3>Paris City of Love</h3>
+                    <p class="package-subtitle">Romantic getaway to Paris</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>6 Days / 5 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🗼</span>
+                  <span>Eiffel Tower Visit</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Schengen Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>5 Nights Boutique Hotel</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Seine River Cruise</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Louvre Museum Entry</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>City Pass</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$3,200</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- New York City Lights -->
+          <div class="package-card" data-category="culture">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&h=600&fit=crop"
+                alt="New York"
+                class="package-image"
+              />
+              <span class="package-badge">🌆 CITY BREAK</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇺🇸</span>
+                  <div>
+                    <h3>New York City Lights</h3>
+                    <p class="package-subtitle">The city that never sleeps</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>5 Days / 4 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🗽</span>
+                  <span>Iconic Landmarks</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>US Visa Assistance</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>4 Nights Manhattan Hotel</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Statue of Liberty</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Broadway Show Ticket</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$3,950</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Turkey Discovery -->
+          <div class="package-card" data-category="culture adventure">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=600&fit=crop"
+                alt="Turkey"
+                class="package-image"
+              />
+              <span class="package-badge">🎈 ADVENTURE</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇹🇷</span>
+                  <div>
+                    <h3>Turkey Discovery Tour</h3>
+                    <p class="package-subtitle">Istanbul & Cappadocia magic</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>7 Days / 6 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🎈</span>
+                  <span>Hot Air Balloon</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Turkey E-Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>6 Nights Hotels</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Istanbul City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Cappadocia Experience</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Internal Flights</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$1,850</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Singapore & Malaysia Twin City -->
+          <div class="package-card" data-category="culture">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=600&fit=crop"
+                alt="Singapore"
+                class="package-image"
+              />
+              <span class="package-badge">🌏 ASIA</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇸🇬</span>
+                  <div>
+                    <h3>Singapore & Malaysia</h3>
+                    <p class="package-subtitle">Twin city Asian adventure</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>8 Days / 7 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🌃</span>
+                  <span>2 Countries</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Visas for Both Countries</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>7 Nights Hotels</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Singapore City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Kuala Lumpur Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Inter-city Transfer</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$2,650</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- India Golden Triangle -->
+          <div class="package-card" data-category="culture">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=600&fit=crop"
+                alt="India Taj Mahal"
+                class="package-image"
+              />
+              <span class="package-badge">🕌 HERITAGE</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇮🇳</span>
+                  <div>
+                    <h3>India Golden Triangle</h3>
+                    <p class="package-subtitle">Delhi, Agra & Jaipur</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>7 Days / 6 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🕌</span>
+                  <span>Taj Mahal Visit</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>India E-Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>6 Nights 4-Star Hotels</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>All City Tours</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Monument Entries</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Private Transport</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$1,550</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- South Africa Safari -->
+          <div class="package-card" data-category="adventure">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&h=600&fit=crop"
+                alt="South Africa Safari"
+                class="package-image"
+              />
+              <span class="package-badge">🦁 SAFARI</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇿🇦</span>
+                  <div>
+                    <h3>South Africa Safari & City</h3>
+                    <p class="package-subtitle">Wildlife & Cape Town</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>8 Days / 7 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🦁</span>
+                  <span>Big 5 Safari</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>South Africa Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>7 Nights Accommodation</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Meals</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Kruger Safari (2 days)</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Cape Town Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Table Mountain</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$2,950</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canada Winter Wonderland -->
+          <div class="package-card" data-category="adventure">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&h=600&fit=crop"
+                alt="Canada Winter"
+                class="package-image"
+              />
+              <span class="package-badge">❄️ WINTER</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇨🇦</span>
+                  <div>
+                    <h3>Canada Winter Wonderland</h3>
+                    <p class="package-subtitle">Toronto & Niagara Falls</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>6 Days / 5 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">❄️</span>
+                  <span>Winter Activities</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Canada Visa Support</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>5 Nights Hotel</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Niagara Falls Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>CN Tower Visit</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Airport Transfers</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$3,450</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Australia Coastal Adventure -->
+          <div class="package-card" data-category="adventure">
+            <div class="package-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&h=600&fit=crop"
+                alt="Australia"
+                class="package-image"
+              />
+              <span class="package-badge">🏖️ BEACH</span>
+            </div>
+            <div class="package-content">
+              <div class="package-header">
+                <div class="package-destination">
+                  <span class="destination-flag">🇦🇺</span>
+                  <div>
+                    <h3>Australia Coastal Adventure</h3>
+                    <p class="package-subtitle">Sydney & Great Barrier Reef</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-details">
+                <div class="detail-item">
+                  <span class="detail-icon">📅</span>
+                  <span>10 Days / 9 Nights</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-icon">🏖️</span>
+                  <span>Beach & Reef</span>
+                </div>
+              </div>
+
+              <div class="package-includes">
+                <h4>Package Includes:</h4>
+                <div class="includes-list">
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Australia Visa</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>9 Nights Hotels</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Daily Breakfast</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Sydney City Tour</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Great Barrier Reef</span>
+                  </div>
+                  <div class="includes-item">
+                    <span class="includes-icon">✓</span>
+                    <span>Internal Flights</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="package-pricing">
+                <div class="pricing-options">
+                  <div class="price-option">
+                    <p class="price-label">Starting From</p>
+                    <p class="price-amount">$4,850</p>
+                    <p class="price-period">per person</p>
+                  </div>
+                </div>
+                <div class="cta-buttons">
+                  <a href="tel:+2348037162368" class="btn btn-primary"
+                    >Book Now</a
+                  >
+                  <a href="#" class="btn btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Offers -->
+      <section class="special-offers">
+        <h2>🎁 Why Book With Donias Travels?</h2>
+        <p>Your trusted partner for unforgettable travel experiences</p>
+        <div class="offers-grid">
+          <div class="offer-card">
+            <div class="offer-icon">✈️</div>
+            <h3>Visa Included</h3>
+            <p>Expert visa support and processing included in all packages</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">💰</div>
+            <h3>Best Price Guarantee</h3>
+            <p>Competitive rates with flexible payment plans available</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">🛡️</div>
+            <h3>Fully Protected</h3>
+            <p>Travel insurance and 24/7 support throughout your journey</p>
+          </div>
+          <div class="offer-card">
+            <div class="offer-icon">⭐</div>
+            <h3>5,000+ Happy Travelers</h3>
+            <p>Join thousands who've created amazing memories with us</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials">
+        <div class="section-header">
+          <h2>What Our Travelers Say</h2>
+          <p>Real experiences from real people</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "The Dubai Christmas package was absolutely perfect! Everything
+              was organized flawlessly from visa to hotel. The city tour was
+              incredible and our guide was fantastic. Highly recommend Donias
+              Travels!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AA</div>
+              <div class="author-info">
+                <h4>Aisha Abubakar</h4>
+                <p>Dubai Christmas Package</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "AFCON 2025 in Morocco was a dream come true! The accommodations
+              were great, transfers smooth, and being able to watch the matches
+              with fellow fans was unforgettable. Worth every penny!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">CO</div>
+              <div class="author-info">
+                <h4>Chinedu Okonkwo</h4>
+                <p>AFCON Experience 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">
+              "Our India Golden Triangle tour exceeded all expectations. The Taj
+              Mahal at sunrise was breathtaking. The hotels were comfortable and
+              our guide was knowledgeable. Thank you Donias!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">FB</div>
+              <div class="author-info">
+                <h4>Funmi Badmus</h4>
+                <p>India Golden Triangle</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section id="faqs" class="section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know about our packages</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What's included in the package price?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                All our packages include accommodation, daily breakfast, visa
+                processing support, airport transfers, specified tours and
+                activities, and travel insurance. International flights can be
+                added upon request. Each package details specific inclusions.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>How do I book a package?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Booking is easy! Call us at +234 803 716 2368, email
+                tourism@donias.com.ng, or WhatsApp us. We'll discuss your
+                preferences, confirm availability, and guide you through the
+                payment process. A deposit secures your booking.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>Can packages be customized?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Absolutely! All packages can be tailored to your preferences.
+                Want to extend your stay, upgrade hotels, add activities, or
+                visit additional cities? Just let us know and we'll create a
+                custom itinerary for you.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What about visa processing?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                We handle all visa applications! Our experienced team will guide
+                you through documentation, complete application forms, and
+                liaise with embassies on your behalf. Visa fees are included in
+                most packages (check individual package details).
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question" onclick="toggleFAQ(this)">
+              <span>What's your cancellation policy?</span>
+              <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Cancellations more than 60 days before departure: Full refund
+                minus 10% admin fee. 30-60 days: 50% refund. Less than 30 days:
+                No refund, but you can transfer to another traveler or
+                reschedule (subject to availability). Travel insurance is
+                recommended.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h4>Donias Travels</h4>
+          <p>
+            Creating unforgettable travel experiences since 2017. Your gateway
+            to the world's most amazing destinations.
+          </p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#packages">All Packages</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#visa-services">Visa Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Popular Packages</h4>
+          <ul class="footer-links">
+            <li><a href="#">Dubai Christmas</a></li>
+            <li><a href="#">AFCON 2025</a></li>
+            <li><a href="#">London Heritage</a></li>
+            <li><a href="#">India Golden Triangle</a></li>
+            <li><a href="#">Turkey Discovery</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Us</h4>
+          <p>📞 +234 803 716 2368</p>
+          <p>📧 tourism@donias.com.ng</p>
+          <p>🌐 www.donias.com.ng</p>
+          <p>📍 Lagos, Nigeria</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Donias Travels (Donias Mega Link Ltd). All rights
+          reserved. | Licensed Tour Operator | 5,000+ Happy Travelers
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Filter Packages
+      function filterPackages(category) {
+        const cards = document.querySelectorAll(".package-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Update active button
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Filter cards
+        cards.forEach((card) => {
+          const categories = card.getAttribute("data-category");
+          if (category === "all") {
+            card.style.display = "block";
+          } else {
+            card.style.display =
+              categories && categories.includes(category) ? "block" : "none";
+          }
+        });
+      }
+
+      // FAQ Toggle
+      function toggleFAQ(element) {
+        const faqItem = element.parentElement;
+        const isActive = faqItem.classList.contains("active");
+
+        // Close all FAQs
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add("active");
+        }
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Animate cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document
+        .querySelectorAll(".package-card, .testimonial-card")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease-out";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>

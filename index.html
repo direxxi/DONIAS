@@ -4,413 +4,1230 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="favicon/doniasLogo.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
-    <title>DONIAS GLOBAL CONSULTANTS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Donias Global Consultants - Your Trusted Business Partner</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Rubik", sans-serif;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .hero-section {
+        background-image: url("images/lukas-souza-iz6DadX_Fl4-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        transition: background-image 1s ease-in-out;
+      }
+
+      .typed-cursor {
+        animation: blink 1s infinite;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .service-item {
+        transition: transform 0.3s ease;
+      }
+      .service-item:hover {
+        transform: scale(1.15) translateY(-10px);
+        z-index: 10;
+      }
+
+      @keyframes scrollLoop {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .scroller-track {
+        animation: scrollLoop 40s linear infinite;
+      }
+      .scroller-track:hover {
+        animation-play-state: paused;
+      }
+
+      .stat-box {
+        transition: transform 0.3s ease;
+      }
+      .stat-box:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-card {
+        transition: all 0.4s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .feature-card {
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateX(8px);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #a23342 0%, #06213a 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="icons/logo.png" alt="logo" class="logo_img">
-        <h2>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header
+      class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm"
+    >
+      <div
+        class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-3">
+          <img
+            src="icons/logo.png"
+            alt="Donias Logo"
+            class="w-[50px] h-[50px]"
+          />
+          <h2
+            class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block"
+          >
             Donias Global Consultants
-        </h2>
-    
-    </div>
-    <nav>
-      <button class="hamburger" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>      
-      <ul class="ul">
-        <li><a class="header_achor" href="index.html">Home</a></li>
-        <li><a class="header_achor" href="about_us.html">About Us</a></li>
-        <li class="dropdown-parent">
-          <a class="header_achor" href="services.html">Services</a>
-        </li>
-        <li class="dropdown-parent">
-          <a class="header_achor" href="sii.html">Study Abroad</a>
-        </li>
-        <li><a class="header_achor" href="Medical_tourism.html">Medical Tourism</a></li>
-      </ul>
-    
-      <div class="get_started">
-        <button class="nav_btn" onclick="location.href='contact_us.html'">
-          Get Free Consultation
+          </h2>
+        </div>
+        <nav class="hidden lg:flex items-center space-x-8">
+          <a
+            href="index.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors"
+            >Home</a
+          >
+          <a
+            href="about_us.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors"
+            >About Us</a
+          >
+          <a
+            href="services.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors"
+            >Services</a
+          >
+          <a
+            href="sii.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors"
+            >Study Abroad</a
+          >
+          <a
+            href="Medical_tourism.html"
+            class="text-gray-700 hover:text-[#a23342] font-medium transition-colors"
+            >Medical Tourism</a
+          >
+          <button
+            class="bg-gradient-to-r from-[#a23342] to-[#8a2938] text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
+            onclick="location.href='contact_us.html'"
+          >
+            Get Free Consultation
+          </button>
+        </nav>
+        <button class="lg:hidden hamburger">
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1.5"></span>
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
         </button>
       </div>
-    </nav>
     </header>
 
-    <section class="one">
-      <div class="top_heading">Welcome to Donias</div>
-      <div class="Main_content">
-        <div class="left_side_one">
-          <h1 class="header">
+    <!-- Hero Section -->
+    <section
+      class="hero-section min-h-screen pt-24 pb-12 px-4 md:px-8 relative"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"
+      ></div>
+      <div class="container mx-auto max-w-7xl relative z-10">
+        <div
+          class="mb-6 inline-block px-4 py-2 glass-effect rounded-full text-sm font-semibold text-white"
+        >
+          Welcome to Donias
+        </div>
+
+        <div class="max-w-3xl mb-12">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight fade-in-up"
+          >
             Your Trusted Consulting Partner for
             <span
               id="typed-word"
-              class="typed-text"
-              data-images='[
-                "images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg",
-                "images/wonderlane-6zlgM-GUd6I-unsplash.jpg",
-                "images/sean-pollock-PhYq704ffdA-unsplash.jpg",
-                "images/scientist-2141259_1280.jpg",
-                "images/randy-fath-dDc0vuVH_LU-unsplash.jpg",
-                "images/person-working-html-computer.jpg"
-              ]'
-            >Travels</span>
+              class="text-[#fbbf24]"
+              data-images='["images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg","images/wonderlane-6zlgM-GUd6I-unsplash.jpg","images/sean-pollock-PhYq704ffdA-unsplash.jpg","images/scientist-2141259_1280.jpg","images/randy-fath-dDc0vuVH_LU-unsplash.jpg","images/person-working-html-computer.jpg"]'
+              >Travels</span
+            ><span class="typed-cursor text-[#fbbf24]">|</span>
           </h1>
 
-          <p class="sub_header_one">
+          <p
+            class="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed fade-in-up"
+            style="animation-delay: 0.2s"
+          >
             Comprehensive solutions for travel, education, business, medical
             tourism, IT services, and strategic consulting
           </p>
-          <button class="talk"><a class="talk" href="contact_us.html">Partner with us</a></button>
+
+          <div
+            class="flex flex-wrap gap-4 fade-in-up"
+            style="animation-delay: 0.4s"
+          >
+            <button
+              class="bg-[#a23342] hover:bg-[#8a2938] text-white px-8 py-4 rounded-full font-bold text-lg transition-all hover:shadow-2xl hover:-translate-y-1"
+              onclick="location.href='contact_us.html'"
+            >
+              Partner with Us
+            </button>
+            <button
+              class="glass-effect text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all"
+              onclick="location.href='services.html'"
+            >
+              Explore Services
+            </button>
+          </div>
         </div>
 
-        <div class="services-preview" id="autoScroller">
-          <div class="scroller-track">
-            <!-- REPEAT BLOCK -->
-            <!-- Travel -->
-            <div class="service-item">
-              <img loading="lazy" src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg" alt="Travel" />
-              <p>Travel</p>
+        <!-- Scrolling Services Preview -->
+        <div class="overflow-hidden relative mt-16">
+          <div class="scroller-track flex gap-0">
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8 first:ml-0">
+              <img
+                src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg"
+                alt="Travel"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Travel</p>
             </div>
-            <!-- Education -->
-            <div class="service-item">
-              <img loading="lazy" src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Education" />
-              <p>Education</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
+                alt="Education"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Education</p>
             </div>
-            <!-- Business -->
-            <div class="service-item">
-              <img loading="lazy" src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Business" />
-              <p>Business</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/sean-pollock-PhYq704ffdA-unsplash.jpg"
+                alt="Business"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Business</p>
             </div>
-            <!-- Medical -->
-            <div class="service-item">
-              <img loading="lazy" src="images/scientist-2141259_1280.jpg" alt="Medical" />
-              <p>Medical</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/scientist-2141259_1280.jpg"
+                alt="Medical"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Medical</p>
             </div>
-            <!-- Agribusiness -->
-            <div class="service-item">
-              <img loading="lazy" src="images/randy-fath-dDc0vuVH_LU-unsplash.jpg" alt="Agribusiness" />
-              <p>Agribusiness</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/randy-fath-dDc0vuVH_LU-unsplash.jpg"
+                alt="Agribusiness"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">
+                Agribusiness
+              </p>
             </div>
-            <div class="service-item">
-                <img loading="lazy" src="images/person-working-html-computer.jpg" alt="IT solutions" />
-                <p>IT solutions</p>
-              </div>
-
-            <!-- Duplicates for infinite scroll effect -->
-            <!-- ...repeat the exact same five service-item blocks... -->
-            <div class="service-item">
-              <img loading="lazy" src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg" alt="Travel" />
-              <p>Travel</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/person-working-html-computer.jpg"
+                alt="IT Solutions"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">
+                IT Solutions
+              </p>
             </div>
-            <div class="service-item">
-              <img loading="lazy" src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Education" />
-              <p>Education</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg"
+                alt="Travel"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Travel</p>
             </div>
-            <div class="service-item">
-              <img loading="lazy" src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Business" />
-              <p>Business</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
+                alt="Education"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Education</p>
             </div>
-            <div class="service-item">
-              <img loading="lazy" src="images/scientist-2141259_1280.jpg" alt="Medical" />
-              <p>Medical</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/sean-pollock-PhYq704ffdA-unsplash.jpg"
+                alt="Business"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Business</p>
             </div>
-            <div class="service-item">
-              <img loading="lazy" src="images/randy-fath-dDc0vuVH_LU-unsplash.jpg" alt="Agribusiness" />
-              <p>Agribusiness</p>
+            <div class="service-item flex-shrink-0 w-40 h-40 -ml-8">
+              <img
+                src="images/scientist-2141259_1280.jpg"
+                alt="Medical"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+              />
+              <p class="text-white text-center mt-2 font-medium">Medical</p>
             </div>
-            <!-- Add more duplicates if needed for seamless scroll -->
-            <div class="service-item">
-                <img loading="lazy" src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg" alt="Travel" />
-                <p>Travel</p>
-              </div>
-              <div class="service-item">
-                <img loading="lazy" src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Education" />
-                <p>Education</p>
-              </div>
-              <div class="service-item">
-                <img loading="lazy" src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Business" />
-                <p>Business</p>
-              </div>
-              <div class="service-item">
-                <img loading="lazy" src="images/scientist-2141259_1280.jpg" alt="Medical" />
-                <p>Medical</p>
-              </div>
-              <div class="service-item">
-                <img loading="lazy" src="images/randy-fath-dDc0vuVH_LU-unsplash.jpg" alt="Agribusiness" />
-                <p>Agribusiness</p>
-          </div>
-          <div class="service-item">
-            <img loading="lazy" src="images/person-working-html-computer.jpg" alt="IT solutions" />
-            <p>IT solutions</p>
           </div>
         </div>
       </div>
     </section>
-<section class="three">
-  <div class="top_heading_three">About us</div>
 
-  <div class="main_three">
-    <div class="left_three">
-      <h2 class="header_three">Meet Donias: Your Consulting Partners</h2>
-      <p class="subheader_three">
-        We’re not just consultants; we’re committed collaborators in your
-        success. At Donias Mega-Link Limited, we provide expert guidance
-        across Travel, Education, Business, Medical Tourism, IT Services,
-        and more. Our team blends innovation, professionalism, and personal
-        care to support your growth, simplify processes, and expand global
-        opportunities. Think of us as your trusted partner, ready to bring
-        your vision to life.
-      </p>
-    </div>
-
-    <div class="right_three">
-      <img
-        src="images/donias.jpg"
-        alt="Team photo"
-        class="about_img"
-      />
-    </div>
-  </div>
-  </div>
-</section>
-<section class="donias-impact">
-    <div class="impact-text">
-      <h2>Proving Excellence Through Donias Global Solutions</h2>
-      <p>
-        At Donias Global Consultants, we empower individuals and organizations with tailored solutions in education, travel, business, and medical services. These numbers reflect our passion for impact and excellence.
-      </p>
-    </div>
-  
-    <div class="impact-stats">
-      <div class="stat-box">
-        <h3><span class="counter" data-target="25">0</span>+</h3>
-        <p>Countries Served Globally</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="500">0</span>+</h3>
-        <p>Clients Successfully Placed Abroad</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="2000">0</span>+</h3>
-        <p>Consultations Completed</p>
-      </div>
-      <div class="stat-box">
-        <h3><span class="counter" data-target="97">0</span>%</h3>
-        <p>Client Satisfaction Rate</p>
-      </div>
-    </div>
-  </section>
-  
-<section class="four">
-    <div class="top_heading_four">
-      <p class="section_tag">What we do</p>
-      <h3 class="section_title">
-        We deliver meaningful solutions, not just quick impressions
-      </h3>
-      <p class="section_subtext">
-        From travel advisory to full digital consulting, we help you build
-        lasting value. Our team blends strategic thinking with execution.
-      </p>
-    </div>
-  
-    <div class="service_cards">
-      <div class="card">
-        <img src="images/lukas-souza-iz6DadX_Fl4-unsplash.jpg" alt="Travel" class="card-img" loading="lazy"/>
-        <h4>Travel and Immigration</h4>
-        <p>Visa guidance, planning, and travel strategy for global mobility.</p>
-        <a href="services.html#words_two" class="learn-btn">Learn More</a>
-      </div>
-  
-      <div class="card">
-        <img src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg" alt="Education" class="card-img" loading="lazy"/>
-        <h4>Education Consulting</h4>
-        <p>Expert placement and advisory for studying abroad and scholarships.</p>
-        <a href="sii.html" class="learn-btn">Learn More</a>
-      </div>
-  
-      <div class="card">
-        <img src="images/sean-pollock-PhYq704ffdA-unsplash.jpg" alt="Business" class="card-img" loading="lazy"/>
-        <h4>Business Consultancy</h4>
-        <p>Legal entity creation, documentation, and CAC compliance services.</p>
-        <a href="services.html#words_three" class="learn-btn">Learn More</a>
-      </div>
-  
-      <div class="card">
-        <img src="images/scientist-2141259_1280.jpg" alt="Medical" class="card-img" loading="lazy"/>
-        <h4>Health and Medical Services</h4>
-        <p>Access quality care overseas with seamless medical travel assistance.</p>
-        <a href="services.html#words_seven" class="learn-btn">Learn More</a>
-      </div>
-  
-      <div class="card">
-        <img src="images/person-working-html-computer.jpg" alt="IT Services" class="card-img" loading="lazy"/>
-        <h4>IT Services</h4>
-        <p>Web development, cloud solutions, and IT support tailored to your business.</p>
-        <a href="services.html#words_four" class="learn-btn">Learn More</a>
-      </div>
-  
-      <div class="card">
-        <img src="images/adeolu-eletu-E7RLgUjjazc-unsplash.jpg" alt="Consulting" class="card-img" loading="lazy"/>
-        <h4>Power and Infracstructure</h4>
-        <p>Strategic planning, project advisory, and digital transformation guidance.</p>
-        <a href="services.html#words_four" class="learn-btn">Learn More</a>
-      </div>
-    </div>
-  </section>
-  <section class="why-choose-us">
-    <div class="why-text" id="whyText">
-      <!-- This will be replaced dynamically -->
-    </div>
-  
-    <div class="why-layout" id="whyLayout">
-      <!-- This will be replaced dynamically -->
-    </div>
-  
-    <div class="why-btn">
-      <a href="contact_us.html" class="cta-button">Book a FREE Consultation</a>
-    </div>
-  </section>
-  <section class="testimonials">
-    <div class="testimonials-header">
-      <span class="section-tag">Reviews</span>
-      <h2>Here’s what people say about our work</h2>
-    </div>
-
-    <div class="swiper testimonial-swiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide testimonial-card">
-          <div class="testimonial-left">
+    <!-- About Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <div
+              class="inline-block px-4 py-2 bg-[#a23342]/10 rounded-full text-sm font-semibold text-[#a23342] mb-6"
+            >
+              ABOUT US
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Meet Donias: Your Consulting Partners
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              We're not just consultants; we're committed collaborators in your
+              success. At Donias Global Consultants, we provide expert guidance
+              across Travel, Education, Business, Medical Tourism, IT Services,
+              and more.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+              Our team blends innovation, professionalism, and personal care to
+              support your growth, simplify processes, and expand global
+              opportunities. Think of us as your trusted partner, ready to bring
+              your vision to life.
+            </p>
+            <button
+              class="bg-[#a23342] text-white px-8 py-4 rounded-full font-bold hover:bg-[#8a2938] transition-all hover:shadow-lg"
+              onclick="location.href='about_us.html'"
+            >
+              Learn More About Us
+            </button>
+          </div>
+          <div class="rounded-[30px] overflow-hidden shadow-2xl">
             <img
-              src="headshots/kazi-mizan-WocOfFRUTSM-unsplash.jpg"
-              alt="Client Photo"
-              class="testimonial-img"
+              src="images/donias.jpg"
+              alt="Donias Team"
+              class="w-full h-[500px] object-cover"
             />
-          </div>
-          <div class="testimonial-right">
-            <p class="quote">❝</p>
-            <p class="testimonial-text">
-              Donias Explore made my UK study process seamless. From school
-              application to visa prep and interview scheduling, they were
-              hands-on and always responsive.
-            </p>
-            <p class="testimonial-name">
-              Jarin A.<br /><span class="testimonial-role"
-                >MSc, University of Leeds</span
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide testimonial-card">
-          <div class="testimonial-left">
-            <img
-              src="headshots/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
-              alt="Client Photo"
-              class="testimonial-img"
-            />
-          </div>
-          <div class="testimonial-right">
-            <p class="quote">❝</p>
-            <p class="testimonial-text">
-              Thanks to Donias Explore, I secured my admission to Canada
-              without stress. Their attention to detail and genuine care set
-              them apart.
-            </p>
-            <p class="testimonial-name">
-              Samuel K.<br /><span class="testimonial-role"
-                >BSc, University of Toronto</span
-              >
-            </p>
-          </div>
-        </div>
-
-        <div class="swiper-slide testimonial-card">
-          <div class="testimonial-left">
-            <img
-              src="headshots/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg"
-              alt="Client Photo"
-              class="testimonial-img"
-            />
-          </div>
-          <div class="testimonial-right">
-            <p class="quote">❝</p>
-            <p class="testimonial-text">
-              I found Donias Explore through a friend and I’m glad I did. They
-              made the whole travel process smooth and even followed up after
-              arrival.
-            </p>
-            <p class="testimonial-name">
-              Anita M.<br /><span class="testimonial-role"
-                >PGD, UNSW Australia</span
-              >
-            </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  <section class="cta">
-    <h2>Let’s start planning your journey</h2>
-    <p>
-      Ready to explore new opportunities with Donias Explore? <br />Send us a
-      message and let’s make it happen.
-    </p>
-    <button class="cta-btn"> <a class="cta-btn" href="contact_us.html">Send us a message</a></button>
-  </section>
-  <footer class="footer">
-    <div class="footer-col brand">
-      <h3>Donias .</h3>
-      <p>
-        Opening global doors through expert travel, education, and business
-        consultations. Start your journey with us.
-      </p>
-    </div>
+    <!-- Impact Stats -->
+    <section
+      class="py-20 bg-gradient-to-br from-[#06213a] via-[#0a2f52] to-[#06213a]"
+    >
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            Proving Excellence Through Results
+          </h2>
+          <p class="text-xl text-white/80 max-w-3xl mx-auto">
+            At Donias Global Consultants, we empower individuals and
+            organizations with tailored solutions. These numbers reflect our
+            passion for impact and excellence.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
+          >
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
+              <span class="counter" data-target="25">25</span>+
+            </h3>
+            <p class="text-white text-lg">Countries Served Globally</p>
+          </div>
+          <div
+            class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
+          >
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
+              <span class="counter" data-target="500">500</span>+
+            </h3>
+            <p class="text-white text-lg">Successful Projects</p>
+          </div>
+          <div
+            class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
+          >
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
+              <span class="counter" data-target="2000">1800</span>+
+            </h3>
+            <p class="text-white text-lg">Consultations Completed</p>
+          </div>
+          <div
+            class="stat-box bg-white/10 backdrop-blur-sm border border-white/20 rounded-[25px] p-8 text-center"
+          >
+            <h3 class="text-5xl font-bold text-[#fbbf24] mb-3">
+              <span class="counter" data-target="97">92</span>%
+            </h3>
+            <p class="text-white text-lg">Client Satisfaction Rate</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about_us.html">About Us</a></li>
-        <li><a href="Event.html">Events</a></li>
-        <li><a href="services.html">Our Services</a></li>
-      </ul>
-    </div>
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <div
+            class="inline-block px-4 py-2 bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mb-4"
+          >
+            WHAT WE DO
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            We deliver meaningful solutions, not just quick impressions
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            From travel advisory to full digital consulting, we help you build
+            lasting value. Our team blends strategic thinking with execution.
+          </p>
+        </div>
 
-    <div class="footer-col">
-      <h4>Support</h4>
-      <ul>
-        <li><a href="contact_us.html">Help Center</a></li>
-        <li><a href="contact_us.html">Contact Us</a></li>
-      </ul>
-    </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Travel and Immigration -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/laura-lezman-SFGABM2DQ6M-unsplash.jpg"
+              alt="Travel and Immigration"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Travel and Immigration
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Business permits, expatriate quota management, visa processing,
+                CERPAC renewal, TWP, and airport services.
+              </p>
+              <a
+                href="Travel.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
 
-    <div class="footer-col">
-      <h4>Social Media</h4>
-      <ul>
-        <li><a href="https://www.instagram.com/doniasmegalink/">Instagram</a></li>
-        <li><a href="https://www.facebook.com/www.donias.com.ng/">Facebook</a></li>
-        <li><a href="https://ng.linkedin.com/company/donias-mega-link">LinkedIn</a></li>
-      </ul>
-    </div>
-  </footer>
+          <!-- Business Consultancy -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/campaign-creators-gMsnXqILjp4-unsplash.jpg"
+              alt="Business Consultancy"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Business Consultancy
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive business solutions, maximizing equipment
+                utilization and addressing real challenges businesses face.
+              </p>
+              <a
+                href="Business_Consultancy.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <script src="Script.js"></script>
+          <!-- Agribusiness -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/emiel-molenaar-j8DsBudk96c-unsplash.jpg"
+              alt="Agribusiness"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Agribusiness Solutions
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Empowering sustainable agriculture through innovative solutions
+                for farmers and agro-industries.
+              </p>
+              <a
+                href="Agribusiness.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- IT Services -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="service_images/portrait-smiling-it-expert-using-pc-startup-office-implement-algorithms.jpg"
+              alt="IT Services"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Information Technology Services
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Connecting people with technologies, comprehensive training in
+                software and hardware solutions.
+              </p>
+              <a
+                href="https://itechlink.com.ng/"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Power & Infrastructure -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/michael-pointner-fP5LU1iD5p4-unsplash.jpg"
+              alt="Power & Infrastructure"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Power and Infrastructure
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Sustainable power and infrastructure solutions that empower
+                growth and drive development.
+              </p>
+              <a
+                href="power.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Event Management -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="service_images/michael-bartlett-uG49PfsxMSk-unsplash.jpg"
+              alt="Event Management"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Event Management
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Bringing your events to life with comprehensive management from
+                corporate to large-scale events.
+              </p>
+              <a
+                href="Event.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Health & Medical -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="service_images/national-cancer-institute-NaqHdUS5mno-unsplash.jpg"
+              alt="Health Services"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Health and Medical Services
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Trusted partner in health services for healthcare providers,
+                medical institutions, and wellness initiatives.
+              </p>
+              <a
+                href="Medical.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Study Abroad -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
+              alt="Study Abroad"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Study Abroad
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Expert placement and advisory for studying abroad, scholarships,
+                and international education opportunities.
+              </p>
+              <a
+                href="sii.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+
+          <!-- Medical Tourism -->
+          <div
+            class="service-card bg-white rounded-[25px] overflow-hidden shadow-lg"
+          >
+            <img
+              src="images/meddy.jpg"
+              alt="Medical Tourism"
+              class="w-full h-[200px] object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                Medical Tourism
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Access quality healthcare overseas with seamless medical travel
+                assistance and coordination.
+              </p>
+              <a
+                href="Medical_tourism.html"
+                class="inline-block bg-[#a23342] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#8a2938] transition-all"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Services Button -->
+        <div class="text-center mt-12">
+          <a
+            href="services.html"
+            class="inline-block bg-gradient-to-r from-[#a23342] to-[#06213a] text-white px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all hover:-translate-y-1"
+          >
+            View All Services
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-4">
+            Why Choose Donias Global Consultants?
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We go beyond consulting—we prepare you for success through expert
+            guidance, personalized consultation, and seamless experiences.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="feature-card bg-gradient-to-br from-[#a23342]/5 to-[#a23342]/10 rounded-[25px] p-8"
+          >
+            <img src="icons/experts.png" alt="Experts" class="w-16 h-16 mb-4" />
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Expert Advisors
+            </h3>
+            <p class="text-gray-600">
+              Certified consultants who guide you through every step of your
+              journey.
+            </p>
+          </div>
+
+          <div
+            class="feature-card bg-gradient-to-br from-[#06213a]/5 to-[#06213a]/10 rounded-[25px] p-8"
+          >
+            <img src="icons/speed.png" alt="Speed" class="w-16 h-16 mb-4" />
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Swift Processing
+            </h3>
+            <p class="text-gray-600">
+              We handle paperwork and bookings efficiently, helping you meet
+              urgent deadlines.
+            </p>
+          </div>
+
+          <div
+            class="feature-card bg-gradient-to-br from-[#fbbf24]/10 to-[#f59e0b]/10 rounded-[25px] p-8"
+          >
+            <img src="icons/pricing.png" alt="Pricing" class="w-16 h-16 mb-4" />
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              Transparent Pricing
+            </h3>
+            <p class="text-gray-600">
+              No hidden charges — just fair and honest pricing for all your
+              needs.
+            </p>
+          </div>
+
+          <div
+            class="feature-card bg-gradient-to-br from-[#a23342]/5 to-[#a23342]/10 rounded-[25px] p-8"
+          >
+            <img
+              src="icons/help-desk.png"
+              alt="Support"
+              class="w-16 h-16 mb-4"
+            />
+            <h3 class="text-xl font-bold text-gray-800 mb-3">
+              All-in-One Support
+            </h3>
+            <p class="text-gray-600">
+              Everything managed from one seamless platform — visa, travel, and
+              more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8 max-w-7xl">
+        <div class="text-center mb-16">
+          <div
+            class="inline-block px-4 py-2 bg-gray-200 rounded-full text-sm font-semibold text-gray-700 mb-4"
+          >
+            REVIEWS
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-800">
+            Here's what people say about our work
+          </h2>
+        </div>
+
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="bg-white rounded-[30px] p-8 md:p-12 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                  <img
+                    src="headshots/kazi-mizan-WocOfFRUTSM-unsplash.jpg"
+                    alt="Client"
+                    class="w-32 h-32 rounded-full object-cover grayscale"
+                  />
+                  <div>
+                    <p class="text-5xl text-[#a23342] mb-4">❝</p>
+                    <p class="text-lg text-gray-700 mb-6">
+                      Donias made my UK study process seamless. From school
+                      application to visa prep and interview scheduling, they
+                      were hands-on and always responsive.
+                    </p>
+                    <p class="font-bold text-gray-800">Jarin A.</p>
+                    <p class="text-gray-600">MSc, University of Leeds</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="bg-white rounded-[30px] p-8 md:p-12 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                  <img
+                    src="headshots/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+                    alt="Client"
+                    class="w-32 h-32 rounded-full object-cover grayscale"
+                  />
+                  <div>
+                    <p class="text-5xl text-[#a23342] mb-4">❝</p>
+                    <p class="text-lg text-gray-700 mb-6">
+                      Thanks to Donias, I secured my admission to Canada without
+                      stress. Their attention to detail and genuine care set
+                      them apart.
+                    </p>
+                    <p class="font-bold text-gray-800">Samuel K.</p>
+                    <p class="text-gray-600">BSc, University of Toronto</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="bg-white rounded-[30px] p-8 md:p-12 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                  <img
+                    src="headshots/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg"
+                    alt="Client"
+                    class="w-32 h-32 rounded-full object-cover grayscale"
+                  />
+                  <div>
+                    <p class="text-5xl text-[#a23342] mb-4">❝</p>
+                    <p class="text-lg text-gray-700 mb-6">
+                      I found Donias through a friend and I'm glad I did. They
+                      made the whole travel process smooth and even followed up
+                      after arrival.
+                    </p>
+                    <p class="font-bold text-gray-800">Anita M.</p>
+                    <p class="text-gray-600">PGD, UNSW Australia</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination mt-8"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section
+      class="py-20 bg-gradient-to-br from-[#a23342] to-[#8a2938] relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="container mx-auto px-4 md:px-8 max-w-4xl text-center relative z-10"
+      >
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+          Let's start planning your journey
+        </h2>
+        <p class="text-xl text-white/90 mb-10">
+          Ready to explore new opportunities with Donias? Send us a message and
+          let's make it happen.
+        </p>
+        <button
+          class="bg-white text-[#a23342] px-10 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all hover:-translate-y-1"
+          onclick="location.href='contact_us.html'"
+        >
+          Send us a message
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white py-16 relative overflow-hidden"
+    >
+      <!-- Background decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-[#a23342]/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-[#fbbf24]/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <img
+                src="icons/logo.png"
+                alt="Donias Global Consultants Logo"
+                class="w-[50px] h-[50px]"
+              />
+              <h3 class="text-xl font-bold">Donias</h3>
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6">
+              Opening global doors through expert travel, education, and
+              business consultations. Start your journey with us.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Facebook"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Twitter/X"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="about_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Our Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="sii.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Study Abroad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="Medical_tourism.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Medical Tourism
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Support Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Support</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="contact_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Help Center
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> FAQs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Get In Touch</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>Lagos, Nigeria</span>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <a
+                  href="mailto:info@doniasglobal.com"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  info@doniasglobal.com
+                </a>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <a
+                  href="tel:+234XXXXXXXXXX"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  +234 XXX XXX XXXX
+                </a>
+              </li>
+            </ul>
+
+            <!-- Newsletter -->
+            <div class="mt-6">
+              <h5 class="font-semibold mb-3">Subscribe to Newsletter</h5>
+              <form class="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-[#fbbf24] transition-colors"
+                />
+                <button
+                  type="submit"
+                  class="px-6 py-2 rounded-full bg-gradient-to-br from-[#fbbf24] to-[#f59e0b] text-[#06213a] font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  →
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-white/60 text-sm text-center md:text-left">
+              © 2025 Donias Global Consultants. All rights reserved.
+            </p>
+            <div class="flex gap-6 text-sm">
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Typing Effect
+        const words = [
+          "Travels",
+          "Education",
+          "Business",
+          "Medical",
+          "Agribusiness",
+          "IT Solutions",
+        ];
+        const typedSpan = document.getElementById("typed-word");
+        const bgImages = JSON.parse(typedSpan.dataset.images);
+        const heroSection = document.querySelector(".hero-section");
+        let wordIndex = 0,
+          charIndex = 0,
+          isDeleting = false;
+
+        function typeEffect() {
+          const currentWord = words[wordIndex];
+          typedSpan.textContent = currentWord.substring(0, charIndex);
+
+          if (!isDeleting && charIndex < currentWord.length) {
+            charIndex++;
+            setTimeout(typeEffect, 100);
+          } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(typeEffect, 50);
+          } else {
+            if (!isDeleting) {
+              isDeleting = true;
+              setTimeout(typeEffect, 2000);
+            } else {
+              isDeleting = false;
+              wordIndex = (wordIndex + 1) % words.length;
+              heroSection.style.backgroundImage = `url(${bgImages[wordIndex]})`;
+              setTimeout(typeEffect, 500);
+            }
+          }
+        }
+
+        typeEffect();
+
+        // Swiper
+        new Swiper(".testimonial-swiper", {
+          loop: true,
+          pagination: { el: ".swiper-pagination", clickable: true },
+          autoplay: { delay: 5000 },
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector(".hamburger");
+        const mobileMenu = document.querySelector(".mobile-nav-menu");
+
+        if (hamburger && mobileMenu) {
+          hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+            hamburger.classList.toggle("open");
+          });
+        }
+      });
+    </script>
   </body>
 </html>

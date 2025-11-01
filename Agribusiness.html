@@ -3,245 +3,2229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="favicon/doniasLogo.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Grey+Qo&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,400;1,300;1,400&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Donias Global Consultants - Agribusiness Solutions</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-burgundy: #8b2332;
+        --dark-navy: #1a2332;
+        --accent-gold: #f5a623;
+        --light-gray: #f8f9fa;
+        --text-dark: #2c3e50;
+        --text-light: #6c757d;
+      }
+
+      body {
+        font-family: "Jost", "Poppins", -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Header & Navigation - Original Structure */
+      header {
+        background: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      header .logo img {
+        height: 50px;
+        width: auto;
+      }
+
+      header .logo h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--primary-burgundy);
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.5rem;
+      }
+
+      .hamburger span {
+        width: 25px;
+        height: 3px;
+        background: var(--primary-burgundy);
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      nav .ul {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+
+      .header_achor {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: color 0.3s;
+        font-size: 1rem;
+      }
+
+      .header_achor:hover {
+        color: var(--primary-burgundy);
+      }
+
+      .get_started .nav_btn {
+        background: var(--primary-burgundy);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.3s;
+        font-size: 0.95rem;
+      }
+
+      .get_started .nav_btn:hover {
+        background: #6d1a27;
+      }
+
+      .cta-button {
+        background: var(--primary-burgundy);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: background 0.3s;
+      }
+
+      .cta-button:hover {
+        background: #6d1a27;
+      }
+
+      .cta-secondary {
+        background: var(--accent-gold);
+        color: var(--dark-navy);
+      }
+
+      .cta-secondary:hover {
+        background: #e09615;
+      }
+
+      /* Responsive Navigation */
+      @media (max-width: 968px) {
+        .hamburger {
+          display: flex;
+        }
+
+        nav .ul {
+          position: absolute;
+          top: 80px;
+          left: 0;
+          right: 0;
+          background: white;
+          flex-direction: column;
+          padding: 2rem;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          display: none;
+        }
+
+        nav .ul.active {
+          display: flex;
+        }
+
+        .get_started {
+          display: none;
+        }
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            rgba(26, 35, 50, 0.85),
+            rgba(26, 35, 50, 0.85)
+          ),
+          url("https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600")
+            center/cover;
+        color: white;
+        padding: 6rem 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        color: #e0e6ed;
+      }
+
+      .hero .pillars {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .pillar-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+      }
+
+      .hero .cta-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .proof-strip {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        backdrop-filter: blur(10px);
+      }
+
+      .proof-item {
+        text-align: center;
+      }
+
+      .proof-item strong {
+        display: block;
+        font-size: 1.8rem;
+        color: var(--accent-gold);
+        font-weight: 700;
+      }
+
+      /* Who We Serve Section */
+      .who-we-serve {
+        padding: 5rem 0;
+        background: var(--light-gray);
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--dark-navy);
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-light);
+        margin-bottom: 3rem;
+        font-size: 1.1rem;
+      }
+
+      .segment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+      }
+
+      .segment-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+        border-top: 4px solid transparent;
+      }
+
+      .segment-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(139, 35, 50, 0.2);
+        border-top-color: var(--primary-burgundy);
+      }
+
+      .segment-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--primary-burgundy), #a82d3f);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        font-size: 2.5rem;
+        box-shadow: 0 4px 10px rgba(139, 35, 50, 0.3);
+      }
+
+      .segment-card h3 {
+        margin-bottom: 0.8rem;
+        color: var(--dark-navy);
+        font-size: 1.3rem;
+      }
+
+      .segment-card p {
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      /* Core Offers Section */
+      .core-offers {
+        padding: 5rem 0;
+      }
+
+      .offer-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        margin-bottom: 3rem;
+        align-items: center;
+      }
+
+      .offer-block:nth-child(even) {
+        direction: rtl;
+      }
+
+      .offer-block:nth-child(even) > * {
+        direction: ltr;
+      }
+
+      .offer-content {
+        padding: 2rem;
+      }
+
+      .offer-content h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--dark-navy);
+      }
+
+      .offer-hook {
+        background: var(--accent-gold);
+        color: var(--dark-navy);
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .offer-image {
+        height: 350px;
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .offer-image.inputs {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800")
+            center/cover;
+      }
+
+      .offer-image.outgrower {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.unsplash.com/photo-1595665593673-bf1ad72905c0?w=800")
+            center/cover;
+      }
+
+      .offer-image.processing {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=800")
+            center/cover;
+      }
+
+      .offer-image.export {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+          url("https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=800")
+            center/cover;
+      }
+
+      /* Results Section */
+      .results {
+        padding: 5rem 0;
+        background: var(--dark-navy);
+        color: white;
+      }
+
+      .results .section-title,
+      .results .section-subtitle {
+        color: white;
+      }
+
+      .impact-counters {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .counter {
+        text-align: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+      }
+
+      .counter-number {
+        font-size: 3rem;
+        font-weight: bold;
+        color: var(--accent-gold);
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+
+      .case-studies {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .case-study {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 2rem;
+        border-radius: 12px;
+        border-left: 5px solid var(--accent-gold);
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s, background 0.3s;
+      }
+
+      .case-study:hover {
+        transform: translateX(5px);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .case-study h4 {
+        color: var(--accent-gold);
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .case-study p {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+      }
+
+      .case-study p strong {
+        color: white;
+        font-weight: 600;
+      }
+
+      .case-study p:last-child {
+        font-style: italic;
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        color: #e0e6ed;
+      }
+
+      /* Commodities Section */
+      .commodities {
+        padding: 5rem 0;
+        background: var(--light-gray);
+      }
+
+      .commodity-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+
+      .commodity-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .commodity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      .commodity-image {
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: transform 0.3s;
+      }
+
+      .commodity-card:hover .commodity-image {
+        transform: scale(1.05);
+      }
+
+      .commodity-image::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+      }
+
+      .commodity-image.maize {
+        background: url("https://images.unsplash.com/photo-1605665673612-423f733e1e9b?w=600")
+          center/cover;
+      }
+
+      .commodity-image.rice {
+        background: url("https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600")
+          center/cover;
+      }
+
+      .commodity-image.sesame {
+        background: url("https://images.unsplash.com/photo-1607672632458-9eb56696346b?w=600")
+          center/cover;
+      }
+
+      .commodity-image.ginger {
+        background: url("https://images.unsplash.com/photo-1613753092122-33094518b0fa?w=600")
+          center/cover;
+      }
+
+      .commodity-image.cashew {
+        background: url("https://images.unsplash.com/photo-1622421876409-7f62f1e54485?w=600")
+          center/cover;
+      }
+
+      .commodity-image.cocoa {
+        background: url("https://images.unsplash.com/photo-1606312619070-d48b4cde5e7f?w=600")
+          center/cover;
+      }
+
+      .commodity-image.catfish {
+        background: url("https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=600")
+          center/cover;
+      }
+
+      .commodity-image.cassava {
+        background: url("https://images.unsplash.com/photo-1568584711271-4a1e988155d2?w=600")
+          center/cover;
+      }
+
+      .commodity-content {
+        padding: 1.5rem;
+      }
+
+      .commodity-content h4 {
+        color: var(--dark-navy);
+        margin-bottom: 0.5rem;
+      }
+
+      .commodity-specs {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        margin-bottom: 1rem;
+      }
+
+      /* Calendar Section */
+      .calendar {
+        padding: 5rem 0;
+      }
+
+      .calendar-timeline {
+        background: white;
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .season-row {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .season-crop {
+        width: 150px;
+        font-weight: 600;
+        color: var(--dark-navy);
+      }
+
+      .season-timeline {
+        flex: 1;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .season-block {
+        flex: 1;
+        height: 40px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .planting {
+        background: #28a745;
+        color: white;
+      }
+
+      .harvest {
+        background: var(--accent-gold);
+        color: var(--dark-navy);
+      }
+
+      /* Quality & Compliance */
+      .quality {
+        padding: 5rem 0;
+        background: var(--light-gray);
+      }
+
+      .quality-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .quality-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      .quality-card h3 {
+        color: var(--primary-burgundy);
+        margin-bottom: 1rem;
+      }
+
+      .quality-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .quality-list li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .quality-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-gold);
+        font-weight: bold;
+      }
+
+      /* Knowledge Hub */
+      .knowledge-hub {
+        padding: 5rem 0;
+      }
+
+      .resource-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tab-button {
+        padding: 0.75rem 1.5rem;
+        background: white;
+        border: 2px solid var(--primary-burgundy);
+        color: var(--primary-burgundy);
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .tab-button:hover,
+      .tab-button.active {
+        background: var(--primary-burgundy);
+        color: white;
+      }
+
+      .resource-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .resource-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .resource-card h4 {
+        color: var(--dark-navy);
+        margin-bottom: 1rem;
+      }
+
+      /* Contact & RFQ */
+      .contact {
+        padding: 5rem 0;
+        background: var(--dark-navy);
+        color: white;
+      }
+
+      .contact .section-title {
+        color: white;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .contact-form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: none;
+        border-radius: 5px;
+        background: white;
+        color: var(--text-dark);
+      }
+
+      .form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        padding: 5rem 0;
+        background: var(--light-gray);
+      }
+
+      .testimonial-slider {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        position: relative;
+      }
+
+      .testimonial-slider::before {
+        content: '"';
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        font-size: 100px;
+        color: var(--accent-gold);
+        opacity: 0.3;
+        font-family: Georgia, serif;
+      }
+
+      .testimonial-content {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      .author-avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--primary-burgundy),
+          var(--accent-gold)
+        );
+        box-shadow: 0 4px 10px rgba(139, 35, 50, 0.3);
+      }
+
+      .author-info strong {
+        display: block;
+        color: var(--dark-navy);
+        font-size: 1.1rem;
+      }
+
+      .author-info span {
+        color: var(--text-light);
+        font-size: 0.95rem;
+      }
+
+      .rating {
+        color: var(--accent-gold);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        letter-spacing: 3px;
+      }
+
+      /* Quality Cards Enhancement */
+      .quality-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .quality-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .quality-card h3 {
+        color: var(--primary-burgundy);
+        margin-bottom: 1.5rem;
+        font-size: 1.3rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .quality-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .quality-list li {
+        padding: 0.7rem 0;
+        padding-left: 2rem;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .quality-list li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--accent-gold);
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      /* Footer */
+      footer.footer {
+        background: var(--dark-navy);
+        color: white;
+        padding: 3rem 0 1rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-section h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--accent-gold);
+      }
+
+      .footer-section h4 {
+        margin-bottom: 1rem;
+        color: var(--accent-gold);
+        font-size: 1.1rem;
+      }
+
+      .footer-section.brand p {
+        color: #e0e6ed;
+        line-height: 1.7;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.6rem;
+      }
+
+      .footer-links a {
+        color: #e0e6ed;
+        text-decoration: none;
+        transition: color 0.3s;
+        display: inline-block;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent-gold);
+        transform: translateX(3px);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #8898aa;
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        z-index: 999;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero .subtitle {
+          font-size: 1rem;
+        }
+
+        .offer-block {
+          grid-template-columns: 1fr;
+        }
+
+        .offer-block:nth-child(even) {
+          direction: ltr;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .section-subtitle {
+          font-size: 1rem;
+        }
+
+        header .logo h2 {
+          font-size: 1rem;
+        }
+
+        header .logo img {
+          height: 40px;
+        }
+
+        header {
+          padding: 1rem;
+        }
+
+        .proof-strip {
+          gap: 1.5rem;
+        }
+
+        .proof-item strong {
+          font-size: 1.4rem;
+        }
+
+        .impact-counters {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 1rem;
+        }
+
+        .counter-number {
+          font-size: 2rem;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-         <link rel="shortcut icon" href="favicon/doniasLogo.png" type="image/x-icon">
-        <link
-          href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Grey+Qo&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,700;1,800;1,900&family=Montserrat:ital,wght@0,400;1,300;1,400&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto&display=swap"
-          rel="stylesheet"
+    <!-- Header with Original Structure -->
+    <header>
+      <div class="logo">
+        <img
+          src="icons/logo.png"
+          alt="Donias Global Consultants"
+          class="logo_img"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-        <link rel="stylesheet" href="agric_style.css" />
-        <title>DONIAS GLOBAL CONSULTANTS</title>
-      </head>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <h2>Donias Global Consultants</h2>
+      </div>
+      <nav>
+        <button
+          class="hamburger"
+          aria-label="Toggle menu"
+          onclick="toggleMenu()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="ul" id="ulz">
+          <li><a class="header_achor" href="index.html">Home</a></li>
+          <li><a class="header_achor" href="about_us.html">About Us</a></li>
+          <li class="dropdown-parent">
+            <a class="header_achor" href="services.html">Services</a>
+          </li>
+          <li class="dropdown-parent">
+            <a class="header_achor" href="sii.html">Study Abroad</a>
+          </li>
+          <li>
+            <a class="header_achor" href="https://itechlink.zohobackstage.com/"
+              >Events</a
+            >
+          </li>
+        </ul>
+        <div class="get_started">
+          <button class="nav_btn" onclick="location.href='contact_us.html'">
+            Get Free Consultation
+          </button>
+        </div>
+      </nav>
+    </header>
 
-      <body>
-        <header>
-          <div class="logo">
-            <img src="icons/logo.png" alt="logo" class="logo_img" />
-            <h2>Donias Global Consultants</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>From Nigerian Farms to Global Markets</h1>
+        <p class="subtitle">
+          Reliable Inputs • Modern Agronomy • Guaranteed Off-take
+        </p>
+
+        <div class="pillars">
+          <div class="pillar-item"><span>🌱</span> Farm Inputs</div>
+          <div class="pillar-item"><span>👨‍🌾</span> Production Support</div>
+          <div class="pillar-item"><span>⚙️</span> Processing</div>
+          <div class="pillar-item"><span>🌍</span> Export & Off-take</div>
+        </div>
+
+        <div class="cta-group">
+          <a href="#rfq" class="cta-button">Get a Quote</a>
+          <a href="#contact" class="cta-button cta-secondary"
+            >Join Outgrower Program</a
+          >
+        </div>
+
+        <div class="proof-strip">
+          <div class="proof-item">
+            <strong>2,500+</strong>
+            <span>Farmers Onboarded</span>
           </div>
-          <nav>
-            <button class="hamburger" aria-label="Toggle menu">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>  
-            <ul class="ul" id="ulz">
-              <li><a class="header_achor" href="index.html">Home</a></li>
-              <li><a class="header_achor" href="about_us.html">About Us</a></li>
-              <li class="dropdown-parent">
-                <a class="header_achor" href="services.html">Services</a>
-              </li>
-              <li class="dropdown-parent">
-                <a class="header_achor" href="sii.html">Study Abroad</a>
+          <div class="proof-item">
+            <strong>15,000</strong>
+            <span>Hectares Managed</span>
+          </div>
+          <div class="proof-item">
+            <strong>25,000 MT</strong>
+            <span>Delivered Annually</span>
+          </div>
+          <div class="proof-item">
+            <strong>&lt;2%</strong>
+            <span>Rejection Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who We Serve -->
+    <section class="who-we-serve" id="segments">
+      <div class="container">
+        <h2 class="section-title">Who We Serve</h2>
+        <p class="section-subtitle">
+          Tailored solutions for every player in Nigeria's agricultural value
+          chain
+        </p>
+
+        <div class="segment-grid">
+          <div class="segment-card">
+            <div class="segment-icon">👥</div>
+            <h3>Smallholders & Co-ops</h3>
+            <p>
+              Affordable inputs, training, and guaranteed markets. We help
+              small-scale farmers access quality inputs and fair prices.
+            </p>
+          </div>
+
+          <div class="segment-card">
+            <div class="segment-icon">🚜</div>
+            <h3>Commercial Farms</h3>
+            <p>
+              Mechanization support, precision agronomy, and finance access for
+              large-scale operations.
+            </p>
+          </div>
+
+          <div class="segment-card">
+            <div class="segment-icon">🏭</div>
+            <h3>Processors & Traders</h3>
+            <p>
+              Traceable supply, consistent quality, and cold chain logistics for
+              value-added production.
+            </p>
+          </div>
+
+          <div class="segment-card">
+            <div class="segment-icon">📦</div>
+            <h3>Exporters & Retail</h3>
+            <p>
+              Certified commodities, documentation support, and logistics for
+              international markets.
+            </p>
+          </div>
+
+          <div class="segment-card">
+            <div class="segment-icon">🤝</div>
+            <h3>Development Partners</h3>
+            <p>
+              Scalable outgrower programs, M&E reporting, and impact measurement
+              for NGOs and banks.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Offers -->
+    <section class="core-offers" id="services">
+      <div class="container">
+        <h2 class="section-title">Our Core Services</h2>
+        <p class="section-subtitle">
+          End-to-end agricultural solutions that drive profitability
+        </p>
+
+        <div class="offer-block">
+          <div class="offer-content">
+            <h3>🌱 Farm Inputs & Advisory</h3>
+            <div class="offer-hook">Soil test + agronomy plan included</div>
+            <p>
+              Quality seeds (maize, rice, soy, cassava stems, vegetables),
+              animal feed, fertilizers, and crop protection products. Our
+              agronomists provide personalized recommendations based on your
+              soil type and climate.
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem">
+              <li>Certified seeds and planting materials</li>
+              <li>Balanced fertilizer formulations</li>
+              <li>Integrated pest management</li>
+              <li>Free soil testing service</li>
+            </ul>
+            <a href="#contact" class="cta-button">View Inputs Catalog</a>
+          </div>
+          <div class="offer-image inputs"></div>
+        </div>
+
+        <div class="offer-block">
+          <div class="offer-content">
+            <h3>🤝 Outgrower & Off-take</h3>
+            <div class="offer-hook">
+              Transparent pricing + digital weight slips
+            </div>
+            <p>
+              Contract farming with input credit, extension services, and
+              guaranteed buy-back at floor price. We provide the support you
+              need to succeed and the market to sell your harvest.
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem">
+              <li>Input financing at favorable terms</li>
+              <li>Weekly farm visits from extension agents</li>
+              <li>Guaranteed minimum price</li>
+              <li>Digital documentation system</li>
+            </ul>
+            <a href="#contact" class="cta-button">Apply as Farmer/Co-op</a>
+          </div>
+          <div class="offer-image outgrower"></div>
+        </div>
+
+        <div class="offer-block">
+          <div class="offer-content">
+            <h3>⚙️ Processing & Value-Add</h3>
+            <div class="offer-hook">Food-grade SOPs, batch traceability</div>
+            <p>
+              Professional processing services: Cassava (HQCF, garri), rice
+              milling, palm oil, cocoa grading, and poultry/fish feed
+              formulation. All operations follow international food safety
+              standards.
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem">
+              <li>HACCP-compliant facilities</li>
+              <li>Batch tracking and quality control</li>
+              <li>Custom packaging options</li>
+              <li>Storage and warehousing</li>
+            </ul>
+            <a href="#contact" class="cta-button">Request Processing Quote</a>
+          </div>
+          <div class="offer-image processing"></div>
+        </div>
+
+        <div class="offer-block">
+          <div class="offer-content">
+            <h3>🌍 Export & Logistics</h3>
+            <div class="offer-hook">
+              Export-ready lots, SGS inspection on request
+            </div>
+            <p>
+              Complete export solutions: Commodity sourcing (sesame, ginger,
+              cashew, cocoa), NAQS/SONCAP/Phyto documentation, fumigation, and
+              container stuffing. We handle the complexity so you can focus on
+              your business.
+            </p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem">
+              <li>Pre-shipment quality inspection</li>
+              <li>All necessary export certifications</li>
+              <li>Fumigation and phytosanitary services</li>
+              <li>FCL/LCL container solutions</li>
+            </ul>
+            <a href="#contact" class="cta-button">Request Export Checklist</a>
+          </div>
+          <div class="offer-image export"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results That Matter -->
+    <section class="results" id="impact">
+      <div class="container">
+        <h2 class="section-title">Results That Matter</h2>
+        <p class="section-subtitle">
+          Measurable impact across Nigeria's agricultural landscape
+        </p>
+
+        <div class="impact-counters">
+          <div class="counter">
+            <span class="counter-number">2,500+</span>
+            <span>Farmers Onboarded</span>
+          </div>
+          <div class="counter">
+            <span class="counter-number">15,000</span>
+            <span>Hectares Managed</span>
+          </div>
+          <div class="counter">
+            <span class="counter-number">25,000 MT</span>
+            <span>Delivered Annually</span>
+          </div>
+          <div class="counter">
+            <span class="counter-number">&lt;2%</span>
+            <span>Rejection Rate</span>
+          </div>
+          <div class="counter">
+            <span class="counter-number">+38%</span>
+            <span>Average Yield Uplift</span>
+          </div>
+        </div>
+
+        <h3
+          style="
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--accent-gold);
+          "
+        >
+          Success Stories
+        </h3>
+
+        <div class="case-studies">
+          <div class="case-study">
+            <h4>Cassava Transformation in Ogun</h4>
+            <p>
+              <strong>Problem:</strong> Low yields (8-10 MT/ha) and inconsistent
+              quality
+            </p>
+            <p>
+              <strong>Intervention:</strong> Improved stem varieties, soil
+              amendment, and IPM program
+            </p>
+            <p>
+              <strong>Outcome:</strong> Yields increased to 14.2 MT/ha (+42%)
+              within 2 seasons, rejection rate dropped to &lt;1%
+            </p>
+            <p style="font-style: italic; margin-top: 1rem">
+              "The difference is night and day. My income has doubled, and
+              buyers now prefer my cassava." - Farmer Cooperative, Ifo LGA
+            </p>
+          </div>
+
+          <div class="case-study">
+            <h4>Rice Export Success</h4>
+            <p>
+              <strong>Problem:</strong> Paddy rice failing international quality
+              standards
+            </p>
+            <p>
+              <strong>Intervention:</strong> Post-harvest training, milling
+              support, and quality grading
+            </p>
+            <p>
+              <strong>Outcome:</strong> Successfully exported 500 MT to West
+              African markets with zero rejections
+            </p>
+            <p style="font-style: italic; margin-top: 1rem">
+              "Their quality control team helped us understand what
+              international buyers really want." - Commercial Farm, Niger State
+            </p>
+          </div>
+
+          <div class="case-study">
+            <h4>Sesame Export Breakthrough</h4>
+            <p>
+              <strong>Problem:</strong> Aflatoxin contamination blocking exports
+            </p>
+            <p>
+              <strong>Intervention:</strong> Pre-harvest management, proper
+              drying protocols, SGS testing
+            </p>
+            <p>
+              <strong>Outcome:</strong> 120 MT cleared for Asian markets,
+              premium pricing achieved
+            </p>
+            <p style="font-style: italic; margin-top: 1rem">
+              "We never thought we could meet export standards. Now we're
+              shipping regularly." - Trader, Kaduna
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Commodities -->
+    <section class="commodities" id="commodities">
+      <div class="container">
+        <h2 class="section-title">Featured Commodities</h2>
+        <p class="section-subtitle">
+          Quality Nigerian produce for domestic and international markets
+        </p>
+
+        <div class="commodity-grid">
+          <div class="commodity-card">
+            <div class="commodity-image maize"></div>
+            <div class="commodity-content">
+              <h4>Yellow Maize</h4>
+              <p class="commodity-specs">
+                Grade: A/B | Moisture: ≤13% | MOQ: 20 MT
+              </p>
+              <p>
+                Premium yellow maize for feed and processing. Aflatoxin tested,
+                export-ready.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image rice"></div>
+            <div class="commodity-content">
+              <h4>Paddy Rice</h4>
+              <p class="commodity-specs">
+                Variety: FARO 44/52 | Moisture: ≤14% | MOQ: 50 MT
+              </p>
+              <p>
+                Long-grain paddy rice, suitable for milling. Clean, minimal
+                foreign matter.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image sesame"></div>
+            <div class="commodity-content">
+              <h4>Sesame Seeds</h4>
+              <p class="commodity-specs">
+                Type: White/Brown | Purity: 99%+ | MOQ: 10 MT
+              </p>
+              <p>
+                Export-grade sesame, aflatoxin compliant. FOB Lagos or CIF terms
+                available.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image ginger"></div>
+            <div class="commodity-content">
+              <h4>Dried Ginger</h4>
+              <p class="commodity-specs">
+                Grade: Premium | Moisture: ≤10% | MOQ: 5 MT
+              </p>
+              <p>
+                Split/whole dried ginger root. Kaduna origin, export
+                documentation available.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image cashew"></div>
+            <div class="commodity-content">
+              <h4>Raw Cashew Nuts</h4>
+              <p class="commodity-specs">
+                Origin: Cross River | Outturn: 48-50 lbs | MOQ: 20 MT
+              </p>
+              <p>
+                Quality RCN for processing. Good kernel recovery, minimal
+                defects.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image cocoa"></div>
+            <div class="commodity-content">
+              <h4>Cocoa Beans</h4>
+              <p class="commodity-specs">Grade: 1 | Fermented | MOQ: 10 MT</p>
+              <p>
+                Well-fermented cocoa beans. Premium quality for chocolate
+                manufacturing.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image catfish"></div>
+            <div class="commodity-content">
+              <h4>Catfish (Live/Smoked)</h4>
+              <p class="commodity-specs">Size: 700g-1.2kg | MOQ: 500 kg</p>
+              <p>
+                Fresh catfish from biosecure ponds. Delivery within Lagos/Ogun.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+
+          <div class="commodity-card">
+            <div class="commodity-image cassava"></div>
+            <div class="commodity-content">
+              <h4>Cassava (Fresh/HQCF)</h4>
+              <p class="commodity-specs">Fresh tubers or HQCF | MOQ: 10 MT</p>
+              <p>
+                High-quality cassava for food and industrial use. Starch content
+                certified.
+              </p>
+              <a href="#contact" class="cta-button" style="margin-top: 1rem"
+                >Get Current Price</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Production Calendar -->
+    <section class="calendar" id="calendar">
+      <div class="container">
+        <h2 class="section-title">Seasonal Production Calendar</h2>
+        <p class="section-subtitle">
+          Plan your procurement and input purchases with confidence
+        </p>
+
+        <div class="calendar-timeline">
+          <div class="season-row">
+            <div class="season-crop">Maize</div>
+            <div class="season-timeline">
+              <div class="season-block planting">Mar-Apr Planting</div>
+              <div class="season-block harvest">Jul-Aug Harvest</div>
+              <div class="season-block planting">Sep-Oct Planting</div>
+              <div class="season-block harvest">Dec-Jan Harvest</div>
+            </div>
+          </div>
+
+          <div class="season-row">
+            <div class="season-crop">Rice</div>
+            <div class="season-timeline">
+              <div class="season-block planting">Apr-Jun Planting</div>
+              <div class="season-block" style="background: transparent"></div>
+              <div class="season-block harvest">Sep-Nov Harvest</div>
+              <div class="season-block" style="background: transparent"></div>
+            </div>
+          </div>
+
+          <div class="season-row">
+            <div class="season-crop">Sesame</div>
+            <div class="season-timeline">
+              <div class="season-block" style="background: transparent"></div>
+              <div class="season-block planting">Jun-Jul Planting</div>
+              <div class="season-block harvest">Sep-Oct Harvest</div>
+              <div class="season-block" style="background: transparent"></div>
+            </div>
+          </div>
+
+          <div class="season-row">
+            <div class="season-crop">Ginger</div>
+            <div class="season-timeline">
+              <div class="season-block planting">Mar-May Planting</div>
+              <div class="season-block" style="background: transparent"></div>
+              <div class="season-block" style="background: transparent"></div>
+              <div class="season-block harvest">Nov-Jan Harvest</div>
+            </div>
+          </div>
+
+          <div class="season-row" style="border-bottom: none">
+            <div class="season-crop">Cassava</div>
+            <div class="season-timeline">
+              <div
+                class="season-block"
+                style="background: #17a2b8; color: white"
+              >
+                Year-round planting
+              </div>
+              <div class="season-block harvest">8-12 month harvest cycle</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem">
+          <a href="#contact" class="cta-button">Plan With an Agronomist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quality & Compliance -->
+    <section class="quality" id="quality">
+      <div class="container">
+        <h2 class="section-title">Quality, Compliance & Sustainability</h2>
+        <p class="section-subtitle">
+          Meeting international standards, supporting local communities
+        </p>
+
+        <div class="quality-grid">
+          <div class="quality-card">
+            <h3>🏆 Standards & Certifications</h3>
+            <ul class="quality-list">
+              <li>HACCP-compliant processing facilities</li>
+              <li>NAQS export registration</li>
+              <li>SON product certifications</li>
+              <li>Working towards GlobalG.A.P certification</li>
+              <li>NAFDAC registration for processed foods</li>
+            </ul>
+            <a href="#contact" class="cta-button" style="margin-top: 1rem"
+              >Request Compliance Pack</a
+            >
+          </div>
+
+          <div class="quality-card">
+            <h3>📊 Traceability & Testing</h3>
+            <ul class="quality-list">
+              <li>Unique batch codes for all products</li>
+              <li>Digital field logs and input records</li>
+              <li>Regular moisture and aflatoxin testing</li>
+              <li>GPS-tagged farm locations</li>
+              <li>Third-party SGS inspection available</li>
+              <li>Certificate of Analysis (COA) on request</li>
+            </ul>
+          </div>
+
+          <div class="quality-card">
+            <h3>🌱 Sustainability Commitment</h3>
+            <ul class="quality-list">
+              <li>Soil health improvement programs</li>
+              <li>Water conservation techniques</li>
+              <li>Waste valorization (e.g., cassava peels to feed)</li>
+              <li>Smallholder inclusion initiatives</li>
+              <li>Women farmers support program</li>
+              <li>Climate-smart agriculture practices</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge Hub -->
+    <section class="knowledge-hub" id="resources">
+      <div class="container">
+        <h2 class="section-title">Knowledge Hub</h2>
+        <p class="section-subtitle">
+          Free resources to help you succeed in Nigerian agriculture
+        </p>
+
+        <div class="resource-tabs">
+          <button class="tab-button active">All Resources</button>
+          <button class="tab-button">Guides</button>
+          <button class="tab-button">Calculators</button>
+          <button class="tab-button">Webinars</button>
+        </div>
+
+        <div class="resource-grid">
+          <div class="resource-card">
+            <h4>📘 Export Inspection Guide</h4>
+            <p>
+              Step-by-step guide to passing NAQS inspection for sesame, ginger,
+              and cashew exports.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Download PDF</a
+            >
+          </div>
+
+          <div class="resource-card">
+            <h4>🛡️ Aflatoxin Control 101</h4>
+            <p>
+              Practical strategies to prevent aflatoxin contamination in
+              groundnuts, maize, and dried products.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Download PDF</a
+            >
+          </div>
+
+          <div class="resource-card">
+            <h4>🧪 Soil Testing in Southwest Nigeria</h4>
+            <p>
+              Understanding soil test results and making fertilizer
+              recommendations for your farm.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Download PDF</a
+            >
+          </div>
+
+          <div class="resource-card">
+            <h4>🐔 Poultry Feed Conversion Cheat Sheet</h4>
+            <p>
+              Quick reference for calculating feed efficiency and optimizing
+              poultry production costs.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Download XLS</a
+            >
+          </div>
+
+          <div class="resource-card">
+            <h4>🧮 Seed Rate Calculator</h4>
+            <p>
+              Calculate the right seeding rate for maize, rice, soybean, and
+              other crops based on your farm size.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Use Calculator</a
+            >
+          </div>
+
+          <div class="resource-card">
+            <h4>📅 Monthly Agronomy Webinars</h4>
+            <p>
+              Join our free monthly sessions covering seasonal crop management,
+              pest control, and market trends.
+            </p>
+            <a href="#" class="cta-button" style="margin-top: 1rem"
+              >Register Now</a
+            >
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem">
+          <a href="#contact" class="cta-button">Talk to an Agronomist</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Our Partners Say</h2>
+
+        <div class="testimonial-slider">
+          <div class="rating">★★★★★</div>
+          <p class="testimonial-content">
+            "Working with AgroConnect transformed our cooperative. The input
+            credit program helped 200 farmers access quality seeds, and the
+            guaranteed off-take gave us confidence to expand. Our members'
+            incomes increased by 45% in just one year."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar"></div>
+            <div class="author-info">
+              <strong>Olumide Adewale</strong>
+              <span>Chairman, Ogun State Cassava Growers Cooperative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & RFQ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle" style="color: #e0e6ed">
+          Get started with a free consultation or request a quote
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-form">
+            <h3>📦 Request for Quotation</h3>
+            <form>
+              <div class="form-group">
+                <label>Product/Service *</label>
+                <select>
+                  <option>Select a commodity or service</option>
+                  <option>Yellow Maize</option>
+                  <option>Paddy Rice</option>
+                  <option>Sesame Seeds</option>
+                  <option>Dried Ginger</option>
+                  <option>Raw Cashew Nuts</option>
+                  <option>Cocoa Beans</option>
+                  <option>Farm Inputs</option>
+                  <option>Processing Services</option>
+                  <option>Export Documentation</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Quantity (MT) *</label>
+                <input type="number" placeholder="Minimum order quantity" />
+              </div>
+              <div class="form-group">
+                <label>Delivery Terms</label>
+                <select>
+                  <option>Ex-Works</option>
+                  <option>FOB Lagos</option>
+                  <option>CIF (specify port)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Contact Information *</label>
+                <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Address" />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Phone/WhatsApp" />
+              </div>
+              <div class="form-group">
+                <label>Additional Details</label>
+                <textarea
+                  placeholder="Grade specifications, delivery timeline, special requirements..."
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-button" style="width: 100%">
+                Submit RFQ
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-form">
+            <h3>👨‍🌾 Join Outgrower Program</h3>
+            <form>
+              <div class="form-group">
+                <label>Farmer Type *</label>
+                <select>
+                  <option>Individual Smallholder</option>
+                  <option>Cooperative</option>
+                  <option>Commercial Farm</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Primary Crop *</label>
+                <select>
+                  <option>Maize</option>
+                  <option>Rice</option>
+                  <option>Cassava</option>
+                  <option>Sesame</option>
+                  <option>Ginger</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Farm Size (Hectares) *</label>
+                <input type="number" step="0.1" placeholder="Total land area" />
+              </div>
+              <div class="form-group">
+                <label>Location (State/LGA) *</label>
+                <input type="text" placeholder="e.g., Ogun State, Ifo LGA" />
+              </div>
+              <div class="form-group">
+                <label>Contact Information *</label>
+                <input type="text" placeholder="Full Name" />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Phone/WhatsApp" />
+              </div>
+              <div class="form-group">
+                <label>How can we help?</label>
+                <textarea
+                  placeholder="Input credit, technical support, market access..."
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-button" style="width: 100%">
+                Apply Now
+              </button>
+            </form>
+          </div>
+
+          <div class="contact-form">
+            <h3>📞 Contact Information</h3>
+            <div style="margin: 2rem 0">
+              <p style="margin-bottom: 1rem">
+                <strong>📍 Head Office:</strong><br />
+                Plot 123, Agriculture Road<br />
+                Ifo, Ogun State, Nigeria
+              </p>
+
+              <p style="margin-bottom: 1rem">
+                <strong>📱 Phone/WhatsApp:</strong><br />
+                +234 802 XXX XXXX
+              </p>
+
+              <p style="margin-bottom: 1rem">
+                <strong>📧 Email:</strong><br />
+                info@agroconnect.ng
+              </p>
+
+              <p style="margin-bottom: 1rem">
+                <strong>🕐 Office Hours:</strong><br />
+                Mon-Fri: 8:00 AM - 5:00 PM<br />
+                Sat: 9:00 AM - 2:00 PM
+              </p>
+
+              <p style="margin-bottom: 2rem">
+                <strong>⚡ Response Time:</strong><br />
+                We respond to all inquiries within 24-48 hours
+              </p>
+
+              <a
+                href="#"
+                class="cta-button cta-secondary"
+                style="width: 100%; text-align: center"
+                >Schedule Farm Visit</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="bg-gradient-to-br from-[#06213a] to-[#0a2f52] text-white py-16 relative overflow-hidden"
+    >
+      <!-- Background decorative elements -->
+      <div
+        class="absolute top-0 right-0 w-64 h-64 bg-[#a23342]/10 rounded-full blur-3xl"
+      ></div>
+      <div
+        class="absolute bottom-0 left-0 w-96 h-96 bg-[#fbbf24]/5 rounded-full blur-3xl"
+      ></div>
+
+      <div class="container mx-auto px-4 md:px-8 relative z-10">
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12"
+        >
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <img
+                src="icons/logo.png"
+                alt="Donias Global Consultants Logo"
+                class="w-[50px] h-[50px]"
+              />
+              <h3 class="text-xl font-bold">Donias</h3>
+            </div>
+            <p class="text-white/80 leading-relaxed mb-6">
+              Opening global doors through expert travel, education, and
+              business consultations. Start your journey with us.
+            </p>
+            <!-- Social Media Icons -->
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Instagram"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Facebook"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-white/10 hover:bg-[#a23342] flex items-center justify-center transition-all duration-300 hover:scale-110"
+                aria-label="Twitter/X"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Company</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Home
+                </a>
               </li>
               <li>
                 <a
-                  class="header_achor"
-                  href="https://itechlink.zohobackstage.com/"
-                  >Events</a
+                  href="about_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
                 >
+                  <span class="text-[#fbbf24]">→</span> About Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="services.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Our Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="sii.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Study Abroad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="Medical_tourism.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Medical Tourism
+                </a>
               </li>
             </ul>
-            <div class="get_started">
-              <button class="nav_btn" onclick="location.href='contact_us.html'">
-                Get Free Consultation
-              </button>
-            </div>
-          </nav>
-        </header>
-        <section class="one">
-          <div class="head">
-            <h2 class="header">Agribusiness</h2>
           </div>
-          <button class="hamburger2" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>  
-        <div class="ull">
-            <ul class="ul">
-                  <a href="Information.html">Information and Technology Services</a>
-                </li>
-                </li>
-                <li><a href="power.html">Power and Infracstructure</a></li>
-                <li><a href="Event.html">Event Management</a></li>
-                <li><a href="Medical.html">Health and Medical Services</a></li>
-                  <li>
-                    <a href="Travel.html">Travel & Immigration</a>
-                  </li>
-                  <li>
-                    <a href="Business_Consultancy.html">Business Consultancy</a>
-                  </li>
-              </ul>
-             
+
+          <!-- Support Links -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Support</h4>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="contact_us.html"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Contact Us
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Help Center
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> FAQs
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-white/80 hover:text-[#fbbf24] transition-colors duration-300 flex items-center gap-2"
+                >
+                  <span class="text-[#fbbf24]">→</span> Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-lg font-bold mb-6">Get In Touch</h4>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>Lagos, Nigeria</span>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <a
+                  href="mailto:info@doniasglobal.com"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  info@doniasglobal.com
+                </a>
+              </li>
+              <li class="flex items-start gap-3 text-white/80">
+                <svg
+                  class="w-5 h-5 mt-1 flex-shrink-0 text-[#fbbf24]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <a
+                  href="tel:+234XXXXXXXXXX"
+                  class="hover:text-[#fbbf24] transition-colors"
+                >
+                  +234 XXX XXX XXXX
+                </a>
+              </li>
+            </ul>
+
+            <!-- Newsletter -->
+            <div class="mt-6">
+              <h5 class="font-semibold mb-3">Subscribe to Newsletter</h5>
+              <form class="flex gap-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="flex-1 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/50 focus:outline-none focus:border-[#fbbf24] transition-colors"
+                />
+                <button
+                  type="submit"
+                  class="px-6 py-2 rounded-full bg-gradient-to-br from-[#fbbf24] to-[#f59e0b] text-[#06213a] font-semibold hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+                >
+                  →
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-        </section>
-        <section class="two">
-            <div class="lines"></div>
-            <div class="lines"></div>
-        </section>
-        <section class="three">
-            <div class="header_3">
-                <h2 class="title">
-                  Harvesting Success with Smart Agribusiness Strategies and Trusted Expertise
-                </h2>
-            </div>
-            <!-- <div class="sub_header3">
-               <p class="subtitle">
-                Our areas of expertise encompass a comprehensive range of travel and immigration services, designed to assist individuals, families, and organizations in navigating the complexities of international mobility. These include visa advisory and processing, study abroad placement and guidance, work and residency permit assistance, travel planning and itinerary management, flight and accommodation booking, pre-departure orientation and counseling, immigration compliance and documentation support, as well as relocation and settlement services tailored to your unique needs.
-               </p>
-            </div> -->
-        </section>
-        <section class="four">
-            <div class="side1">
-              <h2 class="header_one">
-                Visioning & Feasibility
-              </h2>
-              <p class="sub_one">
-                We begin by defining the vision for your agribusiness venture, aligning it with functional needs, market opportunities, and sustainability goals. Through comprehensive feasibility studies, we engage all stakeholders, evaluate environmental and economic viability, and chart a clear path toward success.
-              </p>
-              <div class="line"></div>
-              <h2 class="header_one_2">
-                Strategic Roadmap Development
-              </h2>
-              <p class="sub_one_2">
-              
-              Our strategic roadmaps deliver clarity, reliability, and actionable plans for your agricultural initiatives. Leveraging real-world data, market insights, and innovative practices, we create tailored strategies that combine proven methods with cutting-edge solutions to ensure efficiency, resilience, and profitability.
-              </p>
-            </div>
-            <div class="side2">
-              <h2 class="header_two">
-                Operational Design & Optimization
-              </h2>
-              <p class="sub_two">
-            
-We delve into the specific intricacies of your operations, designing every detail with precision and care. From selecting suitable production systems to optimizing processes and integrating advanced agricultural technologies, we craft robust solutions that enhance productivity, reduce risks, and deliver measurable results.
-              </p>
-              <div class="line"></div>
-              <h2 class="header_two_2">
-                On-Ground Execution & Support
-              </h2>
-              <p class="sub_two_2">
-                Our expertise extends to hands-on implementation, ensuring your plans come to life effectively and sustainably. We oversee field operations, infrastructure setup, supply chain execution, and workforce training — embedding best practices and innovations to guarantee seamless execution and lasting impact.
-              </p>
-            </div>
-        </section>
-        <section class="divider">
-          <div class="lines"></div>
-        </section>
-        <section class="deep_dive">
-          <div class="deep_header">
-            Beyond Borders: Exploring Our Full Range of Agribusiness Services
-          </div>
-          <div class="deeper">
-            <div class="words_2">
-              <h2 class="title_service">Land Loan</h2>
-              <p class="sub_services">
-                We provide flexible and accessible land loan solutions to help individuals and businesses acquire property with ease and confidence. From guiding clients through the application process to ensuring transparent terms and timely disbursement of funds, our land loan services are designed to empower customers to achieve their real estate goals. We focus on offering competitive rates, personalized repayment plans, and reliable support all to make land ownership more attainable and to foster long-term financial stability and growth.
-              </p>
-            </div>
-            <div class="img_2">
-              <img
-                src="service_images/ken-shono-UvvutEc-2PE-unsplash.jpg"
-                alt="travel"
-                class="title_img"
-              />
-            </div>
-          </div>
-          <div class="words_three">
-            <div class="img_3">
-              <img
-                src="service_images/hannah-shedrow-7-5CYKxt-SI-unsplash.jpg"
-                alt="business"
-                class="title_imgs"
-              />
-            </div>
-            <div class="words_3">
-              <h2 class="title_services">Farming Equipment Solutions</h2>
-              <p class="sub_service">
-                We offer reliable and innovative farming equipment solutions to support agricultural productivity and growth. From supplying high-quality machinery and tools to providing expert advice and maintenance services, our operations are designed to meet the diverse needs of farmers and agribusinesses. We focus on delivering durable, efficient, and cost-effective equipment all aimed at enhancing farm operations, improving yields, and driving sustainable agricultural development.
-              </p>
-            </div>
-            
-            
-          </div>
-          <div class="deeper">
-            <div class="words_2">
-              <h2 class="title_service">Farming Activities</h2>
-              <p class="sub_services">
-                We engage in a variety of farming activities that contribute to food security and agricultural development. From land preparation and planting of staple crops like rice, maize, and cassava to the cultivation of vegetables, fruits, and cash crops, our operations are centered on sustainable and efficient farming practices. We focus on maximizing yields through modern techniques, maintaining soil health, and ensuring high-quality produce all to support local communities, meet market demands, and promote agricultural growth.
-              </p>
-            </div>
-            <div class="img_2">
-              <img
-                src="service_images/nel-ranoko-CXKk4zU7anE-unsplash.jpg"
-                alt="travel"
-                class="title_img"
-              />
-            </div>
-          </div>
-          
-        </section>
-        <section class="divider">
-          <div class="lines"></div>
-        </section>
-        <section class="five">
-        </section>
-        <footer class="footer">
-          <div class="footer-col brand">
-            <h3>Donias .</h3>
-            <p>
-              Opening global doors through expert travel, education, and business
-              consultations. Start your journey with us.
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-white/10 pt-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4"
+          >
+            <p class="text-white/60 text-sm text-center md:text-left">
+              © 2025 Donias Global Consultants. All rights reserved.
             </p>
+            <div class="flex gap-6 text-sm">
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Privacy Policy</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Terms of Service</a
+              >
+              <a
+                href="#"
+                class="text-white/60 hover:text-[#fbbf24] transition-colors"
+                >Cookie Policy</a
+              >
+            </div>
           </div>
-      
-          <div class="footer-col">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about_us.html">About Us</a></li>
-              <li><a href="Event.html">Events</a></li>
-              <li><a href="services.html">Our Services</a></li>
-            </ul>
-          </div>
-      
-          <div class="footer-col">
-            <h4>Support</h4>
-            <ul>
-              <li><a href="contact_us.html">Help Center</a></li>
-              <li><a href="contact_us.html">Contact Us</a></li>
-            </ul>
-          </div>
-      
-          <div class="footer-col">
-            <h4>Social Media</h4>
-            <ul>
-              <li><a href="https://www.instagram.com/doniasmegalink/">Instagram</a></li>
-              <li><a href="https://www.facebook.com/www.donias.com.ng/">Facebook</a></li>
-              <li><a href="https://ng.linkedin.com/company/donias-mega-link">LinkedIn</a></li>
-            </ul>
-          </div>
-        </footer>
-        
-        <script src="travel.js"></script>
-      </body>
-    </html>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <div class="whatsapp-float" title="Chat with us on WhatsApp">💬</div>
+
+    <script>
+      // Hamburger menu toggle
+      function toggleMenu() {
+        const menu = document.getElementById("ulz");
+        menu.classList.toggle("active");
+      }
+
+      // Close menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const menu = document.getElementById("ulz");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+          menu.classList.remove("active");
+        }
+      });
+
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

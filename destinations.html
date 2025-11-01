@@ -1,0 +1,1756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Destinations - Visa Services Worldwide | Donias Travels</title>
+    <meta
+      name="description"
+      content="Expert visa services for 40+ destinations worldwide. UK, USA, Canada, Australia, Schengen, UAE, Asia, and more. Your gateway to the world."
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #8b2635;
+        --primary-dark: #6b1d2a;
+        --primary-light: #a63446;
+        --text-dark: #1a1a1a;
+        --text-light: #666;
+        --bg-light: #f8f9fa;
+        --border: #e5e5e5;
+        --white: #ffffff;
+        --success: #28a745;
+        --warning: #ffc107;
+        --info: #17a2b8;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* Header */
+      .header {
+        background: var(--white);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .logo span:first-child {
+        color: var(--text-dark);
+      }
+
+      .logo span:last-child {
+        color: var(--primary);
+      }
+
+      .nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--primary);
+      }
+
+      .header-cta {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border-radius: 6px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        display: inline-block;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(139, 38, 53, 0.3);
+      }
+
+      .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-secondary:hover {
+        background: var(--primary);
+        color: var(--white);
+      }
+
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        z-index: 999;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.1);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(
+            135deg,
+            rgba(139, 38, 53, 0.92),
+            rgba(107, 29, 42, 0.92)
+          ),
+          url("https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1600&h=900&fit=crop")
+            center/cover;
+        color: var(--white);
+        padding: 6rem 2rem 4rem;
+        text-align: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+      }
+
+      .search-bar {
+        max-width: 700px;
+        margin: 2rem auto;
+        position: relative;
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 1.25rem 4rem 1.25rem 1.5rem;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .search-bar input:focus {
+        outline: none;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 1.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: var(--primary);
+      }
+
+      .stats-row {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.25rem;
+      }
+
+      .stat-label {
+        font-size: 0.95rem;
+        opacity: 0.9;
+      }
+
+      /* Filter Section */
+      .filter-section {
+        background: var(--white);
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        position: sticky;
+        top: 70px;
+        z-index: 100;
+      }
+
+      .filter-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .filter-label {
+        font-weight: 600;
+        color: var(--text-dark);
+      }
+
+      .filter-btn {
+        padding: 0.6rem 1.2rem;
+        background: var(--bg-light);
+        border: 2px solid var(--border);
+        border-radius: 25px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+        color: var(--text-dark);
+      }
+
+      .filter-btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+      }
+
+      .filter-btn.active {
+        background: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+      }
+
+      .section {
+        margin-bottom: 5rem;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .section-header h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-dark);
+      }
+
+      .section-header p {
+        font-size: 1.2rem;
+        color: var(--text-light);
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .region-title {
+        font-size: 2rem;
+        margin: 3rem 0 2rem;
+        color: var(--primary);
+        padding-bottom: 1rem;
+        border-bottom: 3px solid var(--primary);
+        display: inline-block;
+      }
+
+      /* Destination Cards */
+      .destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+
+      .destination-card {
+        background: var(--white);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+
+      .destination-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .destination-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        position: relative;
+      }
+
+      .destination-overlay {
+        position: relative;
+      }
+
+      .destination-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--primary);
+        color: var(--white);
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .popular-badge {
+        background: #ffd700;
+        color: var(--text-dark);
+      }
+
+      .destination-content {
+        padding: 2rem;
+      }
+
+      .destination-flag {
+        font-size: 2.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .destination-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+        color: var(--text-dark);
+      }
+
+      .destination-content p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
+      }
+
+      .visa-types {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .visa-tag {
+        padding: 0.4rem 0.9rem;
+        background: rgba(139, 38, 53, 0.1);
+        color: var(--primary);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      .destination-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .stat-box {
+        text-align: center;
+      }
+
+      .stat-box strong {
+        display: block;
+        color: var(--primary);
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .stat-box span {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        color: var(--white);
+        padding: 4rem 2rem;
+        text-align: center;
+        border-radius: 12px;
+        margin: 4rem 0;
+      }
+
+      .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-section .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+      }
+
+      .cta-section .btn-secondary {
+        background: var(--white);
+        color: var(--primary);
+        border: none;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: rgba(255, 255, 255, 0.8);
+        padding: 3rem 2rem 1rem;
+      }
+
+      .footer-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer h4 {
+        color: var(--white);
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-links a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        .nav {
+          display: none;
+        }
+
+        .destinations-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats-row {
+          gap: 1.5rem;
+        }
+
+        .filter-container {
+          justify-content: center;
+        }
+      }
+
+      /* Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      /* Loading State */
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <div class="logo"><span>donias</span><span>travels</span></div>
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#about">About</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="header-cta">
+          <a href="#consultation" class="btn btn-primary">Book Consultation</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- WhatsApp Float -->
+    <div
+      class="whatsapp-float"
+      onclick="window.open('https://wa.me/YOUR_NUMBER', '_blank')"
+    >
+      💬
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <h1>Your Gateway to the World</h1>
+        <p>
+          Expert visa services for 40+ destinations across 6 continents. Where
+          do you dream of going?
+        </p>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for your destination (e.g., United Kingdom, Canada, India...)"
+            onkeyup="searchDestinations()"
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Countries</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Continents</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">12,000+</div>
+            <div class="stat-label">Visas Processed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <div class="filter-container">
+        <span class="filter-label">Filter by Region:</span>
+        <button class="filter-btn active" onclick="filterRegion('all')">
+          All Destinations
+        </button>
+        <button class="filter-btn" onclick="filterRegion('europe')">
+          Europe
+        </button>
+        <button class="filter-btn" onclick="filterRegion('americas')">
+          Americas
+        </button>
+        <button class="filter-btn" onclick="filterRegion('asia')">
+          Asia & Middle East
+        </button>
+        <button class="filter-btn" onclick="filterRegion('oceania')">
+          Oceania
+        </button>
+        <button class="filter-btn" onclick="filterRegion('africa')">
+          Africa
+        </button>
+      </div>
+    </section>
+
+    <!-- Main Container -->
+    <div class="container">
+      <!-- Popular Destinations -->
+      <section id="popular" class="section">
+        <div class="section-header">
+          <h2>🔥 Most Popular Destinations</h2>
+          <p>Our top-requested countries with the highest success rates</p>
+        </div>
+
+        <div class="destinations-grid">
+          <!-- UK -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&h=500&fit=crop"
+                alt="United Kingdom"
+                class="destination-image"
+              />
+              <span class="destination-badge popular-badge"
+                >⭐ MOST POPULAR</span
+              >
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇬🇧</div>
+              <h3>United Kingdom</h3>
+              <p>
+                Study, work, or travel to the UK with expert guidance on
+                Standard Visitor, Skilled Worker, and Student visas.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Family</span>
+                <span class="visa-tag">Business</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>12-24 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>2,800+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Canada -->
+          <a href="#" class="destination-card" data-region="americas">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1517935706615-2717063c2225?w=800&h=500&fit=crop"
+                alt="Canada"
+                class="destination-image"
+              />
+              <span class="destination-badge popular-badge"
+                >⭐ MOST POPULAR</span
+              >
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇨🇦</div>
+              <h3>Canada</h3>
+              <p>
+                Access Canadian universities and work permits. Express Entry,
+                study permits, and family sponsorship support.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Express Entry</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Family</span>
+                <span class="visa-tag">Business</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>6-16 months</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>1,900+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- USA -->
+          <a href="#" class="destination-card" data-region="americas">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=800&h=500&fit=crop"
+                alt="United States"
+                class="destination-image"
+              />
+              <span class="destination-badge popular-badge"
+                >⭐ MOST POPULAR</span
+              >
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇺🇸</div>
+              <h3>United States</h3>
+              <p>
+                Navigate the US visa system for study, work, or tourism. B1/B2,
+                F-1, H-1B, and Green Card support.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">B1/B2 Tourist</span>
+                <span class="visa-tag">F-1 Student</span>
+                <span class="visa-tag">H-1B Work</span>
+                <span class="visa-tag">Green Card</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-24 months</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>1,400+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- UAE -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&h=500&fit=crop"
+                alt="UAE"
+                class="destination-image"
+              />
+              <span class="destination-badge">🔥 TRENDING</span>
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇦🇪</div>
+              <h3>United Arab Emirates</h3>
+              <p>
+                Business, work, and tourism visas to Dubai and beyond. Fast
+                processing and Golden Visa programs available.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work</span>
+                <span class="visa-tag">Golden Visa</span>
+                <span class="visa-tag">Business</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>1,200+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Australia -->
+          <a href="#" class="destination-card" data-region="oceania">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=800&h=500&fit=crop"
+                alt="Australia"
+                class="destination-image"
+              />
+              <span class="destination-badge">🔥 TRENDING</span>
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇦🇺</div>
+              <h3>Australia</h3>
+              <p>
+                Study, skilled migration, and tourism visas down under. 189,
+                190, 482, and student visa expertise.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Skilled Migration</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>6-18 months</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>980+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Germany -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=800&h=500&fit=crop"
+                alt="Germany"
+                class="destination-image"
+              />
+              <span class="destination-badge">🔥 TRENDING</span>
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇩🇪</div>
+              <h3>Germany</h3>
+              <p>
+                Access Germany and 26 Schengen countries. Study, work, and EU
+                Blue Card opportunities.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">EU Blue Card</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Job Seeker</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>4-12 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>750+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Europe -->
+      <section id="europe" class="section">
+        <h2 class="region-title">🇪🇺 Europe</h2>
+        <div class="destinations-grid">
+          <!-- France -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&h=500&fit=crop"
+                alt="France"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇫🇷</div>
+              <h3>France</h3>
+              <p>
+                Experience Paris and beyond with Schengen tourist visas, student
+                visas, and talent passports.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">Student</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>2-6 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>620+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Netherlands -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=800&h=500&fit=crop"
+                alt="Netherlands"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇳🇱</div>
+              <h3>Netherlands</h3>
+              <p>
+                Study at top Dutch universities or work with highly skilled
+                migrant visas in Amsterdam and beyond.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">HSM Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>2-8 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>340+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Italy -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&h=500&fit=crop"
+                alt="Italy"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇮🇹</div>
+              <h3>Italy</h3>
+              <p>
+                Schengen visas for tourism, study at Italian universities, or
+                work in fashion and design hubs.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>2-6 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>290+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Spain -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=800&h=500&fit=crop"
+                alt="Spain"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇪🇸</div>
+              <h3>Spain</h3>
+              <p>
+                Tourist visas, student visas for Spanish universities, and
+                non-lucrative residence permits.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Residence</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-8 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>380+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Portugal -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&h=500&fit=crop"
+                alt="Portugal"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇵🇹</div>
+              <h3>Portugal</h3>
+              <p>
+                Schengen visas, Golden Visa investment program, and D7 passive
+                income residence permits.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Schengen</span>
+                <span class="visa-tag">Golden Visa</span>
+                <span class="visa-tag">D7 Visa</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>6-12 months</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>180+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Ireland -->
+          <a href="#" class="destination-card" data-region="europe">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1590086783191-a0694c7d1e6e?w=800&h=500&fit=crop"
+                alt="Ireland"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇮🇪</div>
+              <h3>Ireland</h3>
+              <p>
+                Study at Irish universities, Critical Skills Employment Permits,
+                and tourist visas.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Work Permit</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>4-8 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>210+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Asia & Middle East -->
+      <section id="asia" class="section">
+        <h2 class="region-title">🌏 Asia & Middle East</h2>
+        <div class="destinations-grid">
+          <!-- India -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800&h=500&fit=crop"
+                alt="India"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇮🇳</div>
+              <h3>India</h3>
+              <p>
+                E-Tourist visas, business visas, and medical tourism support.
+                Experience incredible India with ease.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">E-Tourist</span>
+                <span class="visa-tag">Business</span>
+                <span class="visa-tag">Medical</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>420+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- China -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&h=500&fit=crop"
+                alt="China"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇨🇳</div>
+              <h3>China</h3>
+              <p>
+                Tourist visas, business visas, and work permits for mainland
+                China. Expert guidance on documentation.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist (L)</span>
+                <span class="visa-tag">Business (M)</span>
+                <span class="visa-tag">Work (Z)</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>4-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>280+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Singapore -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&h=500&fit=crop"
+                alt="Singapore"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇸🇬</div>
+              <h3>Singapore</h3>
+              <p>
+                Tourist visas, Employment Passes, and student visas for Asia's
+                business hub. Fast processing.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Employment Pass</span>
+                <span class="visa-tag">Student</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-5 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>320+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Japan -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&h=500&fit=crop"
+                alt="Japan"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇯🇵</div>
+              <h3>Japan</h3>
+              <p>
+                Tourist visas, work visas, and student visas. Experience Japan's
+                culture, technology, and opportunities.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work</span>
+                <span class="visa-tag">Student</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>5-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>190+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- South Korea -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=800&h=500&fit=crop"
+                alt="South Korea"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇰🇷</div>
+              <h3>South Korea</h3>
+              <p>
+                Tourist visas, E-2 teaching visas, and student visas for Korean
+                universities and language schools.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work (E-2)</span>
+                <span class="visa-tag">Study</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>5-10 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>150+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Malaysia -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&h=500&fit=crop"
+                alt="Malaysia"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇲🇾</div>
+              <h3>Malaysia</h3>
+              <p>
+                Tourist visas, Malaysia My Second Home (MM2H) program, and
+                employment passes.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">MM2H</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>240+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Saudi Arabia -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?w=800&h=500&fit=crop"
+                alt="Saudi Arabia"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇸🇦</div>
+              <h3>Saudi Arabia</h3>
+              <p>
+                Umrah visas, Hajj visas, tourist visas, and work visas for
+                opportunities in the Kingdom.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Umrah</span>
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>1-2 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>890+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Qatar -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1614201286271-840c02911d16?w=800&h=500&fit=crop"
+                alt="Qatar"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇶🇦</div>
+              <h3>Qatar</h3>
+              <p>
+                Tourist visas, work permits, and family residence visas for
+                opportunities in Doha and beyond.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Work</span>
+                <span class="visa-tag">Family</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>170+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Turkey -->
+          <a href="#" class="destination-card" data-region="asia">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&h=500&fit=crop"
+                alt="Turkey"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇹🇷</div>
+              <h3>Turkey</h3>
+              <p>
+                E-visas for tourism, business visas, and work permits. Bridge
+                between Europe and Asia.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">E-Visa</span>
+                <span class="visa-tag">Business</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>1-3 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>310+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Oceania -->
+      <section id="oceania" class="section">
+        <h2 class="region-title">🌏 Oceania</h2>
+        <div class="destinations-grid">
+          <!-- New Zealand -->
+          <a href="#" class="destination-card" data-region="oceania">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&h=500&fit=crop"
+                alt="New Zealand"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇳🇿</div>
+              <h3>New Zealand</h3>
+              <p>
+                Tourist visas, student visas, and skilled migrant category.
+                Experience stunning landscapes and quality of life.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Study</span>
+                <span class="visa-tag">Skilled Migrant</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>3-6 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>380+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Africa -->
+      <section id="africa" class="section">
+        <h2 class="region-title">🌍 Africa</h2>
+        <div class="destinations-grid">
+          <!-- South Africa -->
+          <a href="#" class="destination-card" data-region="africa">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1484318571209-661cf29a69c3?w=800&h=500&fit=crop"
+                alt="South Africa"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇿🇦</div>
+              <h3>South Africa</h3>
+              <p>
+                Tourist visas, business visas, and critical skills work permits
+                for the Rainbow Nation.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Business</span>
+                <span class="visa-tag">Critical Skills</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>4-8 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>160+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Kenya -->
+          <a href="#" class="destination-card" data-region="africa">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=800&h=500&fit=crop"
+                alt="Kenya"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇰🇪</div>
+              <h3>Kenya</h3>
+              <p>
+                E-visas for tourism, business visas, and work permits for East
+                Africa's business hub.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">E-Visa</span>
+                <span class="visa-tag">Business</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>2-7 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>120+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Americas (Additional) -->
+      <section id="americas-more" class="section">
+        <h2 class="region-title">🌎 Americas</h2>
+        <div class="destinations-grid">
+          <!-- Mexico -->
+          <a href="#" class="destination-card" data-region="americas">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1518638150340-f706e86654de?w=800&h=500&fit=crop"
+                alt="Mexico"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇲🇽</div>
+              <h3>Mexico</h3>
+              <p>
+                Tourist visas, temporary residence, and business opportunities
+                in Latin America's largest economy.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist</span>
+                <span class="visa-tag">Temporary Residence</span>
+                <span class="visa-tag">Business</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>2-4 weeks</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>140+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <!-- Brazil -->
+          <a href="#" class="destination-card" data-region="americas">
+            <div class="destination-overlay">
+              <img
+                src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&h=500&fit=crop"
+                alt="Brazil"
+                class="destination-image"
+              />
+            </div>
+            <div class="destination-content">
+              <div class="destination-flag">🇧🇷</div>
+              <h3>Brazil</h3>
+              <p>
+                Tourist visas, business visas, and work permits for South
+                America's largest market.
+              </p>
+              <div class="visa-types">
+                <span class="visa-tag">Tourist (VITUR)</span>
+                <span class="visa-tag">Business (VITEM)</span>
+                <span class="visa-tag">Work</span>
+              </div>
+              <div class="destination-stats">
+                <div class="stat-box">
+                  <strong>5-15 days</strong>
+                  <span>Processing time</span>
+                </div>
+                <div class="stat-box">
+                  <strong>95+</strong>
+                  <span>Visas processed</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <h2>Can't Find Your Destination?</h2>
+        <p>
+          We serve 40+ countries worldwide. Let us know where you want to go and
+          we'll guide you there.
+        </p>
+        <div class="cta-buttons">
+          <a href="#consultation" class="btn btn-primary"
+            >Book Free Consultation</a
+          >
+          <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <h4>Donias Travels</h4>
+          <p>
+            Your gateway to the world. Expert visa services for 40+ destinations
+            across 6 continents.
+          </p>
+        </div>
+        <div>
+          <h4>Popular Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">United States</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">UAE</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-links">
+            <li><a href="#">Tourist Visas</a></li>
+            <li><a href="#">Work & Migration</a></li>
+            <li><a href="#">Business & Investment</a></li>
+            <li><a href="#">Family Visas</a></li>
+            <li><a href="#">Study Abroad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Refund Policy</a></li>
+            <li><a href="#">Data Protection</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Donias Travels. All rights reserved. | Licensed Travel
+          Agency | 12,000+ Visas Processed | NDPR Compliant
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Search Functionality
+      function searchDestinations() {
+        const input = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const cards = document.querySelectorAll(".destination-card");
+
+        cards.forEach((card) => {
+          const countryName = card
+            .querySelector("h3")
+            .textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+
+          if (countryName.includes(input) || description.includes(input)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = input === "" ? "block" : "none";
+          }
+        });
+      }
+
+      // Filter by Region
+      function filterRegion(region) {
+        const cards = document.querySelectorAll(".destination-card");
+        const buttons = document.querySelectorAll(".filter-btn");
+
+        // Update active button
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        // Filter cards
+        cards.forEach((card) => {
+          if (region === "all") {
+            card.style.display = "block";
+          } else {
+            const cardRegion = card.getAttribute("data-region");
+            card.style.display = cardRegion === region ? "block" : "none";
+          }
+        });
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Animate cards on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".destination-card").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "all 0.6s ease-out";
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
