@@ -3,6 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="images/lukas-souza-iz6DadX_Fl4-unsplash.jpg"
+      as="image"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
+      as="style"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -35,6 +48,36 @@
         background-size: cover;
         background-position: center;
         transition: background-image 1s ease-in-out;
+      }
+
+      /* Image loading skeleton */
+      .img-loading {
+        background: linear-gradient(
+          90deg,
+          #f0f0f0 25%,
+          #e0e0e0 50%,
+          #f0f0f0 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+      }
+
+      @keyframes loading {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+
+      .lazy-image {
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .lazy-image.loaded {
+        opacity: 1;
       }
 
       .typed-cursor {
@@ -164,6 +207,8 @@
             src="icons/logo.png"
             alt="Donias Logo"
             class="w-[50px] h-[50px]"
+            width="50"
+            height="50"
           />
           <h2
             class="text-lg md:text-xl font-bold text-gray-800 hidden sm:block"
@@ -317,7 +362,10 @@
               <img
                 src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg"
                 alt="Travel"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Travel</p>
             </div>
@@ -325,7 +373,10 @@
               <img
                 src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
                 alt="Education"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Education</p>
             </div>
@@ -333,7 +384,10 @@
               <img
                 src="images/sean-pollock-PhYq704ffdA-unsplash.jpg"
                 alt="Business"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Business</p>
             </div>
@@ -341,7 +395,10 @@
               <img
                 src="images/scientist-2141259_1280.jpg"
                 alt="Medical"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Medical</p>
             </div>
@@ -349,7 +406,10 @@
               <img
                 src="images/randy-fath-dDc0vuVH_LU-unsplash.jpg"
                 alt="Agribusiness"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">
                 Agribusiness
@@ -359,7 +419,10 @@
               <img
                 src="images/person-working-html-computer.jpg"
                 alt="IT Solutions"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">
                 IT Solutions
@@ -369,7 +432,10 @@
               <img
                 src="images/jacek-dylag-SPpsFbCaN2A-unsplash.jpg"
                 alt="Travel"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Travel</p>
             </div>
@@ -377,7 +443,10 @@
               <img
                 src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
                 alt="Education"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Education</p>
             </div>
@@ -385,7 +454,10 @@
               <img
                 src="images/sean-pollock-PhYq704ffdA-unsplash.jpg"
                 alt="Business"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Business</p>
             </div>
@@ -393,7 +465,10 @@
               <img
                 src="images/scientist-2141259_1280.jpg"
                 alt="Medical"
-                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl"
+                class="w-full h-full object-cover rounded-full border-4 border-white shadow-xl lazy-image"
+                width="160"
+                height="160"
+                loading="lazy"
               />
               <p class="text-white text-center mt-2 font-medium">Medical</p>
             </div>
@@ -438,7 +513,10 @@
             <img
               src="images/donias.jpg"
               alt="Donias Team"
-              class="w-full h-[500px] object-cover"
+              class="w-full h-[500px] object-cover lazy-image"
+              width="600"
+              height="500"
+              loading="lazy"
             />
           </div>
         </div>
@@ -523,7 +601,10 @@
             <img
               src="images/laura-lezman-SFGABM2DQ6M-unsplash.jpg"
               alt="Travel and Immigration"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -548,7 +629,10 @@
             <img
               src="images/campaign-creators-gMsnXqILjp4-unsplash.jpg"
               alt="Business Consultancy"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -573,7 +657,10 @@
             <img
               src="images/emiel-molenaar-j8DsBudk96c-unsplash.jpg"
               alt="Agribusiness"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -598,7 +685,10 @@
             <img
               src="service_images/portrait-smiling-it-expert-using-pc-startup-office-implement-algorithms.jpg"
               alt="IT Services"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -623,7 +713,10 @@
             <img
               src="images/michael-pointner-fP5LU1iD5p4-unsplash.jpg"
               alt="Power & Infrastructure"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -648,7 +741,10 @@
             <img
               src="service_images/michael-bartlett-uG49PfsxMSk-unsplash.jpg"
               alt="Event Management"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -673,7 +769,10 @@
             <img
               src="service_images/national-cancer-institute-NaqHdUS5mno-unsplash.jpg"
               alt="Health Services"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -698,7 +797,10 @@
             <img
               src="images/wonderlane-6zlgM-GUd6I-unsplash.jpg"
               alt="Study Abroad"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -723,7 +825,10 @@
             <img
               src="images/meddy.jpg"
               alt="Medical Tourism"
-              class="w-full h-[200px] object-cover"
+              class="w-full h-[200px] object-cover lazy-image"
+              width="400"
+              height="200"
+              loading="lazy"
             />
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-800 mb-3">
@@ -771,7 +876,14 @@
           <div
             class="feature-card bg-gradient-to-br from-[#a23342]/5 to-[#a23342]/10 rounded-[25px] p-8"
           >
-            <img src="icons/experts.png" alt="Experts" class="w-16 h-16 mb-4" />
+            <img
+              src="icons/experts.png"
+              alt="Experts"
+              class="w-16 h-16 mb-4"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
             <h3 class="text-xl font-bold text-gray-800 mb-3">
               Expert Advisors
             </h3>
@@ -784,7 +896,14 @@
           <div
             class="feature-card bg-gradient-to-br from-[#06213a]/5 to-[#06213a]/10 rounded-[25px] p-8"
           >
-            <img src="icons/speed.png" alt="Speed" class="w-16 h-16 mb-4" />
+            <img
+              src="icons/speed.png"
+              alt="Speed"
+              class="w-16 h-16 mb-4"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
             <h3 class="text-xl font-bold text-gray-800 mb-3">
               Swift Processing
             </h3>
@@ -797,7 +916,14 @@
           <div
             class="feature-card bg-gradient-to-br from-[#fbbf24]/10 to-[#f59e0b]/10 rounded-[25px] p-8"
           >
-            <img src="icons/pricing.png" alt="Pricing" class="w-16 h-16 mb-4" />
+            <img
+              src="icons/pricing.png"
+              alt="Pricing"
+              class="w-16 h-16 mb-4"
+              width="64"
+              height="64"
+              loading="lazy"
+            />
             <h3 class="text-xl font-bold text-gray-800 mb-3">
               Transparent Pricing
             </h3>
@@ -814,6 +940,9 @@
               src="icons/help-desk.png"
               alt="Support"
               class="w-16 h-16 mb-4"
+              width="64"
+              height="64"
+              loading="lazy"
             />
             <h3 class="text-xl font-bold text-gray-800 mb-3">
               All-in-One Support
@@ -849,7 +978,10 @@
                   <img
                     src="headshots/kazi-mizan-WocOfFRUTSM-unsplash.jpg"
                     alt="Client"
-                    class="w-32 h-32 rounded-full object-cover grayscale"
+                    class="w-32 h-32 rounded-full object-cover grayscale lazy-image"
+                    width="128"
+                    height="128"
+                    loading="lazy"
                   />
                   <div>
                     <p class="text-5xl text-[#a23342] mb-4">❝</p>
@@ -871,7 +1003,10 @@
                   <img
                     src="headshots/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
                     alt="Client"
-                    class="w-32 h-32 rounded-full object-cover grayscale"
+                    class="w-32 h-32 rounded-full object-cover grayscale lazy-image"
+                    width="128"
+                    height="128"
+                    loading="lazy"
                   />
                   <div>
                     <p class="text-5xl text-[#a23342] mb-4">❝</p>
@@ -893,7 +1028,10 @@
                   <img
                     src="headshots/christina-wocintechchat-com-SJvDxw0azqw-unsplash.jpg"
                     alt="Client"
-                    class="w-32 h-32 rounded-full object-cover grayscale"
+                    class="w-32 h-32 rounded-full object-cover grayscale lazy-image"
+                    width="128"
+                    height="128"
+                    loading="lazy"
                   />
                   <div>
                     <p class="text-5xl text-[#a23342] mb-4">❝</p>
@@ -961,6 +1099,9 @@
                 src="icons/logo.png"
                 alt="Donias Global Consultants Logo"
                 class="w-[50px] h-[50px]"
+                width="50"
+                height="50"
+                loading="lazy"
               />
               <h3 class="text-xl font-bold">Donias</h3>
             </div>
@@ -1219,6 +1360,32 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        // Lazy loading for images
+        const lazyImages = document.querySelectorAll(".lazy-image");
+
+        if ("IntersectionObserver" in window) {
+          const imageObserver = new IntersectionObserver(
+            (entries, observer) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  const img = entry.target;
+                  img.classList.add("loaded");
+                  observer.unobserve(img);
+                }
+              });
+            },
+            {
+              rootMargin: "50px 0px",
+              threshold: 0.01,
+            }
+          );
+
+          lazyImages.forEach((img) => imageObserver.observe(img));
+        } else {
+          // Fallback for browsers without IntersectionObserver
+          lazyImages.forEach((img) => img.classList.add("loaded"));
+        }
+
         // Hamburger Menu Toggle
         const hamburgerBtn = document.getElementById("hamburger-btn");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -1237,7 +1404,7 @@
           });
         });
 
-        // Typing Effect
+        // Typing Effect with background preloading
         const words = [
           "Travels",
           "Education",
@@ -1249,6 +1416,13 @@
         const typedSpan = document.getElementById("typed-word");
         const bgImages = JSON.parse(typedSpan.dataset.images);
         const heroSection = document.querySelector(".hero-section");
+
+        // Preload background images
+        bgImages.forEach((src) => {
+          const img = new Image();
+          img.src = src;
+        });
+
         let wordIndex = 0,
           charIndex = 0,
           isDeleting = false;
@@ -1283,6 +1457,7 @@
           loop: true,
           pagination: { el: ".swiper-pagination", clickable: true },
           autoplay: { delay: 5000 },
+          lazy: true,
         });
       });
     </script>
