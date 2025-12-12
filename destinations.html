@@ -59,6 +59,9 @@
         font-size: 1.5rem;
         font-weight: 700;
       }
+      a {
+        text-decoration: none;
+      }
 
       .logo span:first-child {
         color: var(--text-dark);
@@ -575,15 +578,10 @@
     <!-- Header -->
     <header class="header">
       <div class="header-container">
-        <div class="logo"><span>donias</span><span>travels</span></div>
-        <nav class="nav">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#destinations">Destinations</a>
-          <a href="#about">About</a>
-          <a href="#resources">Resources</a>
-          <a href="#contact">Contact</a>
-        </nav>
+        <a class="no-underline" href="travel.html">
+          <div class="logo"><span>donias</span><span>travels</span></div></a
+        >
+        <nav class="nav"></nav>
         <div class="header-cta">
           <a href="#consultation" class="btn btn-primary">Book Consultation</a>
         </div>
